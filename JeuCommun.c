@@ -1386,10 +1386,14 @@ int OldHauteurAtout = 0;
 void GainPetitAuBout(TarotGame CurrentGame, struct _Jeu *pJeu)
 {
 double p0;
+double AvgBoutPreneur = 0;
+double CalcAtoutPreneur;
+int iBoutPreneur;
 
 	if ( pJeu->ProbCarte[pJeu->PositionJoueur][1] <= 0.0 )      //  Pas le petit ou déjà joué
 	{
 		pJeu->ValPetitAuBout = 0;                         //  Valeur 0
+		return;
 	}
 	else if (pJeu->PositionJoueur == CurrentGame->JoueurPreneur )
 	{
@@ -1399,8 +1403,15 @@ double p0;
 		{
 			pJeu->ValPetitAuBout *= 2;
 		}
+		return;
 	}
-	else if ( (AvgLongueur(pJeu, CurrentGame->JoueurPreneur, ATOUT) < pJeu->NbAtout - 1.2) || AvgLongueur(pJeu, CurrentGame->JoueurPreneur, ATOUT) < 0.001)
+	//  Corrige valeur longueur preneur si besoin est
+	AvgBoutPreneur = pJeu->TmpProbCarte[CurrentGame->JoueurPreneur][0] + pJeu->TmpProbCarte[CurrentGame->JoueurPreneur][1] + pJeu->TmpProbCarte[CurrentGame->JoueurPreneur][21];
+	iBoutPreneur = (int) ( AvgBoutPreneur+0.5);
+	CalcAtoutPreneur = AvgLongueur(pJeu, CurrentGame->JoueurPreneur, ATOUT);
+	if ( NbAtoutMoyen[CurrentGame->TypePartie][iBoutPreneur] > 1.25*CalcAtoutPreneur )
+        CalcAtoutPreneur = NbAtoutMoyen[CurrentGame->TypePartie][iBoutPreneur]/1.25;
+	if ( CalcAtoutPreneur < pJeu->NbAtout - 1.2 || AvgLongueur(pJeu, CurrentGame->JoueurPreneur, ATOUT) < 0.001)
 	{
 		pJeu->ValPetitAuBout = 20.0;
 	}

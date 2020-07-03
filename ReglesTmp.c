@@ -239,11 +239,21 @@ double ProbAtout;
 	{
 		for ( i = Startof[CouleurDemandee]; i < Endof[CouleurDemandee]; i++)
         {
-            if ( pJeu->TmpProbCarte[pJeu->PositionJoueur][i] <= 0 ) continue;
-            if ( pJeu->TmpProbCarte[pJeu->PositionJoueur][i] >= 0.9999 ) continue;
+            if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][i] <= 0 ) continue;
+            if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][i] >= 0.9999 ) continue;
 			MonteTmpProb( pJeu, pJeu->PositionPreneur, i, 1.5 + (pJeu->CouleurTenue==CouleurDemandee)*0.5, 14.0);
         }
 	}
+//  Règle 15 Tmp : Si preneur part à la chasse, possède certainement des atouts
+    if ( IndexPreneur == 0 && CouleurDemandee == ATOUT && pJeu->JoueurCouleur[ATOUT] < 0 && (Table[0]. Hauteur < 9 || Table[0].Hauteur >= 16 ))
+    {
+        for ( i = 2; i < 22; i++ )
+        {
+            if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][i] <= 0 ) continue;
+            if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][i] >= 0.9999 ) continue;
+			MonteTmpProb( pJeu, pJeu->PositionPreneur, i, 1.5, 15.0);
+        }
+    }
 //	Fin des règles, normalise les probas
 	NormaliseTmpProba(CurrentGame, pJeu, IndexJoueur);
 //	Recalcule les probas de coupe

@@ -1800,6 +1800,8 @@ int CBest;
     OutDebug("MinPlisPreneur = %d\n", MinPlisPreneur(CurrentGame, pJeu));
     OutDebug("Flanc = %d, ValFlanc = %.3f, CouleurTenue = %d\n", pJeu->Flanc, pJeu->Flanc > 0 ? pJeu->ValFlanc[pJeu->Flanc]:0.0, pJeu->CouleurTenue);
     OutDebug("ProbGain = %.3f\n", ProbGainCoup(CurrentGame, pJeu, 1, 0));
+    if ( HasCarte(pJeu, pJeu->PositionJoueur, 1) )
+        OutDebug("Valeur petit au bout = %.3f\n", pJeu->ValPetitAuBout);
 #endif // DEBUG_DEFENSE_SECOND
     MakeCarte(&Table[2], 0);             //  Simule excuse après pour être sûr de ne pas faire le pli.
     MakeCarte(&Table[3], 0);
@@ -2226,6 +2228,8 @@ int BestC;
     OutDebug("MinPlisPreneur = %d\n", MinPlisPreneur(CurrentGame, pJeu));
     OutDebug("Flanc = %d, ValFlanc = %.3f, CouleurTenur = %d\n", pJeu->Flanc, pJeu->Flanc > 0 ? pJeu->ValFlanc[pJeu->Flanc]:0.0, pJeu->CouleurTenue);
     OutDebug("ProbGain = %.3f\n", ProbGainCoup(CurrentGame, pJeu, 2, 0));
+    if ( HasCarte(pJeu, pJeu->PositionJoueur, 1) )
+        OutDebug("Valeur petit au bout = %.3f\n", pJeu->ValPetitAuBout);
 #if DEBUG > 0
     if ( Table[0].Couleur == CARREAU && Table[0].Hauteur == 6 )
         i = 0;
@@ -2449,6 +2453,8 @@ int iGagnant;
     OutDebug("MinPlisPreneur = %d\n", MinPlisPreneur(CurrentGame, pJeu));
     OutDebug("Flanc = %d, ValFlanc = %.3f, CouleurTenur = %d\n", pJeu->Flanc, pJeu->Flanc > 0 ? pJeu->ValFlanc[pJeu->Flanc]:0.0, pJeu->CouleurTenue);
     OutDebug("ProbGain = %.3f\n", ProbGainCoup(CurrentGame, pJeu, 3, 0));
+    if ( HasCarte(pJeu, pJeu->PositionJoueur, 1) )
+        OutDebug("Valeur petit au bout = %.3f\n", pJeu->ValPetitAuBout);
 #endif // DEBUG_DEFENSE_DERNIER
 	CouleurDemandee = Table[0].Couleur;
 	if ( CouleurDemandee == EXCUSE )

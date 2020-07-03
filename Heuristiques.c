@@ -207,7 +207,7 @@ double v;
 	}
     //	Heuristique 10: Si un défenseur met le petit après le preneur sur l'atout maître, n'en possède plus
 	if ( (h = PlusFortAtoutJoue(IndexTable))> 0 && Table[IndexTable].Couleur == ATOUT && Table[IndexTable].Hauteur == 1 && h > 1
-		&& IndexTable > posPreneur && (v = ProbRestantAuDessus(pJeu, h, pos, IndexTable)) < 0.1)
+		&& IndexTable > posPreneur && (v = ProbRestantAuDessus(pJeu, h, pos, IndexTable)) < 0.1 && !GainPli(CurrentGame, IndexTable))
 	{
 	    if ( pJeu->ProbCarte[pos][h] >= 0.000001 && pJeu->ProbCarte[pos][h] <= 0.99999 )
         {

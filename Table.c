@@ -298,10 +298,7 @@ double GuessAtoutPreneur;
     //	Met ValFlanc a jour en fonction des coups joués
     if ( CurrentGame->JoueurEntame != CurrentGame->JoueurPreneur )
     {
-#if DEBUG > 0
-        if ( Position == 1 && CurrentGame->NumPli == 1 )
-            c = 0;
-#endif // DEBUG
+
         //  Seulement si entame ne venant pas du preneur
         if ( pJeu->Flanc > ATOUT && pJeu->ValFlanc[pJeu->Flanc] >= 0.3 && pJeu->JoueurCouleur[pJeu->Flanc] == JoueurAvecPetit(CurrentGame, pJeu)
             && pJeu->GuessProbCoupe[pJeu->Flanc] == 1.0 && CurrentGame->CarteJouee[1] < 0 )
@@ -411,7 +408,10 @@ double GuessAtoutPreneur;
             pJeu->NbDefausse[pos]++;      //  Défausse pour le joueur pos
         }
     }
-    //	Maintenant compte les atouts du preneur et essaie de se rapprocher de la "moyenne"
+#if DEBUG > 0
+        if ( Position == 2)
+            c = 0;
+#endif // DEBUG    //	Maintenant compte les atouts du preneur et essaie de se rapprocher de la "moyenne"
 	Boucle = 10;
 	if ( pJeu->PositionJoueur != pJeu->PositionPreneur && pJeu->NbCarte > 2 )
 	{
