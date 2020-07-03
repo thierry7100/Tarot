@@ -1,0 +1,20 @@
+Gain petit au Bout          OK
+Ajout icône                 OK
+A propos de                 OK
+Commande rappel fichier enregistré      OK
+Ouverture fichier           OK
+Sauvegarde fichier          OK
+Affichage Points            OK
+Affichage Atouts            OK
+Affichage version GTK       OK
+Bug Partie 34 Prise Ouest   OK
+Styles de jeu               OK
+Bug Partie 80               OK
+Pb NormaliseProba           OK ?
+Distribution manuelle ?
+Répertoire par défaut       OK
+Plus infos fichier debug    Fait sur distribution
+Windows sans console        OK
+Revoir splash sans version  OK
+Pas d'icône sous windows    OK
+

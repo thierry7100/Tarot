@@ -1,0 +1,2444 @@
+GTK Version 3.22.30
+Début de partie : Distrib 1, Preneur 2, Contrat 2, Joueur Entame 2
+Force du jeu de SUD : 25 / 25
+Force du jeu de EST : 1 / 1
+Force du jeu de NORD : 58 / 67
+Force du jeu de OUEST : 35 / 35
+--------------Pli 1--------------------------------
+JoueEnPremierAttaque : NbCarte = 18
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==0
+JoueEnPremierAttaque : ResteAtout = 13
+JoueEnPremierAttaque: ValCouleur[3]=-3,892
+JoueEnPremierAttaque: ValCouleur[4]=-20,316
+JoueEnPremierAttaque: ValCouleur[5]=-3,100
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=8, ResteAtout=13
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-137,753
+Joueur 2, Position 0, pose Carte 3C Reste NbCarte=17 NbCarteJoueur[2]=17
+--
+Position 3, JoueDefenseSecond après 3C 
+Proba Petit = 2:0,447  1:0,277  0:0,277  Chien:0,000
+Proba 21 = 2:0,538  1:0,231  0:0,231  Chien:0,000
+ProbCoupe[T]=0,688, ProbCoupe[K]=0,406, ProbCoupe[P]=0,500, ProbCoupe[C]=0,406
+GuessProbCoupe[T]=0,688, GuessProbCoupe[K]=0,406, GuessProbCoupe[P]=0,500, GuessProbCoupe[C]=0,406
+CalProbCoupe[T]=0,131, CalProbCoupe[K]=0,061, CalProbCoupe[P]=0,135, CalProbCoupe[C]=0,018
+TmpProbCoupe[T]=0,145, TmpProbCoupe[K]=0,071, TmpProbCoupe[P]=0,150, TmpProbCoupe[C]=0,027
+Longueur ATOUT Preneur =8,54
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenue = -1
+ProbGain = 0,994
+Essai carte Exc  Score = 4,51
+Essai carte 5C  Score = 14,18
+Essai carte 8C  Score = 12,09
+Essai carte CC  Score = 7,46
+Joueur 3, Position 1, pose Carte 5C Reste NbCarte=17 NbCarteJoueur[3]=17
+Joueur 0, Position 2, pose Carte VC Reste NbCarte=17 NbCarteJoueur[0]=17
+----
+Position 1, JoueDefenseDernier après 3C 5C VC 
+Proba Petit = 0:0,280  3:0,280  2:0,439  Chien:0,000
+Proba 21 = 0:0,236  3:0,236  2:0,528  Chien:0,000
+ProbCoupe[T]=0,750, ProbCoupe[K]=0,406, ProbCoupe[P]=0,500, ProbCoupe[C]=0,406
+GuessProbCoupe[T]=0,750, GuessProbCoupe[K]=0,406, GuessProbCoupe[P]=0,500, GuessProbCoupe[C]=0,406
+CalProbCoupe[T]=0,213, CalProbCoupe[K]=0,072, CalProbCoupe[P]=0,151, CalProbCoupe[C]=0,023
+TmpProbCoupe[T]=0,224, TmpProbCoupe[K]=0,079, TmpProbCoupe[P]=0,161, TmpProbCoupe[C]=0,044
+Longueur ATOUT Preneur =9,01
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenur = -1
+ProbGain = 1,000
+Essai Carte 10C  Score = 6,00
+Essai Carte RC  Score = 2,29
+Joueur 1, Position 3, pose Carte 10C Reste NbCarte=17 NbCarteJoueur[1]=17
+Entrée Regle2Proba : Carte N° 0, Index = 66, pos = 2, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :3C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :3C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :3C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 0 :3C 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=0,450, ProbCoupe[K]=0,487, ProbCoupe[P]=0,600, ProbCoupe[C]=0,108
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][64] = 0,273
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][67] = 0,590
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][69] = 0,588
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][71] = 0,270
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][72] = 0,269
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][75] = 0,268
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][76] = 0,576
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][77] = 0,357
+Entrée Regle2Proba : Carte N° 1, Index = 68, pos = 3, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :5C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :5C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :5C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 1 :5C 
+Entrée Regle2Proba : Carte N° 3, Index = 73, pos = 1, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :10C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :10C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :10C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 3 :10C 
+Entrée Regle2Proba : Carte N° 0, Index = 66, pos = 2, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :3C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :3C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :3C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 0 :3C 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=0,750, ProbCoupe[K]=0,487, ProbCoupe[P]=0,600, ProbCoupe[C]=0,108
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][64] = 0,259
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][65] = 0,258
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][67] = 0,559
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][69] = 0,558
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][70] = 0,256
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][71] = 0,255
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][72] = 0,254
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][75] = 0,253
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][76] = 0,543
+Entrée Regle2Proba : Carte N° 1, Index = 68, pos = 3, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :5C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :5C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :5C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 1 :5C 
+Entrée Regle2Proba : Carte N° 2, Index = 74, pos = 0, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :VC 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :VC 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :VC 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 2 :VC 
+Entrée Regle2Proba : Carte N° 1, Index = 68, pos = 3, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :5C 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :5C 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :5C 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 1 :5C 
+Entrée Regle2Proba : Carte N° 2, Index = 74, pos = 0, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :VC 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :VC 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :VC 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 2 :VC 
+Entrée Regle2Proba : Carte N° 3, Index = 73, pos = 1, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :10C 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :10C 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :10C 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 3 :10C 
+Entrée Regle2Proba : Carte N° 0, Index = 66, pos = 2, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :3C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :3C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :3C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 0 :3C 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=0,688, ProbCoupe[K]=0,487, ProbCoupe[P]=0,600, ProbCoupe[C]=0,108
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][64] = 0,270
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][65] = 0,269
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][67] = 0,583
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][69] = 0,581
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][70] = 0,267
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][72] = 0,266
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][76] = 0,573
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][77] = 0,362
+Entrée Regle2Proba : Carte N° 2, Index = 74, pos = 0, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :VC 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :VC 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :VC 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 2 :VC 
+Entrée Regle2Proba : Carte N° 3, Index = 73, pos = 1, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :10C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :10C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :10C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 3 :10C 
+Fin du pli 1
+Points Preneur 0, Défense 3
+--------------------------------------------------------------------------------------------
+Joueur 0, Position 0, pose Carte 7T Reste NbCarte=16 NbCarteJoueur[0]=16
+Règle Tmp 4,0, BaisseTmpProb(0, 34) Initial = 0,362, New 0,090, Facteur pour autres 1,425
+  Nouvelles valeurs TmpProbCarte[1][34] = 0,000 TmpProbCarte[2][34] = 0,202 TmpProbCarte[3][34] = 0,515 TmpProbCarte[4][34] = 0,192
+Règle Tmp 4,0, BaisseTmpProb(0, 35) Initial = 0,361, New 0,090, Facteur pour autres 1,424
+  Nouvelles valeurs TmpProbCarte[1][35] = 0,000 TmpProbCarte[2][35] = 0,396 TmpProbCarte[3][35] = 0,514 TmpProbCarte[4][35] = 0,000
+--
+Position 1, JoueDefenseSecond après 7T 
+Proba Petit = 0:0,293  3:0,293  2:0,414  Chien:0,000
+Proba 21 = 0:0,251  3:0,251  2:0,498  Chien:0,000
+ProbCoupe[T]=0,750, ProbCoupe[K]=0,487, ProbCoupe[P]=0,600, ProbCoupe[C]=0,108
+GuessProbCoupe[T]=0,750, GuessProbCoupe[K]=0,487, GuessProbCoupe[P]=0,600, GuessProbCoupe[C]=0,108
+CalProbCoupe[T]=0,247, CalProbCoupe[K]=0,096, CalProbCoupe[P]=0,181, CalProbCoupe[C]=0,018
+TmpProbCoupe[T]=0,750, TmpProbCoupe[K]=0,487, TmpProbCoupe[P]=0,600, TmpProbCoupe[C]=0,108
+Longueur ATOUT Preneur =8,61
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenue = -1
+ProbGain = 0,321
+Essai carte 2T  Score = -9,85
+Essai carte 5T  Score = -9,85
+Essai carte 6T  Score = -9,85
+Essai carte 8T  Score = -9,86
+Essai carte 10T  Score = -9,85
+Essai carte CT  Score = -13,32
+Joueur 1, Position 1, pose Carte 2T Reste NbCarte=16 NbCarteJoueur[1]=16
+Règle Tmp 4,0, BaisseTmpProb(0, 34) Initial = 0,333, New 0,083, Facteur pour autres 1,375
+  Nouvelles valeurs TmpProbCarte[1][34] = 0,458 TmpProbCarte[2][34] = 0,000 TmpProbCarte[3][34] = 0,458 TmpProbCarte[4][34] = 0,000
+Règle Tmp 4,0, BaisseTmpProb(0, 35) Initial = 0,333, New 0,083, Facteur pour autres 1,375
+  Nouvelles valeurs TmpProbCarte[1][35] = 0,458 TmpProbCarte[2][35] = 0,000 TmpProbCarte[3][35] = 0,458 TmpProbCarte[4][35] = 0,000
+--
+Position 2, JoueAttaqueTroisieme après 7T 2T 
+Proba Petit = 3:0,339  0:0,339  1:0,322  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = 0
+ResteAtout = 13
+Valeur Petit au Bout=0,000
+Flanc = -1, ValFlanc = 0,000, CouleurTenue = -1
+ProbGain = 0,948
+Essai carte 3A  Score = 3,05
+Essai carte 6A  Score = 2,43
+Essai carte 10A  Score = 1,60
+Essai carte 14A  Score = 0,77
+Essai carte 17A  Score = -0,28
+Essai carte 19A  Score = -0,99
+Essai carte 20A  Score = -1,34
+Essai carte 21A  Score = -3,69
+Joueur 2, Position 2, pose Carte 3A Reste NbCarte=16 NbCarteJoueur[2]=16
+Règle Tmp 9,1, BaisseTmpProb(2, 22) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][22] = 0,000 TmpProbCarte[0][22] = 0,423 TmpProbCarte[1][22] = 0,423 TmpProbCarte[4][22] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 25) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][25] = 0,000 TmpProbCarte[0][25] = 0,423 TmpProbCarte[1][25] = 0,423 TmpProbCarte[4][25] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 26) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][26] = 0,000 TmpProbCarte[0][26] = 0,423 TmpProbCarte[1][26] = 0,423 TmpProbCarte[4][26] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 27) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][27] = 0,000 TmpProbCarte[0][27] = 0,423 TmpProbCarte[1][27] = 0,423 TmpProbCarte[4][27] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 29) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][29] = 0,000 TmpProbCarte[0][29] = 0,423 TmpProbCarte[1][29] = 0,423 TmpProbCarte[4][29] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 30) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][30] = 0,000 TmpProbCarte[0][30] = 0,423 TmpProbCarte[1][30] = 0,423 TmpProbCarte[4][30] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 31) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][31] = 0,000 TmpProbCarte[0][31] = 0,423 TmpProbCarte[1][31] = 0,423 TmpProbCarte[4][31] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 32) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][32] = 0,000 TmpProbCarte[0][32] = 0,423 TmpProbCarte[1][32] = 0,423 TmpProbCarte[4][32] = 0,153
+Règle Tmp 9,1, BaisseTmpProb(2, 33) Initial = 0,156, New 0,000, Facteur pour autres 1,184
+  Nouvelles valeurs TmpProbCarte[3][33] = 0,000 TmpProbCarte[0][33] = 0,423 TmpProbCarte[1][33] = 0,423 TmpProbCarte[4][33] = 0,153
+----
+Position 3, JoueDefenseDernier après 7T 2T 3A 
+Proba Petit = 2:0,468  1:0,263  0:0,270  Chien:0,000
+Proba 21 = 2:0,559  1:0,218  0:0,223  Chien:0,000
+ProbCoupe[T]=0,688, ProbCoupe[K]=0,487, ProbCoupe[P]=0,600, ProbCoupe[C]=0,108
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,487, GuessProbCoupe[P]=0,600, GuessProbCoupe[C]=0,108
+CalProbCoupe[T]=0,156, CalProbCoupe[K]=0,079, CalProbCoupe[P]=0,160, CalProbCoupe[C]=0,016
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,071, TmpProbCoupe[P]=0,150, TmpProbCoupe[C]=0,027
+Longueur ATOUT Preneur =8,45
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenur = -1
+ProbGain = 0,000
+Essai Carte Exc  Score = -4,79
+Essai Carte 3T  Score = -2,79
+Essai Carte DT  Score = -8,79
+Essai Carte RT  Score = -10,79
+Joueur 3, Position 3, pose Carte 3T Reste NbCarte=16 NbCarteJoueur[3]=16
+Entrée Regle2Proba : Carte N° 1, Index = 23, pos = 1, PositionJoueur=0, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :2T 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :2T 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :2T 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 1 :2T 
+Entrée Regle2Proba : Carte N° 2, Index = 3, pos = 2, PositionJoueur=0, Couleur demandée=2
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :3A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :3A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :3A 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 2 :3A 
+Entrée Regle2Proba : Carte N° 3, Index = 24, pos = 3, PositionJoueur=0, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :3T 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :3T 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :3T 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 3 :3T 
+Entrée Regle2Proba : Carte N° 0, Index = 28, pos = 0, PositionJoueur=1, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :7T 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :7T 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :7T 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 0 :7T 
+Heuristique Couleur 5, Ouverture couleur avec 6 au 10 : ni Roi ni Dame.. ProbCarte[0][DAME] = 0,076  ProbCarte[0][ROI] = 0,076
+Entrée Regle2Proba : Carte N° 2, Index = 3, pos = 2, PositionJoueur=1, Couleur demandée=2
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :3A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :3A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :3A 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 2 :3A 
+Entrée Regle2Proba : Carte N° 3, Index = 24, pos = 3, PositionJoueur=1, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :3T 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :3T 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :3T 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 3 :3T 
+Entrée Regle2Proba : Carte N° 0, Index = 28, pos = 0, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :7T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :7T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :7T 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 0 :7T 
+Heuristique Couleur 5, Ouverture couleur avec 6 au 10 : ni Roi ni Dame.. ProbCarte[0][DAME] = 0,070  ProbCarte[0][ROI] = 0,070
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][26] = 0,375
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][27] = 0,375
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][29] = 0,374
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][31] = 0,373
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][32] = 0,373
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][33] = 0,372
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][34] = 0,113
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (longue). ProbCarte[0][35] = 0,113
+Heuristique Couleur 22.1, Monte proba petit suite à changement couleur. ProbCarte[0][1] = 0,718
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][26] = 0,282
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][27] = 0,284
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][29] = 0,285
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][31] = 0,287
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][32] = 0,288
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][33] = 0,289
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][34] = 0,088
+Heuristique Couleur 22.1, Changement couleur, baisse proba couleur précédente. ProbCarte[0][35] = 0,088
+Entrée Regle2Proba : Carte N° 1, Index = 23, pos = 1, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :2T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :2T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :2T 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 1 :2T 
+Entrée Regle2Proba : Carte N° 3, Index = 24, pos = 3, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :3T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :3T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :3T 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 3 :3T 
+Entrée Regle2Proba : Carte N° 0, Index = 28, pos = 0, PositionJoueur=3, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :7T 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :7T 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :7T 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 0 :7T 
+Heuristique Couleur 5, Ouverture couleur avec 6 au 10 : ni Roi ni Dame.. ProbCarte[0][DAME] = 0,000  ProbCarte[0][ROI] = 0,000
+Entrée Regle2Proba : Carte N° 1, Index = 23, pos = 1, PositionJoueur=3, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :2T 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :2T 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :2T 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 1 :2T 
+Entrée Regle2Proba : Carte N° 2, Index = 3, pos = 2, PositionJoueur=3, Couleur demandée=2
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :3A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :3A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :3A 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 2 :3A 
+Fin du pli 2
+Points Preneur 2, Défense 3
+--------------------------------------------------------------------------------------------
+--------------Pli 3--------------------------------
+JoueEnPremierAttaque : NbCarte = 16
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==0
+JoueEnPremierAttaque : ResteAtout = 13
+JoueEnPremierAttaque: ValCouleur[3]=-3,890
+JoueEnPremierAttaque: ValCouleur[4]=-20,315
+JoueEnPremierAttaque: ValCouleur[5]=0,760
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=7, ResteAtout=13
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-373,608
+Joueur 2, Position 0, pose Carte 4C Reste NbCarte=15 NbCarteJoueur[2]=15
+--
+Position 3, JoueDefenseSecond après 4C 
+Proba Petit = 2:0,438  1:0,281  0:0,281  Chien:0,000
+Proba 21 = 2:0,518  1:0,241  0:0,241  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,108
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,108
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,051, CalProbCoupe[P]=0,105, CalProbCoupe[C]=0,013
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,071, TmpProbCoupe[P]=0,150, TmpProbCoupe[C]=0,033
+Longueur ATOUT Preneur =8,05
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenue = -1
+ProbGain = 0,955
+Essai carte Exc  Score = 8,34
+Essai carte 8C  Score = 10,74
+Essai carte CC  Score = 14,38
+Joueur 3, Position 1, pose Carte CC Reste NbCarte=15 NbCarteJoueur[3]=15
+Joueur 0, Position 2, pose Carte 2C Reste NbCarte=15 NbCarteJoueur[0]=15
+Règle Tmp 6,0, MonteTmpProb(0, 64) Initial = 0,322, New 0,435, Facteur pour autres 1,200
+  Nouvelles valeurs TmpProbCarte[1][64] = 0,000 TmpProbCarte[2][64] = 0,218 TmpProbCarte[3][64] = 0,246 TmpProbCarte[4][64] = 0,101
+Règle Tmp 6,0, MonteTmpProb(0, 70) Initial = 0,321, New 0,434, Facteur pour autres 1,200
+  Nouvelles valeurs TmpProbCarte[1][70] = 0,000 TmpProbCarte[2][70] = 0,220 TmpProbCarte[3][70] = 0,245 TmpProbCarte[4][70] = 0,100
+Règle Tmp 6,0, MonteTmpProb(0, 71) Initial = 0,320, New 0,434, Facteur pour autres 1,200
+  Nouvelles valeurs TmpProbCarte[1][71] = 0,000 TmpProbCarte[2][71] = 0,221 TmpProbCarte[3][71] = 0,245 TmpProbCarte[4][71] = 0,100
+Règle Tmp 6,0, MonteTmpProb(0, 72) Initial = 0,320, New 0,433, Facteur pour autres 1,200
+  Nouvelles valeurs TmpProbCarte[1][72] = 0,000 TmpProbCarte[2][72] = 0,222 TmpProbCarte[3][72] = 0,245 TmpProbCarte[4][72] = 0,100
+Règle Tmp 6,0, BaisseTmpProb(0, 1) Initial = 0,304, New 0,030, Facteur pour autres 1,392
+  Nouvelles valeurs TmpProbCarte[1][1] = 0,000 TmpProbCarte[2][1] = 0,583 TmpProbCarte[3][1] = 0,387 TmpProbCarte[4][1] = 0,000
+----
+Position 1, JoueDefenseDernier après 4C CC 2C 
+Proba Petit = 0:0,031  3:0,377  2:0,592  Chien:0,000
+Proba 21 = 0:0,259  3:0,237  2:0,504  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,108
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,108
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,072, CalProbCoupe[P]=0,136, CalProbCoupe[C]=0,016
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,487, TmpProbCoupe[P]=0,600, TmpProbCoupe[C]=0,108
+Longueur ATOUT Preneur =8,65
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = -1, ValFlanc = 0,000, CouleurTenur = -1
+ProbGain = 1,000
+Joueur 1, Position 3, pose Carte RC Reste NbCarte=15 NbCarteJoueur[1]=15
+Entrée Regle2Proba : Carte N° 0, Index = 67, pos = 2, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :4C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :4C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :4C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 0 :4C 
+PROBLEME Proba pour joueur 0:  pJeu->ProbCarte[CHIEN][64] = 0,066 et Carte appartient au chien
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][64] = 0,633
+PROBLEME Proba pour joueur 0:  pJeu->ProbCarte[CHIEN][64] = 0,029 et Carte appartient au chien
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][64] = 0,029
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][69] = 0,763
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][69] = 0,100
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][71] = 0,621
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][71] = 0,032
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][72] = 0,619
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][72] = 0,032
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][76] = 0,737
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][76] = 0,111
+Entrée Regle2Proba : Carte N° 1, Index = 75, pos = 3, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :CC 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :CC 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :CC 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 1 :CC 
+Entrée Regle2Proba : Carte N° 3, Index = 77, pos = 1, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :RC 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :RC 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :RC 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 3 :RC 
+Entrée Regle2Proba : Carte N° 0, Index = 67, pos = 2, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :4C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :4C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :4C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 0 :4C 
+PROBLEME Proba pour joueur 1:  pJeu->ProbCarte[CHIEN][64] = 0,073 et Carte appartient au chien
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][64] = 0,612
+PROBLEME Proba pour joueur 1:  pJeu->ProbCarte[CHIEN][64] = 0,032 et Carte appartient au chien
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][64] = 0,032
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][69] = 0,738
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][69] = 0,111
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][70] = 0,601
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][70] = 0,035
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][71] = 0,599
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][71] = 0,036
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][72] = 0,596
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][72] = 0,037
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][76] = 0,704
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][76] = 0,126
+Entrée Regle2Proba : Carte N° 1, Index = 75, pos = 3, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :CC 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :CC 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :CC 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 1 :CC 
+Entrée Regle2Proba : Carte N° 2, Index = 65, pos = 0, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :2C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :2C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :2C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 2 :2C 
+PROBLEME Proba pour joueur 1:  pJeu->ProbCarte[CHIEN][64] = 0,048 et Carte appartient au chien
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][64] = 0,337
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][70] = 0,327
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][71] = 0,318
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][72] = 0,311
+PROBLEME Proba pour joueur 1:  pJeu->ProbCarte[SUD][1] = 0,034 et Carte appartient à joueur SUD
+Heuristique Couleur 8, Sig tenue couleur preneur, ne possède pas le petit, .. ProbCarte[0][1] = 0,034
+Entrée Regle2Proba : Carte N° 1, Index = 75, pos = 3, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :CC 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :CC 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :CC 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 1 :CC 
+Entrée Regle2Proba : Carte N° 2, Index = 65, pos = 0, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :2C 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :2C 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :2C 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 2 :2C 
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][70] = 0,449
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][71] = 0,447
+PROBLEME Proba pour joueur 2:  pJeu->ProbCarte[SUD][1] = 0,074 et Carte appartient à joueur SUD
+Heuristique Couleur 8, Sig tenue couleur preneur, ne possède pas le petit, .. ProbCarte[0][1] = 0,074
+Entrée Regle2Proba : Carte N° 3, Index = 77, pos = 1, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :RC 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :RC 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :RC 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 3 :RC 
+Entrée Regle2Proba : Carte N° 0, Index = 67, pos = 2, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :4C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :4C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :4C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 0 :4C 
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[CHIEN][64] = 0,066 et Carte appartient au chien
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][64] = 0,628
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[CHIEN][64] = 0,028 et Carte appartient au chien
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][64] = 0,028
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][69] = 0,759
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][69] = 0,101
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][70] = 0,616
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][70] = 0,032
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][72] = 0,614
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][72] = 0,032
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][76] = 0,733
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][76] = 0,113
+Entrée Regle2Proba : Carte N° 2, Index = 65, pos = 0, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :2C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :2C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :2C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 2 :2C 
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[CHIEN][64] = 0,039 et Carte appartient au chien
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][64] = 0,320
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][70] = 0,310
+Heuristique Couleur 8, Sig tenue couleur preneur, .. ProbCarte[0][72] = 0,302
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[SUD][1] = 0,030 et Carte appartient à joueur SUD
+Heuristique Couleur 8, Sig tenue couleur preneur, ne possède pas le petit, .. ProbCarte[0][1] = 0,030
+Entrée Regle2Proba : Carte N° 3, Index = 77, pos = 1, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :RC 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :RC 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :RC 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 3 :RC 
+Fin du pli 3
+Points Preneur 2, Défense 11
+--------------------------------------------------------------------------------------------
+---------------------------------------- Pli 4 ---------------------------------
+Entrée JoueEnPremierDefense, Position 1, Flanc = 1, StatusChasse=0, AvgLgPreneur=7,59, SansAtoutPreneur=0,000
+Nombre de distributions 79340116359042239809191936
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,119, CalProbCoupe[P]=0,191, CalProbCoupe[C]=0,002
+Proba Petit = 0:0,034  3:0,446  2:0,520  Chien:0,000
+Proba 21 = 0:0,302  3:0,276  2:0,422  Chien:0,000
+Flanc = 1, ValFlanc = 1,000, CouleurTenur = 5
+Entrée CoupsEntameDefense : NbCarte=15, Joueur=1, ValCouleur=[0,00, 0,00, 0,00, 0,00, 0,00, 0,00]
+Sortie CoupsEntameDefense : Pas de coup sûr
+ValCouleur TREFLE=0,000 CARREAU=0,000 PIQUE=0,000 COEUR=0,000
+Valeur couleur 2: 13,87
+Entrée GetValeurCouleurOuverture(3) : ForceJeu=0, val_longueur = 4,00, pourcentage=0,00, SansAtoutPreneur=0,00
+GetValeurCouleurOuverture(3) après honneurs: val=4,00
+GetValeurCouleurOuverture(3) après signalisation: val=4,00
+Valeur ouverture 3 : NbCouleur = 3, Val=4,997, ProbCoupeAvant=0,000, ProbCoupeApres=0,035
+Valeur couleur 3: 5,00
+Entrée GetValeurCouleurOuverture(4) : ForceJeu=0, val_longueur = 5,00, pourcentage=0,00, SansAtoutPreneur=0,00
+GetValeurCouleurOuverture(4) après honneurs: val=8,50
+GetValeurCouleurOuverture(4) après signalisation: val=8,50
+Valeur ouverture 4 : NbCouleur = 4, Val=9,497, ProbCoupeAvant=0,000, ProbCoupeApres=0,035
+Valeur couleur 4: 9,50
+Valeur ATOUT chasse non lancée: 0,00
+Valeur finale ATOUT : 15,00
+Joueur 1, Position 0, pose Carte 2A Reste NbCarte=14 NbCarteJoueur[1]=14
+--
+Position 2, JoueAttaqueSecond après 2A 
+Proba Petit = 3:0,482  0:0,076  1:0,442  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = 0
+Flanc = 2, ValFlanc = 0,500, CouleurTenue = 5
+ResteAtout = 12
+Valeur Petit au Bout=0,000
+ProbGain = 0,994
+Essai carte 6A  Score = -1,15
+Essai carte 10A  Score = -0,86
+Essai carte 14A  Score = -2,46
+Essai carte 17A  Score = -1,95
+Essai carte 19A  Score = -2,68
+Essai carte 20A  Score = -3,03
+Essai carte 21A  Score = -5,38
+Joueur 2, Position 1, pose Carte 10A Reste NbCarte=14 NbCarteJoueur[2]=14
+---
+Position 3, JoueEnTroisieme après 2A 10A 
+Proba Petit = 2:0,550  1:0,417  0:0,032  Chien:0,000
+Proba 21 = 2:0,460  1:0,261  0:0,279  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,077, CalProbCoupe[P]=0,136, CalProbCoupe[C]=0,002
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=0,150, TmpProbCoupe[C]=0,033
+Longueur ATOUT Preneur =6,86
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 1, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,922
+Essai Carte Exc  Score = -30,44
+Essai Carte 13A  Score = -2,90
+Essai Carte 18A  Score = -5,47
+Joueur 3, Position 2, pose Carte 13A Reste NbCarte=14 NbCarteJoueur[3]=14
+Joueur 0, Position 3, pose Carte 15A Reste NbCarte=14 NbCarteJoueur[0]=14
+Entrée Regle2Proba : Carte N° 0, Index = 2, pos = 1, PositionJoueur=0, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :2A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :2A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :2A 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 0 :2A 
+Entrée Regle2Proba : Carte N° 1, Index = 10, pos = 2, PositionJoueur=0, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :10A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :10A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :10A 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 1 :10A 
+Entrée Regle2Proba : Carte N° 2, Index = 13, pos = 3, PositionJoueur=0, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :13A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :13A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :13A 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 2 :13A 
+Entrée Regle2Proba : Carte N° 1, Index = 10, pos = 2, PositionJoueur=1, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :10A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :10A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :10A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 1 :10A 
+Entrée Regle2Proba : Carte N° 2, Index = 13, pos = 3, PositionJoueur=1, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :13A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :13A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :13A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 2 :13A 
+Entrée Regle2Proba : Carte N° 3, Index = 15, pos = 0, PositionJoueur=1, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :15A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :15A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :15A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 3 :15A 
+Entrée Regle2Proba : Carte N° 0, Index = 2, pos = 1, PositionJoueur=2, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :2A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :2A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :2A 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 0 :2A 
+Entrée Regle2Proba : Carte N° 2, Index = 13, pos = 3, PositionJoueur=2, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :13A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :13A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :13A 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 2 :13A 
+Entrée Regle2Proba : Carte N° 3, Index = 15, pos = 0, PositionJoueur=2, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :15A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :15A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :15A 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 3 :15A 
+Entrée Regle2Proba : Carte N° 0, Index = 2, pos = 1, PositionJoueur=3, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :2A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :2A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :2A 
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 0 :2A 
+Entrée Regle2Proba : Carte N° 1, Index = 10, pos = 2, PositionJoueur=3, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :10A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :10A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :10A 
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 1 :10A 
+Entrée Regle2Proba : Carte N° 3, Index = 15, pos = 0, PositionJoueur=3, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :15A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :15A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :15A 
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 3 :15A 
+Fin du pli 4
+Points Preneur 2, Défense 13
+--------------------------------------------------------------------------------------------
+Joueur 0, Position 0, pose Carte 1P Reste NbCarte=13 NbCarteJoueur[0]=13
+Règle Tmp 4,0, MonteTmpProb(0, 62) Initial = 0,339, New 0,528, Facteur pour autres 1,400
+  Nouvelles valeurs TmpProbCarte[1][62] = 0,000 TmpProbCarte[2][62] = 0,102 TmpProbCarte[3][62] = 0,225 TmpProbCarte[4][62] = 0,146
+Règle Tmp 4,0, MonteTmpProb(0, 63) Initial = 0,381, New 0,558, Facteur pour autres 1,400
+  Nouvelles valeurs TmpProbCarte[1][63] = 0,000 TmpProbCarte[2][63] = 0,188 TmpProbCarte[3][63] = 0,255 TmpProbCarte[4][63] = 0,000
+--
+Position 1, JoueDefenseSecond après 1P 
+Proba Petit = 0:0,031  3:0,445  2:0,524  Chien:0,000
+Proba 21 = 0:0,280  3:0,283  2:0,437  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,116, CalProbCoupe[P]=0,185, CalProbCoupe[C]=0,002
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=0,800, TmpProbCoupe[C]=0,108
+Longueur ATOUT Preneur =6,68
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 1, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,390
+Essai carte 2P  Score = -12,92
+Essai carte 7P  Score = -12,94
+Essai carte 9P  Score = -12,93
+Essai carte CP  Score = -16,08
+Joueur 1, Position 1, pose Carte 2P Reste NbCarte=13 NbCarteJoueur[1]=13
+Règle Tmp 4,0, MonteTmpProb(0, 62) Initial = 0,354, New 0,677, Facteur pour autres 2,000
+  Nouvelles valeurs TmpProbCarte[1][62] = 0,161 TmpProbCarte[2][62] = 0,000 TmpProbCarte[3][62] = 0,161 TmpProbCarte[4][62] = 0,000
+--
+Position 2, JoueAttaqueTroisieme après 1P 2P 
+Proba Petit = 3:0,480  0:0,073  1:0,448  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = 0
+ResteAtout = 10
+Valeur Petit au Bout=0,000
+Flanc = 2, ValFlanc = 0,333, CouleurTenue = 5
+ProbGain = 0,980
+Essai carte RP  Score = -3,10
+Joueur 2, Position 2, pose Carte RP Reste NbCarte=13 NbCarteJoueur[2]=13
+----
+Position 3, JoueDefenseDernier après 1P 2P RP 
+Proba Petit = 2:0,542  1:0,426  0:0,031  Chien:0,000
+Proba 21 = 2:0,462  1:0,269  0:0,269  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,800, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,800, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,072, CalProbCoupe[P]=0,128, CalProbCoupe[C]=0,002
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=0,271, TmpProbCoupe[C]=0,033
+Longueur ATOUT Preneur =6,47
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 1, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte Exc  Score = -0,77
+Essai Carte 5P  Score = 1,23
+Essai Carte 8P  Score = 1,23
+Essai Carte VP  Score = -3,77
+Essai Carte DP  Score = -11,77
+Joueur 3, Position 3, pose Carte 5P Reste NbCarte=13 NbCarteJoueur[3]=13
+Entrée Regle2Proba : Carte N° 1, Index = 51, pos = 1, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :2P 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :2P 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :2P 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 1 :2P 
+Entrée Regle2Proba : Carte N° 2, Index = 63, pos = 2, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :RP 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :RP 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :RP 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 2 :RP 
+Entrée Regle2Proba : Carte N° 3, Index = 54, pos = 3, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :5P 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :5P 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :5P 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 3 :5P 
+Entrée Regle2Proba : Carte N° 0, Index = 50, pos = 0, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :1P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :1P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :1P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 0 :1P 
+Heuristique Couleur 0, Monte proba petit si ne suit pas ATOUT sur Flanc ATOUT. ProbCarte[0][1] = 0,514
+Heuristique Couleur 0.1, Change Flanc ATOUT vers 4
+Heuristique Couleur 5, Ouverture couleur avec 1 au 5 : Roi ou Dame.. ProbCarte[0][DAME] = 0,508  ProbCarte[0][ROI] = 0,000
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][52] = 0,241
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][53] = 0,242
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][55] = 0,244
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][57] = 0,246
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][59] = 0,247
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][60] = 0,249
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][62] = 0,391
+Entrée Regle2Proba : Carte N° 2, Index = 63, pos = 2, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :RP 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :RP 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :RP 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 2 :RP 
+Entrée Regle2Proba : Carte N° 3, Index = 54, pos = 3, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :5P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :5P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :5P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 3 :5P 
+Entrée Regle2Proba : Carte N° 0, Index = 50, pos = 0, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :1P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :1P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :1P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 0 :1P 
+Heuristique Couleur 5, Ouverture couleur avec 1 au 5 : Roi ou Dame.. ProbCarte[0][DAME] = 0,533  ProbCarte[0][ROI] = 0,000
+Entrée Regle2Proba : Carte N° 1, Index = 51, pos = 1, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :2P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :2P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :2P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 1 :2P 
+Entrée Regle2Proba : Carte N° 3, Index = 54, pos = 3, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :5P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :5P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :5P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 3 :5P 
+Entrée Regle2Proba : Carte N° 0, Index = 50, pos = 0, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :1P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :1P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :1P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 0 :1P 
+Heuristique Couleur 0, Monte proba petit si ne suit pas ATOUT sur Flanc ATOUT. ProbCarte[0][1] = 0,512
+Heuristique Couleur 0.1, Change Flanc ATOUT vers 4
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][52] = 0,233
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][53] = 0,234
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][55] = 0,236
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][56] = 0,238
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][58] = 0,239
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][59] = 0,241
+Heuristique Couleur 18, Couleur ouverte par possesseur petit (courte). ProbCarte[0][61] = 0,242
+Entrée Regle2Proba : Carte N° 1, Index = 51, pos = 1, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :2P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :2P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :2P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 1 :2P 
+Entrée Regle2Proba : Carte N° 2, Index = 63, pos = 2, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :RP 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :RP 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :RP 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 2 :RP 
+Fin du pli 5
+Points Preneur 8, Défense 13
+--------------------------------------------------------------------------------------------
+--------------Pli 6--------------------------------
+JoueEnPremierAttaque : NbCarte = 13
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==0
+JoueEnPremierAttaque : ResteAtout = 10
+JoueEnPremierAttaque: ValCouleur[3]=-3,884
+JoueEnPremierAttaque: ValCouleur[5]=4,699
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=6, ResteAtout=10
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-103,824
+Joueur 2, Position 0, pose Carte 6C Reste NbCarte=12 NbCarteJoueur[2]=12
+--
+Position 3, JoueDefenseSecond après 6C 
+Proba Petit = 2:0,275  1:0,214  0:0,511  Chien:0,000
+Proba 21 = 2:0,458  1:0,267  0:0,275  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,400, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,400, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,074, CalProbCoupe[P]=0,221, CalProbCoupe[C]=0,003
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=0,271, TmpProbCoupe[C]=0,033
+Longueur ATOUT Preneur =6,20
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,967
+Essai carte Exc  Score = 6,88
+Essai carte 8C  Score = 10,69
+Joueur 3, Position 1, pose Carte 8C Reste NbCarte=12 NbCarteJoueur[3]=12
+Joueur 0, Position 2, pose Carte 7C Reste NbCarte=12 NbCarteJoueur[0]=12
+----
+Position 1, JoueDefenseDernier après 6C 8C 7C 
+Proba Petit = 0:0,494  3:0,223  2:0,283  Chien:0,000
+Proba 21 = 0:0,293  3:0,259  2:0,448  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,400, ProbCoupe[C]=0,054
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,400, GuessProbCoupe[C]=0,054
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,119, CalProbCoupe[P]=0,312, CalProbCoupe[C]=0,002
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=0,800, TmpProbCoupe[C]=0,108
+Longueur ATOUT Preneur =6,56
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 1,000
+Essai Carte 4A  Score = 6,58
+Essai Carte 11A  Score = 5,11
+Joueur 1, Position 3, pose Carte 4A Reste NbCarte=12 NbCarteJoueur[1]=12
+Entrée Regle2Proba : Carte N° 0, Index = 69, pos = 2, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :6C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :6C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :6C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 0 :6C 
+Entrée Regle2Proba : Carte N° 1, Index = 71, pos = 3, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :8C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :8C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :8C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 1 :8C 
+Entrée Regle2Proba : Carte N° 3, Index = 4, pos = 1, PositionJoueur=0, Couleur demandée=5
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+PROBLEME Proba pour joueur 0:  pJeu->ProbCarte[CHIEN][64] = 0,072 et Carte appartient au chien
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :4A 
+Heuristique 7, Défenseur coupe en premier après le preneur sans mettre petit, n'a pas le petit : Nouvelle proba ProbCarte[1][1] = 0,000
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :4A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :4A 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 3 :4A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 69, pos = 2, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :6C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :6C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :6C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 0 :6C 
+Entrée Regle2Proba : Carte N° 1, Index = 71, pos = 3, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :8C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :8C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :8C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 1 :8C 
+Entrée Regle2Proba : Carte N° 2, Index = 70, pos = 0, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :7C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :7C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :7C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 2 :7C 
+Entrée Regle2Proba : Carte N° 1, Index = 71, pos = 3, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :8C 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :8C 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :8C 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 1 :8C 
+Entrée Regle2Proba : Carte N° 2, Index = 70, pos = 0, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :7C 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :7C 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :7C 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 2 :7C 
+Entrée Regle2Proba : Carte N° 3, Index = 4, pos = 1, PositionJoueur=2, Couleur demandée=5
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :4A 
+Heuristique 7, Défenseur coupe en premier après le preneur sans mettre petit, n'a pas le petit : Nouvelle proba ProbCarte[1][1] = 0,048
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :4A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :4A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][1] = 0,013
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 3 :4A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,438
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 69, pos = 2, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :6C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :6C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :6C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 0 :6C 
+Entrée Regle2Proba : Carte N° 2, Index = 70, pos = 0, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :7C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :7C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :7C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 2 :7C 
+Entrée Regle2Proba : Carte N° 3, Index = 4, pos = 1, PositionJoueur=3, Couleur demandée=5
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[CHIEN][64] = 0,058 et Carte appartient au chien
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :4A 
+Heuristique 7, Défenseur coupe en premier après le preneur sans mettre petit, n'a pas le petit : Nouvelle proba ProbCarte[1][1] = 0,022
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :4A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :4A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][1] = 0,006
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 3 :4A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Fin du pli 6
+Points Preneur 8, Défense 15
+--------------------------------------------------------------------------------------------
+---------------------------------------- Pli 7 ---------------------------------
+Entrée JoueEnPremierDefense, Position 1, Flanc = 4, StatusChasse=0, AvgLgPreneur=6,43, SansAtoutPreneur=0,000
+Nombre de distributions 1361054797417974857728
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,400, ProbCoupe[C]=0,042
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=0,632, GuessProbCoupe[C]=0,027
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,087, CalProbCoupe[P]=0,256, CalProbCoupe[C]=0,042
+Proba Petit = 0:0,500  3:0,220  2:0,280  Chien:0,000
+Proba 21 = 0:0,304  3:0,266  2:0,431  Chien:0,000
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+Entrée CoupsEntameDefense : NbCarte=12, Joueur=1, ValCouleur=[0,00, 0,00, 0,00, 0,00, 0,00, 0,00]
+Sortie CoupsEntameDefense : Pas de coup sûr
+ValCouleur TREFLE=0,000 CARREAU=0,000 PIQUE=0,000 COEUR=0,000
+Valeur couleur 2: 8,02
+Entrée GetValeurCouleurOuverture(3) : ForceJeu=0, val_longueur = 4,00, pourcentage=0,00, SansAtoutPreneur=0,00
+GetValeurCouleurOuverture(3) après honneurs: val=4,00
+GetValeurCouleurOuverture(3) après signalisation: val=4,00
+Valeur ouverture 3 : NbCouleur = 3, Val=4,997, ProbCoupeAvant=0,000, ProbCoupeApres=0,049
+Valeur couleur 3: 5,00
+Valeur couleur 4: 19,20
+Valeur ATOUT chasse non lancée: 0,00
+Valeur finale ATOUT : -23,00
+Joueur 1, Position 0, pose Carte 7P Reste NbCarte=11 NbCarteJoueur[1]=11
+--
+Position 2, JoueAttaqueSecond après 7P 
+Proba Petit = 3:0,840  0:0,147  1:0,013  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = 0
+Flanc = 2, ValFlanc = 0,222, CouleurTenue = 5
+ResteAtout = 9
+Valeur Petit au Bout=0,000
+ProbGain = 0,997
+Essai carte 6A  Score = 2,22
+Essai carte 14A  Score = 0,74
+Essai carte 17A  Score = -0,25
+Essai carte 19A  Score = -0,88
+Essai carte 20A  Score = -1,23
+Essai carte 21A  Score = -3,59
+Joueur 2, Position 1, pose Carte 6A Reste NbCarte=11 NbCarteJoueur[2]=11
+Règle Tmp 9,1, BaisseTmpProb(2, 52) Initial = 0,211, New 0,000, Facteur pour autres 1,268
+  Nouvelles valeurs TmpProbCarte[3][52] = 0,000 TmpProbCarte[0][52] = 0,292 TmpProbCarte[1][52] = 0,443 TmpProbCarte[4][52] = 0,265
+Règle Tmp 9,1, BaisseTmpProb(2, 53) Initial = 0,211, New 0,000, Facteur pour autres 1,268
+  Nouvelles valeurs TmpProbCarte[3][53] = 0,000 TmpProbCarte[0][53] = 0,292 TmpProbCarte[1][53] = 0,443 TmpProbCarte[4][53] = 0,265
+Règle Tmp 9,1, BaisseTmpProb(2, 55) Initial = 0,211, New 0,000, Facteur pour autres 1,268
+  Nouvelles valeurs TmpProbCarte[3][55] = 0,000 TmpProbCarte[0][55] = 0,291 TmpProbCarte[1][55] = 0,444 TmpProbCarte[4][55] = 0,265
+Règle Tmp 9,1, BaisseTmpProb(2, 58) Initial = 0,212, New 0,000, Facteur pour autres 1,269
+  Nouvelles valeurs TmpProbCarte[3][58] = 0,000 TmpProbCarte[0][58] = 0,289 TmpProbCarte[1][58] = 0,445 TmpProbCarte[4][58] = 0,266
+Règle Tmp 9,1, BaisseTmpProb(2, 59) Initial = 0,212, New 0,000, Facteur pour autres 1,269
+  Nouvelles valeurs TmpProbCarte[3][59] = 0,000 TmpProbCarte[0][59] = 0,289 TmpProbCarte[1][59] = 0,445 TmpProbCarte[4][59] = 0,266
+Règle Tmp 9,1, BaisseTmpProb(2, 61) Initial = 0,212, New 0,000, Facteur pour autres 1,269
+  Nouvelles valeurs TmpProbCarte[3][61] = 0,000 TmpProbCarte[0][61] = 0,288 TmpProbCarte[1][61] = 0,446 TmpProbCarte[4][61] = 0,266
+---
+Position 3, JoueEnTroisieme après 7P 6A 
+Proba Petit = 2:0,397  1:0,005  0:0,598  Chien:0,000
+Proba 21 = 2:0,509  1:0,237  0:0,254  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=0,400, ProbCoupe[C]=0,027
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,027
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,058, CalProbCoupe[P]=0,189, CalProbCoupe[C]=0,024
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,033
+Longueur ATOUT Preneur =6,01
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,099
+Essai Carte Exc  Score = -4,28
+Essai Carte 8P  Score = -2,08
+Essai Carte VP  Score = -3,68
+Essai Carte DP  Score = -6,89
+Joueur 3, Position 2, pose Carte 8P Reste NbCarte=11 NbCarteJoueur[3]=11
+Joueur 0, Position 3, pose Carte 4P Reste NbCarte=11 NbCarteJoueur[0]=11
+Entrée Regle2Proba : Carte N° 0, Index = 56, pos = 1, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :7P 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :7P 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :7P 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 0 :7P 
+Entrée Regle2Proba : Carte N° 1, Index = 6, pos = 2, PositionJoueur=0, Couleur demandée=4
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :6A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :6A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :6A 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 1 :6A 
+Entrée Regle2Proba : Carte N° 2, Index = 57, pos = 3, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :8P 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :8P 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :8P 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 2 :8P 
+Entrée Regle2Proba : Carte N° 1, Index = 6, pos = 2, PositionJoueur=1, Couleur demandée=4
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :6A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :6A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :6A 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 1 :6A 
+Entrée Regle2Proba : Carte N° 2, Index = 57, pos = 3, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :8P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :8P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :8P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 2 :8P 
+Entrée Regle2Proba : Carte N° 3, Index = 53, pos = 0, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :4P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :4P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :4P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 3 :4P 
+Entrée Regle2Proba : Carte N° 0, Index = 56, pos = 1, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :7P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :7P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :7P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 0 :7P 
+Entrée Regle2Proba : Carte N° 2, Index = 57, pos = 3, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :8P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :8P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :8P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 2 :8P 
+Entrée Regle2Proba : Carte N° 3, Index = 53, pos = 0, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :4P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :4P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :4P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 3 :4P 
+Entrée Regle2Proba : Carte N° 0, Index = 56, pos = 1, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :7P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :7P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :7P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 0 :7P 
+Entrée Regle2Proba : Carte N° 1, Index = 6, pos = 2, PositionJoueur=3, Couleur demandée=4
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :6A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :6A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :6A 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 1 :6A 
+Entrée Regle2Proba : Carte N° 3, Index = 53, pos = 0, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :4P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :4P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :4P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 3 :4P 
+Fin du pli 7
+Points Preneur 10, Défense 15
+--------------------------------------------------------------------------------------------
+--------------Pli 8--------------------------------
+JoueEnPremierAttaque : NbCarte = 11
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==0
+JoueEnPremierAttaque : ResteAtout = 9
+JoueEnPremierAttaque: ValCouleur[3]=-3,870
+JoueEnPremierAttaque: ValCouleur[5]=5,821
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=5, ResteAtout=9
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-141,666
+Joueur 2, Position 0, pose Carte 9C Reste NbCarte=10 NbCarteJoueur[2]=10
+--
+Position 3, JoueDefenseSecond après 9C 
+Proba Petit = 2:0,398  1:0,007  0:0,596  Chien:0,000
+Proba 21 = 2:0,474  1:0,269  0:0,257  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,027
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,027
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,029, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,022
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,074
+Longueur ATOUT Preneur =5,81
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,976
+Essai carte Exc  Score = 10,74
+Essai carte 8A  Score = 1,91
+Essai carte 9A  Score = 1,70
+Essai carte 18A  Score = -1,16
+Joueur 3, Position 1, pose Carte Exc Reste NbCarte=10 NbCarteJoueur[3]=10
+Joueur 0, Position 2, pose Carte 1A Reste NbCarte=10 NbCarteJoueur[0]=10
+Règle Tmp 9,1, BaisseTmpProb(0, 64) Initial = 0,315, New 0,000, Facteur pour autres 1,461
+  Nouvelles valeurs TmpProbCarte[1][64] = 0,000 TmpProbCarte[2][64] = 0,678 TmpProbCarte[3][64] = 0,217 TmpProbCarte[4][64] = 0,105
+----
+Position 1, JoueDefenseDernier après 9C Exc 1A 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,305  3:0,246  2:0,449  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,043
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,027
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,057, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,043
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,108
+Longueur ATOUT Preneur =6,03
+Status Chasse = 0
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 1,000
+Essai Carte 11A  Score = 22,11
+Joueur 1, Position 3, pose Carte 11A Reste NbCarte=10 NbCarteJoueur[1]=10
+Entrée Regle2Proba : Carte N° 0, Index = 72, pos = 2, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :9C 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :9C 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :9C 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 0 :9C 
+Entrée Regle2Proba : Carte N° 1, Index = 0, pos = 3, PositionJoueur=0, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :Exc 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :Exc 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :Exc 
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 1 :Exc 
+Entrée Regle2Proba : Carte N° 3, Index = 11, pos = 1, PositionJoueur=0, Couleur demandée=5
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :11A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :11A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :11A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][8] = 0,106
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][9] = 0,114
+Entrée Heuristique_Couleur Demandée 5, Position 0, examine carte Index 3 :11A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 72, pos = 2, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :9C 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :9C 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :9C 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 0 :9C 
+Entrée Regle2Proba : Carte N° 1, Index = 0, pos = 3, PositionJoueur=1, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :Exc 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :Exc 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :Exc 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 1 :Exc 
+Entrée Regle2Proba : Carte N° 2, Index = 1, pos = 0, PositionJoueur=1, Couleur demandée=5
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :1A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :1A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :1A 
+Entrée Heuristique_Couleur Demandée 5, Position 1, examine carte Index 2 :1A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,900
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 1, Index = 0, pos = 3, PositionJoueur=2, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :Exc 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :Exc 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :Exc 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 1 :Exc 
+Entrée Regle2Proba : Carte N° 2, Index = 1, pos = 0, PositionJoueur=2, Couleur demandée=5
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :1A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :1A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :1A 
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 2 :1A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,450
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 11, pos = 1, PositionJoueur=2, Couleur demandée=5
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :11A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :11A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :11A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][5] = 0,103
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][7] = 0,121
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][8] = 0,131
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][9] = 0,142
+Entrée Heuristique_Couleur Demandée 5, Position 2, examine carte Index 3 :11A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,394
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 72, pos = 2, PositionJoueur=3, Couleur demandée=5
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :9C 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :9C 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :9C 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 0 :9C 
+Entrée Regle2Proba : Carte N° 2, Index = 1, pos = 0, PositionJoueur=3, Couleur demandée=5
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 0
+PROBLEME Proba pour joueur 3:  pJeu->ProbCarte[NORD][64] = 0,907 et Carte n'appartient pas au joueur NORD
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :1A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :1A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :1A 
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 2 :1A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,900
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 11, pos = 1, PositionJoueur=3, Couleur demandée=5
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 5 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :11A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :11A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :11A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][5] = 0,091
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[1][7] = 0,104
+Entrée Heuristique_Couleur Demandée 5, Position 3, examine carte Index 3 :11A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Fin du pli 8
+Points Preneur 10, Défense 25
+--------------------------------------------------------------------------------------------
+---------------------------------------- Pli 9 ---------------------------------
+Entrée JoueEnPremierDefense, Position 1, Flanc = 4, StatusChasse=-1, AvgLgPreneur=5,98, SansAtoutPreneur=0,000
+Nombre de distributions 772299081585551488
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,055
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,014
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,055, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,055
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,309  3:0,249  2:0,442  Chien:0,000
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+Entrée CoupsEntameDefense : NbCarte=10, Joueur=1, ValCouleur=[0,00, 0,00, 0,00, 0,00, 0,00, 0,00]
+Sortie CoupsEntameDefense : Pas de coup sûr
+ValCouleur TREFLE=0,000 CARREAU=0,000 PIQUE=0,000 COEUR=0,000
+Valeur couleur 2: 7,57
+Entrée GetValeurCouleurOuverture(3) : ForceJeu=0, val_longueur = 4,00, pourcentage=0,00, SansAtoutPreneur=0,00
+GetValeurCouleurOuverture(3) après honneurs: val=4,00
+GetValeurCouleurOuverture(3) après signalisation: val=4,00
+Valeur ouverture 3 : NbCouleur = 3, Val=4,997, ProbCoupeAvant=0,000, ProbCoupeApres=0,068
+Valeur couleur 3: 5,00
+Valeur couleur 4: 17,31
+Valeur finale ATOUT : -100000,00
+Joueur 1, Position 0, pose Carte 9P Reste NbCarte=9 NbCarteJoueur[1]=9
+--
+Position 2, JoueAttaqueSecond après 9P 
+Proba Petit = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = -1
+Flanc = 2, ValFlanc = 0,148, CouleurTenue = 5
+ResteAtout = 7
+Valeur Petit au Bout=0,000
+ProbGain = 0,985
+Essai carte 14A  Score = 2,12
+Essai carte 17A  Score = 1,51
+Essai carte 19A  Score = 1,30
+Essai carte 20A  Score = 0,95
+Essai carte 21A  Score = -1,40
+Joueur 2, Position 1, pose Carte 14A Reste NbCarte=9 NbCarteJoueur[2]=9
+---
+Position 3, JoueEnTroisieme après 9P 14A 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,444  1:0,268  0:0,289  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,020
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,014
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,027, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,020
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,074
+Longueur ATOUT Preneur =4,63
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,142
+Essai Carte VP  Score = -2,07
+Essai Carte DP  Score = -4,93
+Joueur 3, Position 2, pose Carte VP Reste NbCarte=9 NbCarteJoueur[3]=9
+Joueur 0, Position 3, pose Carte 6P Reste NbCarte=9 NbCarteJoueur[0]=9
+Entrée Regle2Proba : Carte N° 0, Index = 58, pos = 1, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :9P 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :9P 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :9P 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 0 :9P 
+Entrée Regle2Proba : Carte N° 1, Index = 14, pos = 2, PositionJoueur=0, Couleur demandée=4
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :14A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :14A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :14A 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 1 :14A 
+Entrée Regle2Proba : Carte N° 2, Index = 60, pos = 3, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :VP 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :VP 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :VP 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 2 :VP 
+Entrée Regle2Proba : Carte N° 1, Index = 14, pos = 2, PositionJoueur=1, Couleur demandée=4
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :14A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :14A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :14A 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 1 :14A 
+Entrée Regle2Proba : Carte N° 2, Index = 60, pos = 3, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :VP 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :VP 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :VP 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 2 :VP 
+Entrée Regle2Proba : Carte N° 3, Index = 55, pos = 0, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :6P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :6P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :6P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 3 :6P 
+Entrée Regle2Proba : Carte N° 0, Index = 58, pos = 1, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :9P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :9P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :9P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 0 :9P 
+Entrée Regle2Proba : Carte N° 2, Index = 60, pos = 3, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :VP 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :VP 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :VP 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 2 :VP 
+Entrée Regle2Proba : Carte N° 3, Index = 55, pos = 0, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :6P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :6P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :6P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 3 :6P 
+Entrée Regle2Proba : Carte N° 0, Index = 58, pos = 1, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :9P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :9P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :9P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 0 :9P 
+Entrée Regle2Proba : Carte N° 1, Index = 14, pos = 2, PositionJoueur=3, Couleur demandée=4
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :14A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :14A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :14A 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 1 :14A 
+Entrée Regle2Proba : Carte N° 3, Index = 55, pos = 0, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :6P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :6P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :6P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 3 :6P 
+Fin du pli 9
+Points Preneur 13, Défense 25
+--------------------------------------------------------------------------------------------
+--------------Pli 10--------------------------------
+JoueEnPremierAttaque : NbCarte = 9
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 7
+JoueEnPremierAttaque: ValCouleur[3]=-3,871
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=4, ResteAtout=7
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-77,842
+Joueur 2, Position 0, pose Carte RK Reste NbCarte=8 NbCarteJoueur[2]=8
+--
+Position 3, JoueDefenseSecond après RK 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,396  1:0,306  0:0,298  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,040
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,014
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,040, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,040
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,083, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,074
+Longueur ATOUT Preneur =4,36
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,088
+Essai carte 3K  Score = -10,30
+Essai carte 5K  Score = -10,30
+Essai carte 10K  Score = -10,30
+Joueur 3, Position 1, pose Carte 3K Reste NbCarte=8 NbCarteJoueur[3]=8
+Joueur 0, Position 2, pose Carte 7K Reste NbCarte=8 NbCarteJoueur[0]=8
+----
+Position 1, JoueDefenseDernier après RK 3K 7K 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,337  3:0,266  2:0,397  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,744, ProbCoupe[P]=1,000, ProbCoupe[C]=0,081
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,744, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,014
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,077, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,081
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,109
+Longueur ATOUT Preneur =5,23
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte 2K  Score = -12,00
+Essai Carte 4K  Score = -12,00
+Essai Carte 6K  Score = -12,00
+Joueur 1, Position 3, pose Carte 2K Reste NbCarte=8 NbCarteJoueur[1]=8
+Entrée Regle2Proba : Carte N° 0, Index = 49, pos = 2, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :RK 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :RK 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :RK 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 0 :RK 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=0,500, ProbCoupe[K]=0,297, ProbCoupe[P]=0,707, ProbCoupe[C]=0,016
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][36] = 0,312
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][39] = 0,310
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][40] = 0,307
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][41] = 0,304
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][43] = 0,302
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][45] = 0,299
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][46] = 0,445
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][48] = 0,295
+Entrée Regle2Proba : Carte N° 1, Index = 38, pos = 3, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :3K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :3K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :3K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 1 :3K 
+Entrée Regle2Proba : Carte N° 3, Index = 37, pos = 1, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :2K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :2K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :2K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 3 :2K 
+Entrée Regle2Proba : Carte N° 0, Index = 49, pos = 2, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :RK 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :RK 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :RK 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 0 :RK 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=1,000, ProbCoupe[K]=0,297, ProbCoupe[P]=1,000, ProbCoupe[C]=0,016
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][36] = 0,236
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][40] = 0,234
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][43] = 0,232
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][44] = 0,230
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][45] = 0,228
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][46] = 0,380
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][47] = 0,225
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][48] = 0,223
+Entrée Regle2Proba : Carte N° 1, Index = 38, pos = 3, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :3K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :3K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :3K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 1 :3K 
+Entrée Regle2Proba : Carte N° 2, Index = 42, pos = 0, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :7K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :7K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :7K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 2 :7K 
+Entrée Regle2Proba : Carte N° 1, Index = 38, pos = 3, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :3K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :3K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :3K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 1 :3K 
+Entrée Regle2Proba : Carte N° 2, Index = 42, pos = 0, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :7K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :7K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :7K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 2 :7K 
+Entrée Regle2Proba : Carte N° 3, Index = 37, pos = 1, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :2K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :2K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :2K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 3 :2K 
+Entrée Regle2Proba : Carte N° 0, Index = 49, pos = 2, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :RK 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :RK 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :RK 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 0 :RK 
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. Change ProbCoupe[T]=1,000, ProbCoupe[K]=0,297, ProbCoupe[P]=1,000, ProbCoupe[C]=0,016
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][36] = 0,281
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][39] = 0,279
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][41] = 0,276
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][43] = 0,274
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][44] = 0,272
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][46] = 0,435
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][47] = 0,267
+Heuristique Couleur 17, Entame preneur plutôt dans une longue. ProbCarte[2][48] = 0,265
+Entrée Regle2Proba : Carte N° 2, Index = 42, pos = 0, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :7K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :7K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :7K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 2 :7K 
+Entrée Regle2Proba : Carte N° 3, Index = 37, pos = 1, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :2K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :2K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :2K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 3 :2K 
+Fin du pli 10
+Points Preneur 19, Défense 25
+--------------------------------------------------------------------------------------------
+--------------Pli 11--------------------------------
+JoueEnPremierAttaque : NbCarte = 8
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 7
+JoueEnPremierAttaque: ValCouleur[3]=0,420
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=4, ResteAtout=7
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-77,842
+Joueur 2, Position 0, pose Carte DK Reste NbCarte=7 NbCarteJoueur[2]=7
+--
+Position 3, JoueDefenseSecond après DK 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,340  1:0,338  0:0,322  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,297, ProbCoupe[P]=1,000, ProbCoupe[C]=0,078
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,297, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,069, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,078
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,131, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,134
+Longueur ATOUT Preneur =4,04
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,288
+Essai carte 5K  Score = -4,62
+Essai carte 10K  Score = -4,61
+Joueur 3, Position 1, pose Carte 10K Reste NbCarte=7 NbCarteJoueur[3]=7
+Joueur 0, Position 2, pose Carte 9K Reste NbCarte=7 NbCarteJoueur[0]=7
+----
+Position 1, JoueDefenseDernier après DK 10K 9K 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,363  3:0,292  2:0,345  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,297, ProbCoupe[P]=1,000, ProbCoupe[C]=0,139
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,297, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,113, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,139
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,204
+Longueur ATOUT Preneur =4,82
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte 4K  Score = -10,00
+Essai Carte 6K  Score = -10,00
+Joueur 1, Position 3, pose Carte 4K Reste NbCarte=7 NbCarteJoueur[1]=7
+Entrée Regle2Proba : Carte N° 0, Index = 48, pos = 2, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :DK 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :DK 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :DK 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 0 :DK 
+Heuristique Couleur 6, Perd la dame sur le Roi ne possède pas l'excuse.. ProbCarte[2][0] = 0,000
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][36] = 0,404
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][36] = 0,092
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][40] = 0,393
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][40] = 0,096
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][41] = 0,383
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][41] = 0,100
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][43] = 0,374
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][43] = 0,105
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][46] = 0,453
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][46] = 0,234
+Entrée Regle2Proba : Carte N° 1, Index = 45, pos = 3, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :10K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :10K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :10K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 1 :10K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][36] = 0,083
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][40] = 0,085
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][41] = 0,086
+Entrée Regle2Proba : Carte N° 3, Index = 39, pos = 1, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :4K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :4K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :4K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 3 :4K 
+Entrée Regle2Proba : Carte N° 0, Index = 48, pos = 2, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :DK 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :DK 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :DK 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 0 :DK 
+Heuristique Couleur 6, Perd la dame sur le Roi ne possède pas l'excuse.. ProbCarte[2][0] = 0,000
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][36] = 0,339
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][36] = 0,125
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][40] = 0,329
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][40] = 0,132
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][43] = 0,320
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][43] = 0,139
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][46] = 0,397
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][46] = 0,266
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][47] = 0,288
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][47] = 0,161
+Entrée Regle2Proba : Carte N° 1, Index = 45, pos = 3, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :10K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :10K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :10K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 1 :10K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][36] = 0,079
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][40] = 0,081
+Entrée Regle2Proba : Carte N° 2, Index = 44, pos = 0, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :9K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :9K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :9K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 2 :9K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[0][36] = 0,117
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[0][40] = 0,120
+Entrée Regle2Proba : Carte N° 1, Index = 45, pos = 3, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :10K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :10K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :10K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 1 :10K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][40] = 0,110
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[3][41] = 0,114
+Entrée Regle2Proba : Carte N° 2, Index = 44, pos = 0, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :9K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :9K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :9K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 2 :9K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[0][40] = 0,158
+Entrée Regle2Proba : Carte N° 3, Index = 39, pos = 1, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :4K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :4K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :4K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 3 :4K 
+Entrée Regle2Proba : Carte N° 0, Index = 48, pos = 2, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :DK 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :DK 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :DK 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 0 :DK 
+Heuristique Couleur 6, Perd la dame sur le Roi ne possède pas l'excuse.. ProbCarte[2][0] = 0,000
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][36] = 0,379
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][36] = 0,086
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][41] = 0,370
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][41] = 0,090
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][43] = 0,362
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][43] = 0,093
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][46] = 0,458
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][46] = 0,231
+Heuristique Couleur 17bis, Preneur rejoue dans couleur entamée. ProbCarte[2][47] = 0,327
+Heuristique Couleur 17ter, Preneur rejoue dans couleur entamée, baisse proba chien. ProbCarte[4][47] = 0,107
+Entrée Regle2Proba : Carte N° 2, Index = 44, pos = 0, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :9K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :9K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :9K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 2 :9K 
+Heuristique Couleur 10, joueur joue assez grosse carte et perd le pli, n'a plus de petites.. ProbCarte[0][36] = 0,093
+Entrée Regle2Proba : Carte N° 3, Index = 39, pos = 1, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :4K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :4K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :4K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 3 :4K 
+Fin du pli 11
+Points Preneur 24, Défense 25
+--------------------------------------------------------------------------------------------
+--------------Pli 12--------------------------------
+JoueEnPremierAttaque : NbCarte = 7
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 7
+JoueEnPremierAttaque: ValCouleur[3]=3,456
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=4, ResteAtout=7
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-77,842
+Joueur 2, Position 0, pose Carte 1K Reste NbCarte=6 NbCarteJoueur[2]=6
+--
+Position 3, JoueDefenseSecond après 1K 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,249  1:0,395  0:0,356  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,149, ProbCoupe[P]=1,000, ProbCoupe[C]=0,212
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,149, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,043, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,212
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,131, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,271
+Longueur ATOUT Preneur =3,50
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 1,000
+Essai carte 5K  Score = 6,88
+Joueur 3, Position 1, pose Carte 5K Reste NbCarte=6 NbCarteJoueur[3]=6
+Joueur 0, Position 2, pose Carte CK Reste NbCarte=6 NbCarteJoueur[0]=6
+----
+Position 1, JoueDefenseDernier après 1K 5K CK 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,397  3:0,323  2:0,280  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,149, ProbCoupe[P]=1,000, ProbCoupe[C]=0,355
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,149, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,043, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,355
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,366
+Longueur ATOUT Preneur =4,30
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 1,000
+Essai Carte 6K  Score = 9,00
+Joueur 1, Position 3, pose Carte 6K Reste NbCarte=6 NbCarteJoueur[1]=6
+Entrée Regle2Proba : Carte N° 0, Index = 36, pos = 2, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :1K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :1K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :1K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 0 :1K 
+Entrée Regle2Proba : Carte N° 1, Index = 40, pos = 3, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :5K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :5K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :5K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 1 :5K 
+Entrée Regle2Proba : Carte N° 3, Index = 41, pos = 1, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :6K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :6K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :6K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 3 :6K 
+Entrée Regle2Proba : Carte N° 0, Index = 36, pos = 2, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :1K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :1K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :1K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 0 :1K 
+Entrée Regle2Proba : Carte N° 1, Index = 40, pos = 3, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :5K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :5K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :5K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 1 :5K 
+Entrée Regle2Proba : Carte N° 2, Index = 47, pos = 0, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :CK 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :CK 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :CK 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 2 :CK 
+Entrée Regle2Proba : Carte N° 1, Index = 40, pos = 3, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :5K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :5K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :5K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 1 :5K 
+Entrée Regle2Proba : Carte N° 2, Index = 47, pos = 0, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :CK 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :CK 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :CK 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 2 :CK 
+Entrée Regle2Proba : Carte N° 3, Index = 41, pos = 1, PositionJoueur=2, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :6K 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :6K 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :6K 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 3 :6K 
+Entrée Regle2Proba : Carte N° 0, Index = 36, pos = 2, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :1K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :1K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :1K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 0 :1K 
+Entrée Regle2Proba : Carte N° 2, Index = 47, pos = 0, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :CK 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :CK 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :CK 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 2 :CK 
+Entrée Regle2Proba : Carte N° 3, Index = 41, pos = 1, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :6K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :6K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :6K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 3 :6K 
+Fin du pli 12
+Points Preneur 24, Défense 29
+--------------------------------------------------------------------------------------------
+Joueur 0, Position 0, pose Carte 10P Reste NbCarte=5 NbCarteJoueur[0]=5
+--
+Position 1, JoueDefenseSecond après 10P 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,358  3:0,349  2:0,294  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,251, ProbCoupe[P]=1,000, ProbCoupe[C]=0,379
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,074, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,251, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,379
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,417
+Longueur ATOUT Preneur =4,44
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,156
+Essai carte CP  Score = -2,24
+Joueur 1, Position 1, pose Carte CP Reste NbCarte=5 NbCarteJoueur[1]=5
+--
+Position 2, JoueAttaqueTroisieme après 10P CP 
+Proba Petit = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = -2
+ResteAtout = 7
+Valeur Petit au Bout=0,000
+Flanc = 2, ValFlanc = 0,099, CouleurTenue = 5
+ProbGain = 0,787
+Essai carte 17A  Score = 2,86
+Essai carte 19A  Score = 4,30
+Essai carte 20A  Score = 3,95
+Essai carte 21A  Score = 1,59
+Joueur 2, Position 2, pose Carte 19A Reste NbCarte=5 NbCarteJoueur[2]=5
+----
+Position 3, JoueDefenseDernier après 10P CP 19A 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,263  1:0,393  0:0,344  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,179, ProbCoupe[P]=1,000, ProbCoupe[C]=0,217
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,074, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,179, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,217
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,302, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,336
+Longueur ATOUT Preneur =3,36
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte DP  Score = -8,71
+Joueur 3, Position 3, pose Carte DP Reste NbCarte=5 NbCarteJoueur[3]=5
+Entrée Regle2Proba : Carte N° 1, Index = 61, pos = 1, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :CP 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :CP 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :CP 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 1 :CP 
+Entrée Regle2Proba : Carte N° 2, Index = 19, pos = 2, PositionJoueur=0, Couleur demandée=4
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :19A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :19A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :19A 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 2 :19A 
+Entrée Regle2Proba : Carte N° 3, Index = 62, pos = 3, PositionJoueur=0, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :DP 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :DP 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :DP 
+Entrée Heuristique_Couleur Demandée 4, Position 0, examine carte Index 3 :DP 
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][52] = 0,013
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][52] = 0,002
+Entrée Regle2Proba : Carte N° 0, Index = 59, pos = 0, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :10P 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :10P 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :10P 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 0 :10P 
+Entrée Regle2Proba : Carte N° 2, Index = 19, pos = 2, PositionJoueur=1, Couleur demandée=4
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :19A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :19A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :19A 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 2 :19A 
+Entrée Regle2Proba : Carte N° 3, Index = 62, pos = 3, PositionJoueur=1, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :DP 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :DP 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :DP 
+Entrée Heuristique_Couleur Demandée 4, Position 1, examine carte Index 3 :DP 
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][52] = 0,009
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][52] = 0,002
+Entrée Regle2Proba : Carte N° 0, Index = 59, pos = 0, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :10P 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :10P 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :10P 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 0 :10P 
+Entrée Regle2Proba : Carte N° 1, Index = 61, pos = 1, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :CP 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :CP 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :CP 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 1 :CP 
+Entrée Regle2Proba : Carte N° 3, Index = 62, pos = 3, PositionJoueur=2, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :DP 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :DP 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :DP 
+Entrée Heuristique_Couleur Demandée 4, Position 2, examine carte Index 3 :DP 
+Entrée Regle2Proba : Carte N° 0, Index = 59, pos = 0, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :10P 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :10P 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :10P 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 0 :10P 
+Entrée Regle2Proba : Carte N° 1, Index = 61, pos = 1, PositionJoueur=3, Couleur demandée=4
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :CP 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :CP 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :CP 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 1 :CP 
+Entrée Regle2Proba : Carte N° 2, Index = 19, pos = 2, PositionJoueur=3, Couleur demandée=4
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 4 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :19A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :19A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :19A 
+Entrée Heuristique_Couleur Demandée 4, Position 3, examine carte Index 2 :19A 
+Fin du pli 13
+Points Preneur 31, Défense 29
+--------------------------------------------------------------------------------------------
+--------------Pli 14--------------------------------
+JoueEnPremierAttaque : NbCarte = 5
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 7
+JoueEnPremierAttaque: ValCouleur[3]=5,999
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=3, ResteAtout=7
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-402,990
+Joueur 2, Position 0, pose Carte 8K Reste NbCarte=4 NbCarteJoueur[2]=4
+--
+Position 3, JoueDefenseSecond après 8K 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,178  1:0,445  0:0,376  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,279, ProbCoupe[P]=1,000, ProbCoupe[C]=0,330
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,074, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,279, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,330
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,523, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,448
+Longueur ATOUT Preneur =2,91
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,996
+Essai carte 8A  Score = -0,71
+Essai carte 9A  Score = -0,92
+Essai carte 18A  Score = -6,21
+Joueur 3, Position 1, pose Carte 8A Reste NbCarte=4 NbCarteJoueur[3]=4
+Joueur 0, Position 2, pose Carte 12A Reste NbCarte=4 NbCarteJoueur[0]=4
+----
+Position 1, JoueDefenseDernier après 8K 8A 12A 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,449  3:0,337  2:0,214  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,389, ProbCoupe[P]=1,000, ProbCoupe[C]=0,529
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,074, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,389, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,529
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,583
+Longueur ATOUT Preneur =3,18
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 1,000
+DéfausseGagnant_dernier : 8K 8A 12A 5T , val =  3,15
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,15
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 2,00
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+3,18)*0,00-> 0,000
+DéfausseGagnant_dernier : 8K 8A 12A 6T , val =  3,15
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,15
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 2,00
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+3,18)*0,00-> 0,000
+DéfausseGagnant_dernier : 8K 8A 12A 8T , val =  3,15
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,15
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 2,00
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+3,18)*0,00-> 0,000
+DéfausseGagnant_dernier : 8K 8A 12A 10T , val =  3,15
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,15
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 2,00
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+3,18)*0,00-> 0,000
+DéfausseGagnant_dernier : 8K 8A 12A CT , val =  5,15
+    = pJeu->MyCarte[i].Valeur : 5
+    + 0.75/pJeu->NbCouleur[c] : 0,15
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 2,00
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*5*(1-1,00)/(1.0+3,18)*0,00-> 0,000
+Joueur 1, Position 3, pose Carte CT Reste NbCarte=4 NbCarteJoueur[1]=4
+Entrée Regle2Proba : Carte N° 0, Index = 43, pos = 2, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :8K 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :8K 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :8K 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 0 :8K 
+Entrée Regle2Proba : Carte N° 1, Index = 8, pos = 3, PositionJoueur=0, Couleur demandée=3
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :8A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :8A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :8A 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 1 :8A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 33, pos = 1, PositionJoueur=0, Couleur demandée=3
+Règle 3, Vue de 0, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :CT 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :CT 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :CT 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 3 :CT 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 43, pos = 2, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :8K 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :8K 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :8K 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 0 :8K 
+Entrée Regle2Proba : Carte N° 1, Index = 8, pos = 3, PositionJoueur=1, Couleur demandée=3
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :8A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :8A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :8A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][5] = 0,135
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][7] = 0,165
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 1 :8A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 12, pos = 0, PositionJoueur=1, Couleur demandée=3
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :12A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :12A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :12A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[0][9] = 0,176
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 2 :12A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,844
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 1, Index = 8, pos = 3, PositionJoueur=2, Couleur demandée=3
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :8A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :8A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :8A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][5] = 0,145
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][7] = 0,175
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 1 :8A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 12, pos = 0, PositionJoueur=2, Couleur demandée=3
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :12A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :12A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :12A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[0][9] = 0,181
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 2 :12A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,422
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 33, pos = 1, PositionJoueur=2, Couleur demandée=3
+Règle 3, Vue de 2, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :CT 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :CT 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :CT 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 3 :CT 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,369
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 43, pos = 2, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :8K 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :8K 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :8K 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 0 :8K 
+Entrée Regle2Proba : Carte N° 2, Index = 12, pos = 0, PositionJoueur=3, Couleur demandée=3
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :12A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :12A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :12A 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 2 :12A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,844
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 33, pos = 1, PositionJoueur=3, Couleur demandée=3
+Règle 3, Vue de 3, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :CT 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :CT 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :CT 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 3 :CT 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Fin du pli 14
+Points Preneur 31, Défense 33
+--------------------------------------------------------------------------------------------
+Joueur 0, Position 0, pose Carte VT Reste NbCarte=3 NbCarteJoueur[0]=3
+--
+Position 1, JoueDefenseSecond après VT 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,356  3:0,432  2:0,211  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,643, ProbCoupe[P]=1,000, ProbCoupe[C]=0,654
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,037, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,643, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,654
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,744, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,709
+Longueur ATOUT Preneur =3,47
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenue = 5
+ProbGain = 0,038
+Essai carte 5T  Score = -6,04
+Essai carte 6T  Score = -6,04
+Essai carte 8T  Score = -6,04
+Essai carte 10T  Score = -6,04
+Joueur 1, Position 1, pose Carte 5T Reste NbCarte=3 NbCarteJoueur[1]=3
+--
+Position 2, JoueAttaqueTroisieme après VT 5T 
+Proba Petit = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = -2
+ResteAtout = 5
+Valeur Petit au Bout=0,000
+Flanc = 2, ValFlanc = 0,066, CouleurTenue = 5
+ProbGain = 0,615
+Essai carte 17A  Score = 2,40
+Essai carte 20A  Score = 1,91
+Essai carte 21A  Score = -0,44
+Joueur 2, Position 2, pose Carte 17A Reste NbCarte=3 NbCarteJoueur[2]=3
+----
+Position 3, JoueDefenseDernier après VT 5T 17A 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,395  1:0,000  0:0,605  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,620, ProbCoupe[P]=1,000, ProbCoupe[C]=0,587
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=0,037, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,620, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,587
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=0,776, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,744
+Longueur ATOUT Preneur =2,54
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 1,000, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte DT  Score = -7,41
+Essai Carte RT  Score = -9,41
+Joueur 3, Position 3, pose Carte DT Reste NbCarte=3 NbCarteJoueur[3]=3
+Entrée Regle2Proba : Carte N° 1, Index = 26, pos = 1, PositionJoueur=0, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :5T 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :5T 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :5T 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 1 :5T 
+Entrée Regle2Proba : Carte N° 2, Index = 17, pos = 2, PositionJoueur=0, Couleur demandée=2
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :17A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :17A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :17A 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 2 :17A 
+Entrée Regle2Proba : Carte N° 3, Index = 34, pos = 3, PositionJoueur=0, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :DT 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :DT 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :DT 
+Entrée Heuristique_Couleur Demandée 2, Position 0, examine carte Index 3 :DT 
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][22] = 0,006
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][25] = 0,007
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][27] = 0,008
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][29] = 0,010
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][30] = 0,012
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][31] = 0,016
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][22] = 0,003
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][25] = 0,004
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][27] = 0,004
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][29] = 0,004
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][30] = 0,004
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][31] = 0,004
+Entrée Regle2Proba : Carte N° 0, Index = 32, pos = 0, PositionJoueur=1, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :VT 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :VT 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :VT 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 0 :VT 
+Entrée Regle2Proba : Carte N° 2, Index = 17, pos = 2, PositionJoueur=1, Couleur demandée=2
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :17A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :17A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :17A 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 2 :17A 
+Entrée Regle2Proba : Carte N° 3, Index = 34, pos = 3, PositionJoueur=1, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :DT 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :DT 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :DT 
+Entrée Heuristique_Couleur Demandée 2, Position 1, examine carte Index 3 :DT 
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][22] = 0,004
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][25] = 0,005
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][30] = 0,006
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][22] = 0,001
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][25] = 0,001
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][30] = 0,001
+Entrée Regle2Proba : Carte N° 0, Index = 32, pos = 0, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :VT 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :VT 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :VT 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 0 :VT 
+Entrée Regle2Proba : Carte N° 1, Index = 26, pos = 1, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :5T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :5T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :5T 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 1 :5T 
+Entrée Regle2Proba : Carte N° 3, Index = 34, pos = 3, PositionJoueur=2, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :DT 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :DT 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :DT 
+Entrée Heuristique_Couleur Demandée 2, Position 2, examine carte Index 3 :DT 
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][27] = 0,008
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][29] = 0,010
+Heuristique Couleur 1, Si joue un honneur en dernier sur pli perdu, ne possède pas en dessous.. ProbCarte[3][31] = 0,013
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][27] = 0,003
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][29] = 0,003
+Heuristique Couleur 11, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[3][31] = 0,003
+Entrée Regle2Proba : Carte N° 0, Index = 32, pos = 0, PositionJoueur=3, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :VT 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :VT 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :VT 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 0 :VT 
+Entrée Regle2Proba : Carte N° 1, Index = 26, pos = 1, PositionJoueur=3, Couleur demandée=2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :5T 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :5T 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :5T 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 1 :5T 
+Entrée Regle2Proba : Carte N° 2, Index = 17, pos = 2, PositionJoueur=3, Couleur demandée=2
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 2 pour joueur 2
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :17A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :17A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :17A 
+Entrée Heuristique_Couleur Demandée 2, Position 3, examine carte Index 2 :17A 
+Fin du pli 15
+Points Preneur 37, Défense 33
+--------------------------------------------------------------------------------------------
+--------------Pli 16--------------------------------
+JoueEnPremierAttaque : NbCarte = 3
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 5
+JoueEnPremierAttaque: ValCouleur[3]=-1,612
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=2, ResteAtout=5
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=-274,866
+Joueur 2, Position 0, pose Carte VK Reste NbCarte=2 NbCarteJoueur[2]=2
+--
+Position 3, JoueDefenseSecond après VK 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,307  1:0,000  0:0,693  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,764, ProbCoupe[P]=1,000, ProbCoupe[C]=0,731
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,764, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,731
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=1,000, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,961
+Longueur ATOUT Preneur =2,22
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,500, CouleurTenue = 5
+ProbGain = 0,991
+Essai carte 9A  Score = 0,16
+Essai carte 18A  Score = -4,97
+Joueur 3, Position 1, pose Carte 9A Reste NbCarte=2 NbCarteJoueur[3]=2
+Joueur 0, Position 2, pose Carte 16A Reste NbCarte=2 NbCarteJoueur[0]=2
+----
+Position 1, JoueDefenseDernier après VK 9A 16A 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,335  3:0,415  2:0,250  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=0,827, ProbCoupe[P]=1,000, ProbCoupe[C]=0,768
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=0,827, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,768
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=1,000, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,931
+Longueur ATOUT Preneur =2,10
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,500, CouleurTenur = 5
+ProbGain = 1,000
+DéfausseGagnant_dernier : VK 9A 16A 6T , val =  3,75
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,25
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 1,50
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+2,10)*0,00-> 0,000
+DéfausseGagnant_dernier : VK 9A 16A 8T , val =  3,75
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,25
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 1,50
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+2,10)*0,00-> 0,000
+DéfausseGagnant_dernier : VK 9A 16A 10T , val =  3,75
+    = pJeu->MyCarte[i].Valeur : 1
+    + 0.75/pJeu->NbCouleur[c] : 0,25
+    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : 1,50
+    - 0.1*pJeu->NbCouleurChien[c] : 0,00
+    + 2.0*pc : 2,00
+    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*0,00)*(1-0-1,00)*sqrt(0,00) -> 0,000
+    - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c) : 0,00*0,00-> 0,000
+    - Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c) : 0,00*1*(1-1,00)/(1.0+2,10)*0,00-> 0,000
+Joueur 1, Position 3, pose Carte 6T Reste NbCarte=2 NbCarteJoueur[1]=2
+Entrée Regle2Proba : Carte N° 0, Index = 46, pos = 2, PositionJoueur=0, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 0 :VK 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 0 :VK 
+Entrée Heuristique_Atout, Position 0, examine carte Index 0 :VK 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 0 :VK 
+Entrée Regle2Proba : Carte N° 1, Index = 9, pos = 3, PositionJoueur=0, Couleur demandée=3
+Règle 1, Vue de 0, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :9A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :9A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :9A 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 1 :9A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 27, pos = 1, PositionJoueur=0, Couleur demandée=3
+Règle 3, Vue de 0, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :6T 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :6T 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :6T 
+Entrée Heuristique_Couleur Demandée 3, Position 0, examine carte Index 3 :6T 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 5  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 0, Index = 46, pos = 2, PositionJoueur=1, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :VK 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :VK 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :VK 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 0 :VK 
+Entrée Regle2Proba : Carte N° 1, Index = 9, pos = 3, PositionJoueur=1, Couleur demandée=3
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 1 :9A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 1 :9A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 1 :9A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][5] = 0,078
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][7] = 0,113
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 1 :9A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 16, pos = 0, PositionJoueur=1, Couleur demandée=3
+Règle 1, Vue de 1, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :16A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :16A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :16A 
+Entrée Heuristique_Couleur Demandée 3, Position 1, examine carte Index 2 :16A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,797
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 1, Index = 9, pos = 3, PositionJoueur=2, Couleur demandée=3
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :9A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :9A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :9A 
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][5] = 0,185
+Heuristique Atout 1, Coupe fort après preneur ne possède pas les petits atouts... ProbCarte[3][7] = 0,271
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 1 :9A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[3] = 0,000
+Heuristique Couleur 21, Défausse joueur 3 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 16, pos = 0, PositionJoueur=2, Couleur demandée=3
+Règle 1, Vue de 2, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 2 :16A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 2 :16A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 2 :16A 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 2 :16A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,398
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 27, pos = 1, PositionJoueur=2, Couleur demandée=3
+Règle 3, Vue de 2, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :6T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :6T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :6T 
+Entrée Heuristique_Couleur Demandée 3, Position 2, examine carte Index 3 :6T 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,349
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Joueur 3: Normalise Proba NbCarte=2 Bcl 981, Pos 3, SommeErr = 6,069e-03, Err[x] = 3,032e-03 -3,035e-03 4,441e-16 0,000e+00 2,873e-06
+Joueur 3: Normalise Proba NbCarte=2 Bcl 982, Pos 3, SommeErr = 6,060e-03, Err[x] = 3,030e-03 0,000e+00 4,441e-16 0,000e+00 -3,030e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 983, Pos 3, SommeErr = 6,056e-03, Err[x] = -4,441e-16 1,052e-06 3,027e-03 0,000e+00 -3,028e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 984, Pos 3, SommeErr = 6,051e-03, Err[x] = -3,146e-06 -3,022e-03 3,026e-03 0,000e+00 -8,882e-16
+Joueur 3: Normalise Proba NbCarte=2 Bcl 985, Pos 3, SommeErr = 6,045e-03, Err[x] = 3,020e-03 -3,022e-03 0,000e+00 0,000e+00 2,848e-06
+Joueur 3: Normalise Proba NbCarte=2 Bcl 986, Pos 3, SommeErr = 6,036e-03, Err[x] = 3,018e-03 0,000e+00 0,000e+00 0,000e+00 -3,018e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 987, Pos 3, SommeErr = 6,032e-03, Err[x] = -2,220e-16 1,043e-06 3,015e-03 0,000e+00 -3,016e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 988, Pos 3, SommeErr = 6,027e-03, Err[x] = -3,122e-06 -3,010e-03 3,013e-03 0,000e+00 0,000e+00
+Joueur 3: Normalise Proba NbCarte=2 Bcl 989, Pos 3, SommeErr = 6,021e-03, Err[x] = 3,008e-03 -3,010e-03 -2,220e-16 0,000e+00 2,824e-06
+Joueur 3: Normalise Proba NbCarte=2 Bcl 990, Pos 3, SommeErr = 6,012e-03, Err[x] = 3,006e-03 4,441e-16 -2,220e-16 0,000e+00 -3,006e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 991, Pos 3, SommeErr = 6,008e-03, Err[x] = -8,882e-16 1,035e-06 3,003e-03 0,000e+00 -3,004e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 992, Pos 3, SommeErr = 6,003e-03, Err[x] = -3,098e-06 -2,998e-03 3,001e-03 0,000e+00 -8,882e-16
+Joueur 3: Normalise Proba NbCarte=2 Bcl 993, Pos 3, SommeErr = 5,997e-03, Err[x] = 2,996e-03 -2,998e-03 4,441e-16 0,000e+00 2,800e-06
+Joueur 3: Normalise Proba NbCarte=2 Bcl 994, Pos 3, SommeErr = 5,988e-03, Err[x] = 2,994e-03 0,000e+00 4,441e-16 0,000e+00 -2,994e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 995, Pos 3, SommeErr = 5,984e-03, Err[x] = -1,332e-15 1,027e-06 2,991e-03 0,000e+00 -2,992e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 996, Pos 3, SommeErr = 5,979e-03, Err[x] = -3,074e-06 -2,986e-03 2,990e-03 0,000e+00 0,000e+00
+Joueur 3: Normalise Proba NbCarte=2 Bcl 997, Pos 3, SommeErr = 5,973e-03, Err[x] = 2,984e-03 -2,986e-03 4,441e-16 0,000e+00 2,776e-06
+Joueur 3: Normalise Proba NbCarte=2 Bcl 998, Pos 3, SommeErr = 5,964e-03, Err[x] = 2,982e-03 0,000e+00 4,441e-16 0,000e+00 -2,982e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 999, Pos 3, SommeErr = 5,960e-03, Err[x] = -8,882e-16 1,019e-06 2,979e-03 0,000e+00 -2,980e-03
+Joueur 3: Normalise Proba NbCarte=2 Bcl 1000, Pos 3, SommeErr = 5,955e-03, Err[x] = -3,051e-06 -2,975e-03 2,978e-03 0,000e+00 0,000e+00
+Entrée Regle2Proba : Carte N° 0, Index = 46, pos = 2, PositionJoueur=3, Couleur demandée=3
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :VK 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :VK 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :VK 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 0 :VK 
+Entrée Regle2Proba : Carte N° 2, Index = 16, pos = 0, PositionJoueur=3, Couleur demandée=3
+Règle 1, Vue de 3, passe à 0 probabilité d'avoir des cartes de la couleur 3 pour joueur 0
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :16A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :16A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :16A 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 2 :16A 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[0] = 0,797
+Heuristique Couleur 21, Défausse joueur 0 ne veut pas de la couleur 1
+CouleurVoulue : 2 = 0  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 27, pos = 1, PositionJoueur=3, Couleur demandée=3
+Règle 3, Vue de 3, passe à 0 probabilité d'avoir des atouts et des cartes de la couleur 3 pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 3 :6T 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 3 :6T 
+Entrée Heuristique_Atout, Position 3, examine carte Index 3 :6T 
+Entrée Heuristique_Couleur Demandée 3, Position 3, examine carte Index 3 :6T 
+Heuristique Couleur 20, baisse force jeu du défenseur qui coupe très tôt. ForceMain[1] = 0,000
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 5  CouleurVoulue : 5 = 0  
+Fin du pli 16
+Points Preneur 37, Défense 36
+--------------------------------------------------------------------------------------------
+Joueur 0, Position 0, pose Carte 7A Reste NbCarte=1 NbCarteJoueur[0]=1
+--
+Position 1, JoueDefenseSecond après 7A 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,227  3:0,522  2:0,252  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=1,000, ProbCoupe[P]=1,000, ProbCoupe[C]=1,000
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=1,000
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=1,000, CalProbCoupe[P]=1,000, CalProbCoupe[C]=1,000
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=1,000, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=1,000
+Longueur ATOUT Preneur =1,98
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,500, CouleurTenue = 5
+ProbGain = 0,390
+Défausse 2nd, ProbGain = 0,39, MinPliPreneur = 0
+Défausse 2nd : 7A Exc , val : 1,16 = (2.0* 0,39 -1.0 + 0,00) * 1 + 0.75/2 -  0.5*2 + 2.0*1,00 - (1.0 + 6*2) * (1.0 - 0,00) * 1,00
+Défausse 2nd : 7A Exc , val : 1,16 = (2.0* 0,39 -1.0 + 0,00) * 1 + 0.75/2 -  0.5*2 + 2.0*1,00 - (1.0 + 6*2) * (1.0 - 0,00) * 1,00
+Joueur 1, Position 1, pose Carte 8T Reste NbCarte=1 NbCarteJoueur[1]=1
+--
+Position 2, JoueAttaqueTroisieme après 7A 8T 
+Proba Petit = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Proba 21 = 3:0,000  0:0,000  1:0,000  Chien:0,000
+Status Chasse = -2
+ResteAtout = 2
+Valeur Petit au Bout=0,000
+Flanc = 2, ValFlanc = 0,500, CouleurTenue = 5
+ProbGain = 0,831
+Essai carte 20A  Score = -0,79
+Essai carte 21A  Score = -3,08
+Joueur 2, Position 2, pose Carte 20A Reste NbCarte=1 NbCarteJoueur[2]=1
+Règle Tmp 1,2, BaisseTmpProb(0, 21) Initial = 0,666, New 0,100, Facteur pour autres 2,694
+  Nouvelles valeurs TmpProbCarte[1][21] = 0,000 TmpProbCarte[2][21] = 0,900 TmpProbCarte[3][21] = 0,000 TmpProbCarte[4][21] = 0,000
+----
+Position 3, JoueDefenseDernier après 7A 8T 20A 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,870  1:0,000  0:0,130  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=1,000, ProbCoupe[P]=1,000, ProbCoupe[C]=0,999
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=0,016
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=1,000, CalProbCoupe[P]=1,000, CalProbCoupe[C]=0,999
+TmpProbCoupe[T]=1,000, TmpProbCoupe[K]=1,000, TmpProbCoupe[P]=1,000, TmpProbCoupe[C]=0,999
+Longueur ATOUT Preneur =1,00
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,500, CouleurTenur = 5
+ProbGain = 0,000
+Essai Carte 18A  Score = -0,22
+Joueur 3, Position 3, pose Carte 18A Reste NbCarte=1 NbCarteJoueur[3]=1
+Entrée Regle2Proba : Carte N° 1, Index = 29, pos = 1, PositionJoueur=0, Couleur demandée=1
+Règle 2, Vue de 0, passe à 0 probabilité d'avoir des atouts pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 1 :8T 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 1 :8T 
+Entrée Heuristique_Atout, Position 0, examine carte Index 1 :8T 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 1 :8T 
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 5  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 20, pos = 2, PositionJoueur=0, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 2 :20A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 2 :20A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 2 :20A 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 2 :20A 
+Entrée Regle2Proba : Carte N° 3, Index = 18, pos = 3, PositionJoueur=0, Couleur demandée=1
+Règle 4, Passe à 0 probabilité d'avoir des atouts au dessus du 20 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 0, examine carte Index 3 :18A 
+Entrée Heuristique_Chasse, Position 0, examine carte Index 3 :18A 
+Entrée Heuristique_Atout, Position 0, examine carte Index 3 :18A 
+Entrée Heuristique_Couleur Demandée 1, Position 0, examine carte Index 3 :18A 
+Entrée Regle2Proba : Carte N° 0, Index = 7, pos = 0, PositionJoueur=1, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 0 :7A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 0 :7A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 0 :7A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 0 :7A 
+Entrée Regle2Proba : Carte N° 2, Index = 20, pos = 2, PositionJoueur=1, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 2 :20A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 2 :20A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 2 :20A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 2 :20A 
+Entrée Regle2Proba : Carte N° 3, Index = 18, pos = 3, PositionJoueur=1, Couleur demandée=1
+Règle 4, Passe à 0 probabilité d'avoir des atouts au dessus du 20 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 1, examine carte Index 3 :18A 
+Entrée Heuristique_Chasse, Position 1, examine carte Index 3 :18A 
+Entrée Heuristique_Atout, Position 1, examine carte Index 3 :18A 
+Entrée Heuristique_Couleur Demandée 1, Position 1, examine carte Index 3 :18A 
+Entrée Regle2Proba : Carte N° 0, Index = 7, pos = 0, PositionJoueur=2, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 0 :7A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 0 :7A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 0 :7A 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 0 :7A 
+Entrée Regle2Proba : Carte N° 1, Index = 29, pos = 1, PositionJoueur=2, Couleur demandée=1
+Règle 2, Vue de 2, passe à 0 probabilité d'avoir des atouts pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 1 :8T 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 1 :8T 
+Entrée Heuristique_Atout, Position 2, examine carte Index 1 :8T 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 1 :8T 
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 0  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 3, Index = 18, pos = 3, PositionJoueur=2, Couleur demandée=1
+Règle 4, Passe à 0 probabilité d'avoir des atouts au dessus du 20 pour joueur 3
+Entrée Heuristique_Petit_Proba, Position 2, examine carte Index 3 :18A 
+Entrée Heuristique_Chasse, Position 2, examine carte Index 3 :18A 
+Entrée Heuristique_Atout, Position 2, examine carte Index 3 :18A 
+Entrée Heuristique_Couleur Demandée 1, Position 2, examine carte Index 3 :18A 
+Entrée Regle2Proba : Carte N° 0, Index = 7, pos = 0, PositionJoueur=3, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 0 :7A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 0 :7A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 0 :7A 
+Heuristique Atout 2, Ne joue pas atout maître pour défausse... ProbCarte[0][2] = 0,000
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 0 :7A 
+Entrée Regle2Proba : Carte N° 1, Index = 29, pos = 1, PositionJoueur=3, Couleur demandée=1
+Règle 2, Vue de 3, passe à 0 probabilité d'avoir des atouts pour joueur 1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 1 :8T 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 1 :8T 
+Entrée Heuristique_Atout, Position 3, examine carte Index 1 :8T 
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 1 :8T 
+Heuristique Couleur 21, Défausse joueur 1 ne veut pas de la couleur 2
+CouleurVoulue : 2 = -1  CouleurVoulue : 3 = 0  CouleurVoulue : 4 = 5  CouleurVoulue : 5 = 0  
+Entrée Regle2Proba : Carte N° 2, Index = 20, pos = 2, PositionJoueur=3, Couleur demandée=1
+Entrée Heuristique_Petit_Proba, Position 3, examine carte Index 2 :20A 
+Entrée Heuristique_Chasse, Position 3, examine carte Index 2 :20A 
+Entrée Heuristique_Atout, Position 3, examine carte Index 2 :20A 
+Entrée Heuristique_Couleur Demandée 1, Position 3, examine carte Index 2 :20A 
+Fin du pli 17
+Points Preneur 39, Défense 36
+--------------------------------------------------------------------------------------------
+--------------Pli 18--------------------------------
+JoueEnPremierAttaque : NbCarte = 1
+JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==-2
+JoueEnPremierAttaque : ResteAtout = 1
+JoueEnPremierAttaque: Cas ATOUT, AtoutVrais=1, ResteAtout=1
+JoueEnPremierAttaque: Cas ATOUT, ValCouleur[ATOUT]=1,500
+Joueur 2, Position 0, pose Carte 21A Reste NbCarte=0 NbCarteJoueur[2]=0
+--
+Position 3, JoueDefenseSecond après 21A 
+Proba Petit = 2:0,000  1:0,000  0:0,000  Chien:0,000
+Proba 21 = 2:0,000  1:0,000  0:0,000  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=1,000, ProbCoupe[P]=1,000, ProbCoupe[C]=1,000
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=1,000
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=1,000, CalProbCoupe[P]=1,000, CalProbCoupe[C]=1,000
+TmpProbCoupe[T]=0,000, TmpProbCoupe[K]=0,000, TmpProbCoupe[P]=0,000, TmpProbCoupe[C]=0,000
+Longueur ATOUT Preneur =0,00
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,333, CouleurTenue = 5
+ProbGain = 0,000
+Défausse 2nd, ProbGain = 0,00, MinPliPreneur = 0
+Défausse Perdant second : 21A RT , val : 0,75 = (-1 + 1.0/2)*9 + 0.75/1 +  2.0*1,00/1*1 + 2.5*1,00 
+    - 2.0 * (1.0 - 1,00) * 0,00 - 8.0* 1,00 * (1.0 - 1,00) * 0,00 - 0.2/1*0,00*9*0,00
+Joueur 3, Position 1, pose Carte RT Reste NbCarte=0 NbCarteJoueur[3]=0
+Joueur 0, Position 2, pose Carte 5A Reste NbCarte=0 NbCarteJoueur[0]=0
+----
+Position 1, JoueDefenseDernier après 21A RT 5A 
+Proba Petit = 0:0,000  3:0,000  2:0,000  Chien:0,000
+Proba 21 = 0:0,000  3:0,000  2:0,000  Chien:0,000
+ProbCoupe[T]=1,000, ProbCoupe[K]=1,000, ProbCoupe[P]=1,000, ProbCoupe[C]=1,000
+GuessProbCoupe[T]=1,000, GuessProbCoupe[K]=1,000, GuessProbCoupe[P]=1,000, GuessProbCoupe[C]=1,000
+CalProbCoupe[T]=1,000, CalProbCoupe[K]=1,000, CalProbCoupe[P]=1,000, CalProbCoupe[C]=1,000
+TmpProbCoupe[T]=0,000, TmpProbCoupe[K]=0,000, TmpProbCoupe[P]=0,000, TmpProbCoupe[C]=0,000
+Longueur ATOUT Preneur =0,00
+Status Chasse = -1
+MinPlisPreneur = 0
+Flanc = 4, ValFlanc = 0,333, CouleurTenur = 5
+ProbGain = 0,000
+Défausse Perdant dernier : 21A RT 5A 10T , val : 8,75 = (-1 + 1.0/2)*1 + 0.75/1 +  2.0*1,00/1*1 + 2.5*1,00 
+    - 2.0 * (1.0 - 1,00) * 0,00 - 8.0* 1,00 * (1.0 - 1,00) * 0,00 - 0.2/1*0,00*1*0,00
+Joueur 1, Position 3, pose Carte 10T Reste NbCarte=0 NbCarteJoueur[1]=0
+Fin du pli 18
+Points Preneur 49, Défense 36
+--------------------------------------------------------------------------------------------

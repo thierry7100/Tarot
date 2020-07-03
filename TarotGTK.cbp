@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TarotGTK" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TarotGTK" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D DEBUG=1" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TarotGTK" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="`pkg-config gtk+-3.0 --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config gtk+-3.0 --libs`" />
+		</Linker>
+		<Unit filename="AffCartes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="AffContrat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="AffResultat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="AffScores.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Cairo_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ChoixContrat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Distribue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DrawGameZone.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ecart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Heuristiques.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JeuAttaque.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JeuCommun.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="JeuDefense.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MouseGameZone.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="NomJoueurs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PartieMaitre.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Poignee.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Proba.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Regle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ReglesTmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ScreenSize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ScreenSize.h" />
+		<Unit filename="SplashScreen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SplashScreen.h" />
+		<Unit filename="Table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Tarot.css" />
+		<Unit filename="TarotFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TarotMessage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Tarot_Game.h" />
+		<Unit filename="Tarot_Main_ui.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Tarot_Ui_Objects.h" />
+		<Unit filename="Tarot_ui.glade" />
+		<Unit filename="Tarot_ui.gresource.xml" />
+		<Unit filename="Tarot_ui.h" />
+		<Unit filename="TodoList.txt" />
+		<Unit filename="UserPreferences.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="UtilJeu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cairo_util.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="resources.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
