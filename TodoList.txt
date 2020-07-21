@@ -23,5 +23,9 @@ Programmer durée attente fin pli + autres aides utilisateur (proposition chien)
 Rendre grisé les boutons OK chien et poignée si pas le bon nombre   OK
 ----------------------   Version 0.01.04
 Améliorer jeu excuse
-    Pas la peine de protéger une carte si le preneur coupe si très court sauf si très peu d'atout pour défausse'
-    Si défenseur joue excuse courte, ne pas rejouer de cette couleur
+    Pas la peine de protéger une carte si le preneur coupe si très court sauf si très peu d'atout pour défausse OK
+    Si défenseur joue excuse courte, ne pas rejouer de cette couleur --> Baisse proba petites cartes
+Regarder bug partie 23 --> A coeur Ouest annonce doubleton en descendant    OK favorise plus petite si plus de 2 cartes dans ouverture défense
+Partie 104 : bug, joueur nord joue coeur sur pique alors qu'il a de l'atout : bug pose carte OK
+----------------------   Version 0.01.05
+Fin de partie : essai toutes les possibilités en 1er

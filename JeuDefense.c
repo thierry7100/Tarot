@@ -1001,7 +1001,7 @@ int c;
 //  Jeu de la défense quand entame, mais pas pour la première carte du jeu.
 //  Il y a déjà eu au moins un pli
 //
-//	La defense joue en premier...
+//	La défense joue en premier...
 //	"Règles" utilisées
 //	1) Suit sauf motif valable la première couleur ouverte par la défense :
 //		plus dans cette couleur,
@@ -1840,6 +1840,8 @@ int CBest;
     OutDebug("ProbGain = %.3f\n", ProbGainCoup(CurrentGame, pJeu, 1, 0));
     if ( HasCarte(pJeu, pJeu->PositionJoueur, 1) )
         OutDebug("Valeur petit au bout = %.3f\n", pJeu->ValPetitAuBout);
+    if ( Table[0].Couleur == COEUR )
+        i0 = 0;
 #endif // DEBUG_DEFENSE_SECOND
     MakeCarte(&Table[2], 0);             //  Simule excuse après pour être sûr de ne pas faire le pli.
     MakeCarte(&Table[3], 0);
@@ -1921,6 +1923,13 @@ int CBest;
 					&& i0 > 0 && pJeu->MyCarte[i0-1].Couleur == couleur )
 				{
                     Score += 1.0;       //  Bonus pour cette carte, si pas trop mauvais sera choisie
+				}
+				//  Si pas doubleton, favorise la plus petite
+				if ( couleur > ATOUT && Table[1].Couleur == couleur && pJeu->NbCouleur[couleur] > 2
+					&& CurrentGame->JoueurEntame != CurrentGame->JoueurPreneur && pJeu->JoueurCouleur[couleur] < 0
+					&& i0 == GetPlusFaible(pJeu, couleur) )
+				{
+                    Score += 1.0;       //  Bonus pour cette carte, pour ne pas tromper la défense
 				}
 				//  Si tenue, joue également en descendant
 				if ( couleur > ATOUT && Table[1].Couleur == couleur && CurrentGame->JoueurEntame == CurrentGame->JoueurPreneur
@@ -2269,7 +2278,7 @@ int BestC;
     if ( HasCarte(pJeu, pJeu->PositionJoueur, 1) )
         OutDebug("Valeur petit au bout = %.3f\n", pJeu->ValPetitAuBout);
 #if DEBUG > 0
-    if ( Table[0].Couleur == CARREAU && Table[0].Hauteur == 6 )
+    if ( Table[0].Couleur == PIQUE )
         i = 0;
 #endif
 #endif // DEBUG_DEFENSE_3EME

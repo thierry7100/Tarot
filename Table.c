@@ -48,7 +48,7 @@ int iCarte;
         for ( i = IndexCarte+1; i < pJeu->NbCarte; i++ )
         {
             j = CurrentGame->IdxCartesJoueur[Position][i];
-            if ( j == iCarte+1)
+            if ( j == iCarte+1 && pJeu->MyCarte[IndexCarte].Couleur == pJeu->MyCarte[i].Couleur)
             {
                 iCarte = j;
                 IndexCarte++;

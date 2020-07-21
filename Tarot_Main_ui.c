@@ -44,7 +44,7 @@ struct _Tarot_Partie UiGame;
 const int DurationStepContrat = 500;
 const int DurationStepJeu = 500;
 
-const char *strVersion = "v 0.01.04";
+const char *strVersion = "v 0.01.05";
 
 int InitUi(int argc, char **argv)
 {

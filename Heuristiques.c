@@ -967,12 +967,12 @@ int PossPetit;
 			}
 		}
 		pJeu->Obeissance[CurrentGame->JoueurEntame] = 1.0;
-		pJeu->Flanc = CouleurDemandee;			//	Devient Flanc par defaut
+		pJeu->Flanc = CouleurDemandee;			//	Devient Flanc par défaut
 		pJeu->ValFlanc[CouleurDemandee] = 1.0;
 		if ( pJeu->ForceMain[CurrentGame->JoueurEntame] < 0.5 ) pJeu->ForceMain[CurrentGame->JoueurEntame] = 0.5;
 		CopieProba2Tmp(pJeu);
 	}
-    //	Heuristique 19, pas de singleton à la DAME chez le preneur si pas excuse.
+    //	Heuristique 19, pas de singleton à la DAME chez le preneur si ne possède pas l'excuse.
 	if ( CurrentGame->TypePartie < GARDE_SANS && IndexTable > 0 && IndexTable == posPreneur
         && pJeu->NbJoue[CurrentGame->JoueurPreneur][CouleurDemandee] == 1 &&
 		Table[IndexTable].Couleur == CouleurDemandee && Table[IndexTable].Hauteur == DAME )
@@ -1103,6 +1103,22 @@ int PossPetit;
 				pJeu->ForceMain[CurrentGame->JoueurEntame] = 0.5;
 			}
 		}
+		CopieProba2Tmp(pJeu);
+	}
+	//	Heuristique couleur 23 : Si met l'excuse sur une couleur et pli perdu, ne possède plus de "petites cartes"
+	//  En défense, vrai si preneur prend le pli (coupe) et ouverture couleur défense
+	if ( IndexTable > 0 && CouleurDemandee > ATOUT && Table[IndexTable].Couleur == EXCUSE && pos != CurrentGame->JoueurPreneur
+        && !GainPli(CurrentGame, IndexTable) && pJeu->JoueurCouleur[CouleurDemandee] != CurrentGame->JoueurPreneur && CurrentGame->NumPli < 15 )
+	{
+        for ( j = Startof[CouleurDemandee]; j < Startof[CouleurDemandee]+10; j++)
+        {
+            if ( pJeu->ProbCarte[pos][j] < 0.0001 ) continue;
+            BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, j, 0.6);
+#if DEBUG_HEURISTIQUES > 0
+            OutDebug("Heuristique Couleur 23.1, Défense joue excuse sur . ProbCarte[%d][%d] = %.3f\n",
+                pos, j, pJeu->ProbCarte[pos][j]);
+#endif // DEBUG_HEURISTIQUE
+        }
 		CopieProba2Tmp(pJeu);
 	}
 }

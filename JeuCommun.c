@@ -1012,9 +1012,10 @@ int OldHauteurAtout = 0;
                     }
                     else if ( AvgLongueur(pJeu, pJeu->PositionPreneur, CouleurDemandee) > 3 )
                         pts[0] -= 3.0 / pJeu->NbCouleur[CouleurDemandee];
+                    else if ( PosC == pJeu->PositionJoueur && pJeu->NbAtout >= 3 )
+                        pts[0] -= 5.1;      //  Valeur pour ne pas jouer excuse pour protéger cavalier si reste Atout
                     else
-                        pts[0] -= 3;
-
+                        pts[0] -= 3.0;
                 }
 
 			}
