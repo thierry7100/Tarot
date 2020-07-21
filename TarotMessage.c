@@ -11,6 +11,7 @@
 
 #define COULEUR_BULLE_MESSAGE   0.0, 0.0, 0.0
 #define COULEUR_BOUTON_MESSAGE  1.0, 1.0, 1.0
+#define COULEUR_BOUTON_MESSAGE_GREYED  0.4, 0.4, 0.4
 #define COULEUR_TEXTE_MESSAGE   1.0, 1.0, 1.0
 #define COULEUR_TEXTE_BOUTON_MESSAGE    0.0, 0.0, 0.0
 
@@ -86,6 +87,7 @@ double xtexte, ytexte;
     BoutonsTarot[0].ResponseCode = 1;
     BoutonsTarot[0].radius = 0.45;
     BoutonsTarot[0].HasFocus = 1;
+    BoutonsTarot[0].isOK = 1;
 
     pango_font_description_free (fontMessage);
     pango_font_description_free (fontBouton);
@@ -95,6 +97,90 @@ double xtexte, ytexte;
 
 }
 
+void AfficheInfoMessageTarotGreyed(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame, int BoutonOK)
+{
+double wRect, hRect;
+double xRect, yRect;
+double hBouton, wBouton;
+char strFonte[64];
+PangoContext *pangocontext;
+PangoLayout *pangolayoutTexte = NULL;
+PangoLayout *pangolayoutBouton = NULL;
+PangoFontDescription *fontMessage;
+PangoFontDescription *fontBouton;
+PangoRectangle inkRect, logicalRect;
+double XBouton, YBouton;
+double xtexte, ytexte;
+
+    pangocontext = gtk_widget_create_pango_context (widget);
+    //  Calcule taille fonte
+    snprintf(strFonte, 60, "Sans %d", ComputeSizeFont(14));
+    fontMessage = pango_font_description_from_string (strFonte);
+    pangolayoutTexte = pango_layout_new (pangocontext);
+    //  Taille  max de la bulle 0.3* écran en largeur
+    wRect = GameZoneArea_width * 0.3;
+    //  Calcule la taille du texte à afficher
+    pango_layout_set_font_description (pangolayoutTexte, fontMessage);
+    pango_layout_set_text (pangolayoutTexte, CurrentGame->InfoMessage, -1);
+    pango_layout_set_alignment(pangolayoutTexte, PANGO_ALIGN_CENTER);
+    pango_layout_set_width(pangolayoutTexte, pango_units_from_double(wRect));
+    pango_layout_get_pixel_extents(pangolayoutTexte, &inkRect, &logicalRect);
+    if ( logicalRect.width < wRect*0.8 )        //  Si texte trop petit par rapport à bulle max, réduit la taille de la bulle
+        wRect = logicalRect.width * 1.25;
+    hBouton = ComputeSizeFont(14)*3.5;          //  Hauteur max bouton
+    //  Dessine la bulle
+    hRect = logicalRect.height*1.8 + hBouton + GameZoneArea_height*0.03; //  Hauteur bulle
+    yRect = TopYJoueur[SUD] - GameZoneArea_height*0.03 - 10 - hRect - CurrentGame->DeltaYMessage;
+    xRect = (GameZoneArea_width - wRect) / 2;
+    //  Trace la bulle
+    cairo_set_source_rgb(cr, COULEUR_BULLE_MESSAGE);      //  Couleur pour la bulle (Noir)
+    CairoBulle(cr, xRect, yRect, wRect, hRect, 0.1, GameZoneArea_height*0.015, 1, BEC_DESSOUS);
+
+    YBouton = yRect + hRect - hBouton - GameZoneArea_height*0.015;
+
+    //  Trace le texte du message. Centré au dessus du bouton
+    ytexte = yRect + (YBouton-yRect-logicalRect.height)/2;
+    xtexte = GameZoneArea_width*0.35;
+    cairo_set_source_rgb(cr, COULEUR_TEXTE_MESSAGE);      //  Couleur pour le texte (Blanc)
+    cairo_move_to(cr, xtexte, ytexte);
+    pango_cairo_show_layout(cr, pangolayoutTexte);
+    //  Et maintenant le bouton
+    snprintf(strFonte, 60, "Sans %d", ComputeSizeFont(16));
+    pangolayoutBouton = pango_layout_new (pangocontext);
+    fontBouton = pango_font_description_from_string (strFonte);
+    pango_layout_set_font_description (pangolayoutBouton, fontBouton);
+    pango_layout_set_text (pangolayoutBouton, "OK", -1);
+    pango_layout_get_pixel_extents(pangolayoutBouton, &inkRect, &logicalRect);
+    wBouton = logicalRect.width * 2.5;
+    XBouton = (GameZoneArea_width - wBouton)/2.0;
+    if ( BoutonOK )
+        cairo_set_source_rgb(cr, COULEUR_BOUTON_MESSAGE);      //  Couleur pour le bouton (Blanc)
+    else
+        cairo_set_source_rgb(cr, COULEUR_BOUTON_MESSAGE_GREYED);      //  Couleur pour le bouton (gris)
+    CairoRoundedRectangle(cr, XBouton, YBouton, wBouton, hBouton, 0.45, 1);
+    ytexte = YBouton + (hBouton - logicalRect.height)/2.0;
+    xtexte = XBouton + (wBouton - logicalRect.width)/2.0;
+    cairo_set_source_rgb(cr, COULEUR_TEXTE_BOUTON_MESSAGE);      //  Couleur pour le texte (Blanc)
+    cairo_move_to(cr, xtexte, ytexte);
+    pango_cairo_show_layout(cr, pangolayoutBouton);
+
+    NbBoutons = 1;
+    BoutonsTarot[0].Xmin = xRect;
+    BoutonsTarot[0].Xmax = xRect+wRect;
+    BoutonsTarot[0].Ymin = yRect;
+    BoutonsTarot[0].Ymax = yRect+hRect;
+    BoutonsTarot[0].ResponseCode = 1;
+    BoutonsTarot[0].radius = 0.45;
+    BoutonsTarot[0].HasFocus = 1;
+    BoutonsTarot[0].isOK = BoutonOK;
+
+    pango_font_description_free (fontMessage);
+    pango_font_description_free (fontBouton);
+    g_object_unref (pangolayoutBouton);
+    g_object_unref (pangolayoutTexte);
+    g_object_unref (pangocontext);
+
+}
 //  Affiche message demande de Chelem
 
 void AfficheInfoMessageChelem(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame)

@@ -107,7 +107,7 @@ double Result;
     BoutonsTarot[0].Ymax = yb+hBouton;
     BoutonsTarot[0].ResponseCode = 1;
     BoutonsTarot[0].radius = 0.45;
-    BoutonsTarot[0].HasFocus = 1;
+    BoutonsTarot[0].isOK = 1;
     //  Texte du bouton
     cairo_set_source_rgb(cr, COULEUR_TEXTE_BOUTON_RESULTAT);
     cairo_move_to(cr, xb + (wBouton-logicalRectBouton.width)/2

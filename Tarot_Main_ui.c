@@ -21,6 +21,7 @@ GtkDialog *DialogDistrib;
 GtkDialog *DialogNomJoueurs;
 GtkDialog *DialogStyleJeu;
 GtkDialog *DialogChoixPartie;
+GtkDialog *DialogUserPref;
 GtkBuilder *builder;
 GdkPixbuf *IconTarot;
 GtkMenuItem * ReloadMenuItem;
@@ -33,12 +34,17 @@ int FlagPartieEnregistreeAttaque;
 int FlagPartieEnregistreeDefense;
 int FlagAffichagePoints;
 int FlagAffichageAtouts;
+int FlagSuggestionChien;
+int FlagSuggestionCarte;
+int FlagSuggestionPoignee;
+int PassageAutoPliSuivant;
+int DelaiPliAuto;
 
 struct _Tarot_Partie UiGame;
 const int DurationStepContrat = 500;
 const int DurationStepJeu = 500;
 
-const char *strVersion = "v 0.1.2";
+const char *strVersion = "v 0.01.04";
 
 int InitUi(int argc, char **argv)
 {
@@ -212,7 +218,10 @@ static int NbTickTimer;
     {
         //  Fin du pli.
         UiGame.StateJeu = JEU_FIN_PLI;
-        UiGame.DecompteFinPli = DECOMPTE_FIN_PLI;
+        if ( PassageAutoPliSuivant )
+            UiGame.DecompteFinPli = DelaiPliAuto;
+        else
+            UiGame.DecompteFinPli = 7200;               //  Passe au pli suivant après 1H !
         gtk_widget_queue_draw(GameZoneArea);            //  Force réaffichage pour affichage pli
         return TRUE;
     }
@@ -405,8 +414,45 @@ void RejouePartie(TarotGame CurrentGame)
     UiGame.TypeTimer = TIMER_ENCHERES;
 }
 
-static void MenuPartieManuelle(GtkWidget *widget, gpointer data)
+//  Affiche la boîte de dialogue pour les préférences utilisateur
+
+static void MenuUserPref(GtkWidget *widget, gpointer data)
 {
+int Ret;
+GtkToggleButton *SuggestionChien, *SuggestionCarte, *SuggestionPoignee;
+GtkToggleButton *PliSuivantAuto;
+GtkSpinButton *DelaiPli;
+double val;
+
+    DelaiPli =  GTK_SPIN_BUTTON(gtk_builder_get_object(builder, "ID_DELAI_PLI_SUIVANT"));
+    gtk_spin_button_set_digits(DelaiPli, 1);
+    gtk_spin_button_set_range(DelaiPli, 1.0, 10.0);
+    gtk_spin_button_set_increments(DelaiPli, 0.5, 2.0);
+    gtk_spin_button_set_value(DelaiPli, DelaiPliAuto*0.5);
+
+    PliSuivantAuto =  GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "ID_PLI_SUIVANT_AUTO"));
+    gtk_toggle_button_set_active(PliSuivantAuto, PassageAutoPliSuivant);
+
+    SuggestionChien =  GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "ID_SUGGESTION_CHIEN"));
+    gtk_toggle_button_set_active(SuggestionChien, FlagSuggestionChien);
+    SuggestionCarte =  GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "ID_SUGGESTION_CARTE"));
+    gtk_toggle_button_set_active(SuggestionCarte, FlagSuggestionCarte);
+    SuggestionPoignee =  GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "ID_SUGGESTION_POIGNEE"));
+    gtk_toggle_button_set_active(SuggestionPoignee, FlagSuggestionPoignee);
+
+    Ret = gtk_dialog_run(DialogUserPref);
+    gtk_widget_hide(GTK_WIDGET(DialogUserPref));
+    if ( Ret == GTK_RESPONSE_OK )
+    {
+        //  Lecture des champs de la boîte de dialogue;
+        val = gtk_spin_button_get_value(DelaiPli);
+        DelaiPliAuto = (int) (val * 2.0 + 0.001);
+        PassageAutoPliSuivant = gtk_toggle_button_get_active(PliSuivantAuto);
+        FlagSuggestionChien = gtk_toggle_button_get_active(SuggestionChien);
+        FlagSuggestionCarte = gtk_toggle_button_get_active(SuggestionCarte);
+        FlagSuggestionPoignee = gtk_toggle_button_get_active(SuggestionPoignee);
+        ChangeUserPref();
+    }
 }
 
 static void MenuRejoue(GtkWidget *widget, gpointer data)
@@ -1014,8 +1060,8 @@ gchar *DebugFileName;
     g_signal_connect (ModePartieEnregistreeAttaque, "toggled", G_CALLBACK(ChangeModeEnregistreAttaque), NULL);
     ModePartieEnregistreeDefense = GTK_CHECK_MENU_ITEM(gtk_builder_get_object(builder, "UI_MODE_MAITRE_DEFENSE"));
     g_signal_connect (ModePartieEnregistreeDefense, "toggled", G_CALLBACK(ChangeModeEnregistreDefense), NULL);
-    MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "MENU_PARTIE_MAN"));
-    g_signal_connect (MenuItem, "activate", G_CALLBACK(MenuPartieManuelle), NULL);
+    MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "UI_PREFERENCES_UTILISATEUR"));
+    g_signal_connect (MenuItem, "activate", G_CALLBACK(MenuUserPref), NULL);
     MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "MENU_REJOUE"));
     g_signal_connect (MenuItem, "activate", G_CALLBACK(MenuRejoue), NULL);
     MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "MENU_PLI_PRECEDENT"));
@@ -1071,6 +1117,11 @@ gchar *DebugFileName;
     DialogChoixPartie = GTK_DIALOG(gtk_builder_get_object(builder, "DIALOGUE_CHOIX_PARTIE"));
     gtk_window_set_transient_for(GTK_WINDOW(DialogChoixPartie), MainWindow);
     gtk_window_set_modal(GTK_WINDOW(DialogChoixPartie), TRUE);
+
+    DialogUserPref = GTK_DIALOG(gtk_builder_get_object(builder, "DIALOGUE_PREFERENCES"));
+    gtk_window_set_transient_for(GTK_WINDOW(DialogUserPref), MainWindow);
+    gtk_window_set_modal(GTK_WINDOW(DialogUserPref), TRUE);
+
     //  Status bars
     StatusBarGen = GTK_STATUSBAR(gtk_builder_get_object(builder, "Status_Bar"));
     StatusBarAtout = GTK_STATUSBAR(gtk_builder_get_object(builder, "STATUS_ATOUTS"));

@@ -195,7 +195,10 @@ extern double RecouvrementJeu;
                     //  Appel choix carte chien pour preneur....
                     EffaceContratsJoueurs(CurrentGame);
                     AjouteCarteChienPreneur(CurrentGame);                  //  Ajoute les cartes du chien au preneur
-                    MakeEcart(CurrentGame);                                //  Met les cartes au chien pour le preneur (proposition)
+                    if ( FlagSuggestionChien )
+                        MakeEcart(CurrentGame);                            //  Fait une proposition de cartes à mettre au chien
+                    else
+                        CurrentGame->NbCarteLevee = 0;                      //  Pas encore de cartes levées
                     CurrentGame->DeltaYMessage = GameZoneArea_height * 0.08;
                     DeltaCarteLevee = Card_Height/5;
                     CurrentGame->InfoMessage = "Choisissez les cartes à écarter";

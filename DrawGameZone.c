@@ -49,13 +49,13 @@ double margin;
     if ( CurrentGame->StateJeu == JEU_MESSAGE )
         AfficheInfoMessageTarot(widget, cr, CurrentGame);
     if (  CurrentGame->StateJeu == JEU_CHOIX_CARTES_CHIEN )
-        AfficheInfoMessageTarot(widget, cr, CurrentGame);
+        AfficheInfoMessageTarotGreyed(widget, cr, CurrentGame, CurrentGame->NbCarteLevee == 6);
     if (  CurrentGame->StateJeu == JEU_MESSAGE_NO_BUTTON )
         AfficheInfoMessageSansBouton(widget, cr, CurrentGame);
     if (  CurrentGame->StateJeu == JEU_CHOIX_POIGNEE )
         AfficheInfoMessagePoigneeSUD(widget, cr, CurrentGame);
     if (  CurrentGame->StateJeu == JEU_CHOIX_CARTE_POIGNEE )
-        AfficheInfoMessageTarot(widget, cr, CurrentGame);
+        AfficheInfoMessageTarotGreyed(widget, cr, CurrentGame, CurrentGame->NbCarteLevee == CurrentGame->NumAtoutPoignee[SUD]);
     if (  CurrentGame->StateJeu == JEU_AFFICHE_POIGNEE )
         AfficheInfoMessagePoigneeAutres(widget, cr, CurrentGame);
     if (  CurrentGame->StateJeu == JEU_TERMINE )

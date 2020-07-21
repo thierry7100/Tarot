@@ -52,6 +52,7 @@ void AfficheResultatPartie(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGam
 void AffichePliPrecedent(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame);
 void AfficheScores(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame);
 void AfficheFinPartie(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame);
+void AfficheInfoMessageTarotGreyed(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame, int BoutonOK);
 void AfficheInfoMessageChelem(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame);
 void AfficheInfoMessageOuiNon(GtkWidget *widget, cairo_t *cr , TarotGame CurrentGame);
 int ComputeSizeFont(int BaseSize);
@@ -71,6 +72,7 @@ void ChangeUserConfigSignalisation(void);
 void ChangeUserConfigModeEnregistre(void);
 void ChangeUserConfigAffichage(void);
 void ChangeContraintesDistribution(void);
+void ChangeUserPref(void);
 void ChangeNomsJoueurs(void);
 void SaveScores(void);
 void SaveStyleJoueurs(void);
@@ -115,6 +117,7 @@ struct BoutonTarot {
     double radius;
     int ResponseCode;
     int HasFocus;
+    int isOK;
 };
 
 extern int NbBoutons;

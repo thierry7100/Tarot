@@ -17,4 +17,11 @@ Plus infos fichier debug    Fait sur distribution
 Windows sans console        OK
 Revoir splash sans version  OK
 Pas d'icône sous windows    OK
-
+Amélioration 2 pour 1       OK
+---------------------    Version 0.01.03
+Programmer durée attente fin pli + autres aides utilisateur (proposition chien) OK
+Rendre grisé les boutons OK chien et poignée si pas le bon nombre   OK
+----------------------   Version 0.01.04
+Améliorer jeu excuse
+    Pas la peine de protéger une carte si le preneur coupe si très court sauf si très peu d'atout pour défausse'
+    Si défenseur joue excuse courte, ne pas rejouer de cette couleur

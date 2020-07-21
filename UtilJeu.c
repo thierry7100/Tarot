@@ -268,7 +268,7 @@ int i;
     DeltaCarteLevee = Card_Height/6;
     for ( i = 0; i < pJeu->NbCarte; i++ )
     {
-        if ( CarteValide(pJeu, i, CurrentGame->JoueurEntame) )
+        if ( CarteValide(pJeu, i, CurrentGame->JoueurEntame) && FlagSuggestionCarte )
         {
             CurrentGame->isCarteLevee[i] = 1;       //  Lève la carte
         }

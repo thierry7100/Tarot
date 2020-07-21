@@ -89,6 +89,11 @@ int idx;
 
     SelectAtoutsPoignee(CurrentGame, pJeu, Nb);
     memset(CurrentGame->isCarteLevee, 0, sizeof(CurrentGame->isCarteLevee));
+    if ( FlagSuggestionPoignee == 0 )       //  pas de sélection
+    {
+        CurrentGame->NbCarteLevee = 0;
+        return;
+    }
     for ( i = 0; i < Nb; i++ )
     {
         idx = CurrentGame->ListeAtoutPoignee[SUD][i];

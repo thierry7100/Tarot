@@ -350,6 +350,7 @@ int pos = (pJeu->PositionPreneur - pJeu->PositionJoueur) & 3;
     {
         val += pJeu->GuessProbCoupe[Couleur]*5;                 //  Essaie de faire couper le preneur à la fin
     }
+
 #if DEBUG_ENTAME_DEFENSE > 0
     OutDebug("GetValeurCouleurOuverture(%d) après honneurs: val=%.2f\n", Couleur, val);
 #endif // DEBUG_ENTAME_DEFENCE
@@ -372,7 +373,7 @@ int pos = (pJeu->PositionPreneur - pJeu->PositionJoueur) & 3;
     if ( HasCarte(pJeu, pJeu->PositionJoueur, Startof[Couleur]+13) && HasCarte(pJeu, pJeu->PositionJoueur, Startof[Couleur]+11)
         && !HasCarte(pJeu, pJeu->PositionJoueur, Startof[Couleur]+12) )
     {
-        val -= pos*pos * 0.5;       //  -0.25 devant, -2 milieu, -4.5 du fond
+        val -= pos*pos * 0.5;       //  -0.5 devant, -2 milieu, -4.5 du fond
     }
 	//	Pas d'entame dans un ROI du chien sauf si très fort ou petit court a signaler
     if ( HasCarte(pJeu, pJeu->PositionPreneur, Startof[Couleur]+13) )
@@ -398,7 +399,17 @@ int pos = (pJeu->PositionPreneur - pJeu->PositionJoueur) & 3;
         val += 0.25 * NbNonHonneur(CurrentGame, pJeu->PositionJoueur, Couleur) * (1.5 - pJeu->ForceMain[pJeu->PositionJoueur]);
     //	A priori n'ouvre pas la dernière couleur
     if ( NbCouleurOuverte(pJeu) == 3 )
+    {
         val += -10.0 + 5.0 * CompteCouleurJoueur(pJeu, pJeu->PositionPreneur);
+    }
+    else if ( pos == 1 )
+    {
+        val += pJeu->GuessProbCoupe[Couleur]*5;
+    }
+    else if ( pos == 2 )
+    {
+        val += pJeu->GuessProbCoupe[Couleur]*2;
+    }
     val *= 1.0 - SansAtoutPreneur;
     //	Si pas d'Atout au preneur règles différentes
     //	Favorise toujours les couleurs longues, mais avec le ROI...
@@ -959,6 +970,34 @@ double val, probreste;
 	return(val);
 }
 
+//  Calcule intérêt deux pour un (jouer petit ATOUT avant le preneur) pour revenir ensuite dans la coupe du preneur;
+
+double DeuxPourUnOK(TarotGame CurrentGame, struct _Jeu *pJeu)
+{
+double va, vc;
+int posJP = (pJeu->PositionPreneur - pJeu->PositionJoueur) & 3;     //  Position joueur par rapport au preneur
+int c;
+
+    //  Si le preneur possède ATOUT maître, pas bon il peut le jouer et bloquer le coup
+    if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] >= 0.8 || (pJeu->ResteAtout - pJeu->AtoutPreneur) < 0.5 )
+            return -1000;
+    va = -10000;
+    for ( c = TREFLE; c < NB_COULEUR; c++ )
+    {
+        vc = 0;
+        if ( pJeu->GuessProbCoupe[c] == 1.0 )
+        {
+            //  Sur de couper cette couleur ?
+            vc = -CoutCoupe(pJeu, c);       //  Calcule coût de la coupe
+            if ( vc > va )
+                va = vc;
+        }
+    }
+    va += pJeu->NbCoupeInit * 10.0 + 20.0 - 6*posJP - GetCartePlusFaible(pJeu, ATOUT)->Hauteur
+        - 10.0 * pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] - 4.0 * pJeu->NbCouleurChien[ATOUT];
+    return va;
+}
+
 //  Jeu de la défense quand entame, mais pas pour la première carte du jeu.
 //  Il y a déjà eu au moins un pli
 //
@@ -1048,7 +1087,7 @@ double ValAtoutFort = - 100000.0;
 	}
 #if DEBUG_DEFENSE_PREMIER > 0
 #if DEBUG > 0
-    if ( CurrentGame->NumPli == 6 )
+    if ( CurrentGame->NumPli == 7 || CurrentGame->NumPli == 9 )
         c = 0;
 #endif // DEBUG
     OutDebug("---------------------------------------- Pli %d ---------------------------------\n", CurrentGame->NumPli+1);
@@ -1415,22 +1454,21 @@ double ValAtoutFort = - 100000.0;
 		}
 		else if ( PosPreneurM1 == 0 )		//	Juste avant preneur, essaie 2 pour un
 		{
-			if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] < 0.8 && pJeu->NbCoupeInit > 0
-				&& (pJeu->ResteAtout - pJeu->AtoutPreneur) > 0.5)
+		    va = DeuxPourUnOK(CurrentGame, pJeu);
+			if ( va > -10 )
 			{
 				CarteCouleur[ATOUT] = GetPlusFaible(pJeu, ATOUT);
-				ValCouleur[ATOUT] = pJeu->NbCoupeInit * 10.0 + 14.0 - pJeu->MyCarte[CarteCouleur[ATOUT]].Hauteur
-                            - 10.0 * pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] - 4.0 * pJeu->NbCouleurChien[ATOUT];
+				ValCouleur[ATOUT] = va;
+
 			}
 		}
 		else if ( PosPreneurM1 == 1 )		//	Milieu, essaie également 2 pour un
 		{
-			if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] < 0.8 && pJeu->NbCoupeInit > 0
-				&& (pJeu->ResteAtout - pJeu->AtoutPreneur) > 0.5)
+		    va = DeuxPourUnOK(CurrentGame, pJeu);
+			if ( va > -10 )
 			{
 				CarteCouleur[ATOUT] = GetPlusFaible(pJeu, ATOUT);
-				ValCouleur[ATOUT] = pJeu->NbCoupeInit * 10.0 + (8.0 - pJeu->MyCarte[CarteCouleur[ATOUT]].Hauteur)
-                            - 14.0 * pJeu->ProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)];
+				ValCouleur[ATOUT] = va;
 				ValCouleur[ATOUT] -= 10.0 * (1.0 - pJeu->ForceMain[(pJeu->PositionJoueur+3)&3]);
 			}
 		}

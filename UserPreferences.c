@@ -354,6 +354,47 @@ gsize liste_len;
         g_key_file_set_integer(UserPrefFile, "PartiesEnregistrees", "NumJouees", NbPartieMaitreJouee);
         isConfModified = 1;
     }
+    Error = NULL;
+    FlagSuggestionChien = g_key_file_get_boolean(UserPrefFile, "Preferences", "Chien", &Error);
+    if ( Error != NULL )
+    {
+        FlagSuggestionChien = 1;
+        g_key_file_set_boolean(UserPrefFile, "Preferences", "Chien", FlagSuggestionChien);
+        isConfModified = 1;
+    }
+    Error = NULL;
+    FlagSuggestionCarte = g_key_file_get_boolean(UserPrefFile, "Preferences", "Carte", &Error);
+    if ( Error != NULL )
+    {
+        FlagSuggestionCarte = 1;
+        g_key_file_set_boolean(UserPrefFile, "Preferences", "Carte", FlagSuggestionCarte);
+        isConfModified = 1;
+    }
+    Error = NULL;
+    FlagSuggestionPoignee = g_key_file_get_boolean(UserPrefFile, "Preferences", "Poignee", &Error);
+    if ( Error != NULL )
+    {
+        FlagSuggestionPoignee = 1;
+        g_key_file_set_boolean(UserPrefFile, "Preferences", "Poignee", FlagSuggestionPoignee);
+        isConfModified = 1;
+    }
+    Error = NULL;
+    PassageAutoPliSuivant = g_key_file_get_boolean(UserPrefFile, "Preferences", "PliSuivant", &Error);
+    if ( Error != NULL )
+    {
+        PassageAutoPliSuivant = 1;
+        g_key_file_set_boolean(UserPrefFile, "Preferences", "PliSuivant", PassageAutoPliSuivant);
+        isConfModified = 1;
+    }
+    Error = NULL;
+    DelaiPliAuto = g_key_file_get_integer(UserPrefFile, "Preferences", "DelaiPliSuivant", &Error);
+    if ( Error != NULL )
+    {
+        DelaiPliAuto = DECOMPTE_FIN_PLI;
+        g_key_file_set_integer(UserPrefFile, "Preferences", "DelaiPliSuivant", DelaiPliAuto);
+        isConfModified = 1;
+    }
+
     //  Les contraintes de distribution
     ReadContraintesDistribution(UserPrefFile, &isConfModified);
     //  Et enfin le style des joueurs
@@ -399,6 +440,17 @@ void ChangeUserConfigAffichage(void)
     g_key_file_set_boolean(UserPrefFile, "Affichage", "OUEST", AfficheJeuJoueurs[OUEST]);
     g_key_file_set_boolean(UserPrefFile, "Affichage", "Points", FlagAffichagePoints);
     g_key_file_set_boolean(UserPrefFile, "Affichage", "Atouts", FlagAffichageAtouts);
+    isConfModified = 1;
+}
+
+void ChangeUserPref(void)
+{
+    Error = NULL;
+    g_key_file_set_boolean(UserPrefFile, "Preferences", "Chien", FlagSuggestionChien);
+    g_key_file_set_boolean(UserPrefFile, "Preferences", "Poignee", FlagSuggestionPoignee);
+    g_key_file_set_boolean(UserPrefFile, "Preferences", "Carte", FlagSuggestionCarte);
+    g_key_file_set_boolean(UserPrefFile, "Preferences", "PliSuivant", PassageAutoPliSuivant);
+    g_key_file_set_integer(UserPrefFile, "Preferences", "DelaiPliSuivant", DelaiPliAuto);
     isConfModified = 1;
 }
 

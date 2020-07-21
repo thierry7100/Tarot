@@ -118,6 +118,11 @@ extern int FlagAffichagePoints;
 extern int FlagAffichageAtouts;
 extern int AfficheJeuJoueurs[MAX_JOUEURS];
 extern int MaitreJouee[NB_PARTIE_MAITRE];
+extern int FlagSuggestionChien;
+extern int FlagSuggestionCarte;
+extern int FlagSuggestionPoignee;
+extern int PassageAutoPliSuivant;
+extern int DelaiPliAuto;
 extern unsigned NbPartieMaitreJouee;
 
 
