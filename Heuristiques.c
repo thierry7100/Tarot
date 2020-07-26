@@ -5,7 +5,7 @@
 #include <math.h>
 
 #if DEBUG > 0
-#define DEBUG_HEURISTIQUES  1
+#define DEBUG_HEURISTIQUES  0
 #else
 #define DEBUG_HEURISTIQUES  0
 #endif // DEBUG
@@ -1005,7 +1005,7 @@ int PossPetit;
 #endif // DEBUG_HEURISTIQUES
     }
     //	Heuristique couleur 21 : Si un joueur défausse une petite carte dans une couleur, il n'en veut pas
-	if ( IndexTable > 0 && Table[IndexTable].Couleur != CouleurDemandee && pos != CurrentGame->JoueurPreneur && Table[IndexTable].Couleur != EXCUSE )
+	if ( IndexTable > 0 && Table[IndexTable].Couleur != CouleurDemandee && pos != CurrentGame->JoueurPreneur && Table[IndexTable].Couleur > ATOUT )
 	{
 		if ( Table[IndexTable].Valeur == 1 && Table[IndexTable].Couleur > ATOUT )
 		{
