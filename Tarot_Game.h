@@ -8,6 +8,13 @@
 
 #define NOMBRE_DONNES_PARTIE    15
 
+//  Si plus faible que ce nombre, essaie toutes les possibilités
+#define NOMBRE_DISTRIB_FIN_PARTIE_ATTAQUE   2000
+#define MAX_CARTE_FIN_PARTIE_ATTAQUE        4
+#define NOMBRE_DISTRIB_FIN_PARTIE_DEFENSE   2000
+#define MAX_CARTE_FIN_PARTIE_DEFENSE        3
+
+
 enum _Couleur_Carte {
     EXCUSE,
     ATOUT,
@@ -190,7 +197,7 @@ struct _Jeu {
 	double NbPoint;                             //  Points ne tenant compte que des forces des cartes
 	double	NbPointDH;                          //  Points tenant compte de la distribution (coupes...)
 	int NbBout;						            //	Nombre de bouts du joueur
-	int TypePoignee[MAX_JOUEURS];		        //	Type de poignee annoncée par le joueur
+	int TypePoignee[MAX_JOUEURS];		        //	Type de poignée annoncée par le joueur
 	int PositionJoueur;                         //  Position du joueur pour cette structure _Jeu
 	int PositionPreneur;                        //  Position du preneur
 	int NbCouleurChien[NB_COULEUR];
@@ -198,7 +205,10 @@ struct _Jeu {
     int PetitSurCoupe;                          //  Nombre de coupes avant de mettre le petit
 	int		PetitImprenable;		            //	Vrai si le joueur possède le petit imprenable
 };
-//  Define the structure that will be used for the current play
+
+//  Structure qui décrit la partie en cours.
+//  Une seule structure est utilisée durant la partie "normale"
+//  En fin de partie, quand le programme teste toutes les distributions possibles, d'autres structures sont allouées.
 
 struct _Tarot_Partie {
     int JoueurDistrib;                      //  Numéro du joueur qui a distribué
@@ -227,6 +237,7 @@ struct _Tarot_Partie {
     char *InfoMessage;                      //  Message à afficher si état JEU_MESSAGE
     int StateAfterMessage;
     double DeltaYMessage;
+    double ProbaDistrib;                    //  Probabilité de la distribution en cours (fin de partie seulement)
     int PartiePetitImprenable;
     int TypeTimer;                          //  Type de timer en cours
     int NumPartieEnregistree;               //  Numéro partie enregistrée ou -1 si non
@@ -296,6 +307,7 @@ void OpenDebugFile(const char *Name);
 void CloseDebugFile();
 void OutDebug(char *fmt, ...);
 void ImprimeCarte(struct _Carte_Jeu *Carte);
+char *strNomCarte(char *Buffer, int Index);
 
 void DistribueJeu(TarotGame CurrentGame);
 void DistribuePartieMaitre(TarotGame CurrentGame, int ChixFixe);
@@ -321,7 +333,7 @@ void RegardeAtoutEcart(TarotGame CurrentGame, struct _Jeu *pJeu);
 void IntegreInformationsChienJoueurs(TarotGame CurrentGame);
 void SelectAtoutsLeveePoignee(TarotGame CurrentGame);
 int NombrePointsContrat(TarotGame CurrentGame);
-void ComptePointsFinPartie(TarotGame CurrentGame);
+void ComptePointsFinPartie(TarotGame CurrentGame, int FlagFinPartie);
 double ResultatPartieMaitre(TarotGame CurrentGame);
 int CalcScoresPartie(double ScoreJoueurs[MAX_JOUEURS], int *JoueurGagnant);
 int RegardeChelemPreneur(TarotGame CurrentGame);
@@ -348,6 +360,7 @@ void CalcTmpProbCoupe(TarotGame CurrentGame, struct _Jeu *pJeu, int IndexTable);
 void BaisseTmpProb(struct _Jeu *pJeu, int posJoueur, int IndexCarte, double ProbRegle, double NumRegle);
 void MonteTmpProb(struct _Jeu *pJeu, int posJoueur, int IndexCarte, double mul, double NumRegle);
 void NormaliseTmpProba(TarotGame CurrentGame, struct _Jeu *pJeu, int indexJoueur);
+void Attract_Proba(TarotGame CurrentGame, struct _Jeu *pJeu);
 
 //  Heuristiques
 void Heuristique_Petit_Proba(TarotGame CurrentGame, struct _Jeu *pJeu, int IndexTable);
@@ -413,11 +426,13 @@ int NextAtout(TarotGame CurrentGame, int Index);
 int AtoutMaitre(TarotGame CurrentGame);
 double nbDistrib(TarotGame CurrentGame, struct _Jeu *pJeu);
 void GainPetitAuBout(TarotGame CurrentGame, struct _Jeu *pJeu);
+int FinPartie(TarotGame CurrentGame);
+
 //  Fonctions liées à la Table de jeu
 
 int CarteValide(struct _Jeu *pJeu, int IndexCarte, int JoueurEntame);
 void PoseCarte(TarotGame CurrentGame, int IndexCarte);
-void RamassePli(TarotGame CurrentGame);
+void RamassePli(TarotGame CurrentGame, int ModeFinPartie);
 int PlusFortAtoutJoue(int Position);
 int Gagnant(int idxPosition);
 int GainPli(TarotGame CurrentGame, int PosTable);

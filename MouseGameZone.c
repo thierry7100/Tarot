@@ -72,11 +72,11 @@ extern double RecouvrementJeu;
         CurrentGame->DecompteFinPli = 0;
         CurrentGame->StateJeu = JEU_EN_COURS;         //  Passe au second pli (ou plus)
         CurrentGame->StateAfterMessage = JEU_EN_COURS;//  Ne met pas de suite l'état attente jeu SUD, il faudra attendre un tick avant de pouvoir jouer
-        RamassePli(CurrentGame);                      //  Ramasse le pli en cours, prépare pli suivant
+        RamassePli(CurrentGame, 0);                      //  Ramasse le pli en cours, prépare pli suivant
         AffichagePoints(CurrentGame);
         if ( CurrentGame->NumPli == 18 )
         {
-            ComptePointsFinPartie(CurrentGame);     //
+            ComptePointsFinPartie(CurrentGame, 0);     //
             CurrentGame->StateJeu = JEU_TERMINE;
             CurrentGame->StateAfterMessage = JEU_TERMINE;
             gtk_widget_queue_draw(GameZoneArea);    //  Force réaffichage pour affichage pli ramassé

@@ -589,49 +589,49 @@ void ImprimeCarte(struct _Carte_Jeu *Carte)
 		if ( Carte->Hauteur <= 10 )
 			OutDebug("%dT ", Carte->Hauteur);
 		if ( Carte->Hauteur == VALET )
-			OutDebug( "VT ", Carte->Hauteur);
+			OutDebug( "VT ");
 		if ( Carte->Hauteur == CAVALIER )
-			OutDebug( "CT ", Carte->Hauteur);
+			OutDebug( "CT ");
 		if ( Carte->Hauteur == DAME )
-			OutDebug( "DT ", Carte->Hauteur);
+			OutDebug( "DT ");
 		if ( Carte->Hauteur == ROI )
-			OutDebug( "RT ", Carte->Hauteur);
+			OutDebug( "RT ");
 		return;
 	case CARREAU:
 		if ( Carte->Hauteur <= 10 )
 			OutDebug( "%dK ", Carte->Hauteur);
 		if ( Carte->Hauteur == VALET )
-			OutDebug( "VK ", Carte->Hauteur);
+			OutDebug( "VK ");
 		if ( Carte->Hauteur == CAVALIER )
-			OutDebug( "CK ", Carte->Hauteur);
+			OutDebug( "CK ");
 		if ( Carte->Hauteur == DAME )
-			OutDebug( "DK ", Carte->Hauteur);
+			OutDebug( "DK ");
 		if ( Carte->Hauteur == ROI )
-			OutDebug( "RK ", Carte->Hauteur);
+			OutDebug( "RK ");
 		return;
 	case COEUR:
 		if ( Carte->Hauteur <= 10 )
 			OutDebug("%dC ", Carte->Hauteur);
 		if ( Carte->Hauteur == VALET )
-			OutDebug("VC ", Carte->Hauteur);
+			OutDebug("VC ");
 		if ( Carte->Hauteur == CAVALIER )
-			OutDebug( "CC ", Carte->Hauteur);
+			OutDebug( "CC ");
 		if ( Carte->Hauteur == DAME )
-			OutDebug( "DC ", Carte->Hauteur);
+			OutDebug( "DC ");
 		if ( Carte->Hauteur == ROI )
-			OutDebug("RC ", Carte->Hauteur);
+			OutDebug("RC ");
 		return;
 	case PIQUE:
 		if ( Carte->Hauteur <= 10 )
 			OutDebug("%dP ", Carte->Hauteur);
 		if ( Carte->Hauteur == VALET )
-			OutDebug( "VP ", Carte->Hauteur);
+			OutDebug( "VP ");
 		if ( Carte->Hauteur == CAVALIER )
-			OutDebug( "CP ", Carte->Hauteur);
+			OutDebug( "CP ");
 		if ( Carte->Hauteur == DAME )
-			OutDebug( "DP ", Carte->Hauteur);
+			OutDebug( "DP ");
 		if ( Carte->Hauteur == ROI )
-			OutDebug( "RP ", Carte->Hauteur);
+			OutDebug( "RP ");
 		return;
 	}
 }
@@ -697,6 +697,73 @@ void MakeCarte(struct _Carte_Jeu *Carte, int Index)
 		Carte->Valeur = 1;
 }
 
+//  Retourne une chaîne de caractères avec le nom de la carte
+//  Utilise le buffer pour cela
+
+char *strNomCarte(char *buffer, int Index)
+{
+struct _Carte_Jeu tmpCarte;
+
+    MakeCarte(&tmpCarte, Index);
+	switch ( tmpCarte.Couleur )
+	{
+	case EXCUSE:
+	    sprintf(buffer, "Exc");
+		return buffer;
+	case ATOUT:
+		sprintf(buffer, "%dA", tmpCarte.Hauteur);
+		return buffer;
+	case TREFLE:
+		if ( tmpCarte.Hauteur <= 10 )
+			sprintf(buffer, "%dT", tmpCarte.Hauteur);
+		if ( tmpCarte.Hauteur == VALET )
+			sprintf(buffer,  "VT");
+		if ( tmpCarte.Hauteur == CAVALIER )
+			sprintf(buffer,  "CT");
+		if ( tmpCarte.Hauteur == DAME )
+			sprintf(buffer, "DT");
+		if ( tmpCarte.Hauteur == ROI )
+			sprintf(buffer, "RT");
+		return buffer;
+	case CARREAU:
+		if ( tmpCarte.Hauteur <= 10 )
+			sprintf(buffer, "%dK", tmpCarte.Hauteur);
+		if ( tmpCarte.Hauteur == VALET )
+			sprintf(buffer, "VK");
+		if ( tmpCarte.Hauteur == CAVALIER )
+			sprintf(buffer, "CK");
+		if ( tmpCarte.Hauteur == DAME )
+			sprintf(buffer,  "DK ");
+		if ( tmpCarte.Hauteur == ROI )
+			sprintf(buffer, "RK");
+		return buffer;
+	case COEUR:
+		if ( tmpCarte.Hauteur <= 10 )
+			sprintf(buffer, "%dC", tmpCarte.Hauteur);
+		if ( tmpCarte.Hauteur == VALET )
+			sprintf(buffer, "VC");
+		if ( tmpCarte.Hauteur == CAVALIER )
+			sprintf(buffer, "CC ");
+		if ( tmpCarte.Hauteur == DAME )
+			sprintf(buffer, "DC");
+		if ( tmpCarte.Hauteur == ROI )
+			sprintf(buffer, "RC");
+		return buffer;
+	case PIQUE:
+		if ( tmpCarte.Hauteur <= 10 )
+			sprintf(buffer, "%dP", tmpCarte.Hauteur);
+		if ( tmpCarte.Hauteur == VALET )
+			sprintf(buffer, "VP");
+		if (tmpCarte.Hauteur == CAVALIER )
+			sprintf(buffer, "CP");
+		if (tmpCarte.Hauteur == DAME )
+			sprintf(buffer, "DP");
+		if ( tmpCarte.Hauteur == ROI )
+			sprintf(buffer, "RP");
+		return buffer;
+	}
+    return buffer;
+}
 
 //	Retourne l'index dans le jeu du joueur de la carte demandée
 
@@ -894,7 +961,7 @@ int gagnant;
 
 //  Compte les points à la fin de la partie
 
-void ComptePointsFinPartie(TarotGame CurrentGame)
+void ComptePointsFinPartie(TarotGame CurrentGame, int FlagFinPartie )
 {
 int i;
 int Multiplicateur;
@@ -989,6 +1056,7 @@ int BasePoints = 0;
     BasePoints -= CurrentGame->PointsChelemDefense;
     CurrentGame->PointsAttaque = 3 * BasePoints;
     CurrentGame->PointsDefense = -BasePoints;
+    if ( FlagFinPartie ) return;
     if ( NumDonnes < NOMBRE_DONNES_PARTIE )
     {
         ResPartie[NumDonnes].TypeEnregistre = CurrentGame->NumPartieEnregistree >= 0;

@@ -64,6 +64,9 @@
 		<Unit filename="Ecart.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="FinPartie.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Heuristiques.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -38,7 +38,7 @@ double SommeJoueur[5];
                 ProbaCarte += pJeu->ProbCarte[j][i];
                 SommeJoueur[j] += pJeu->ProbCarte[j][i];
             }
-            assert(fabs(ProbaCarte-1.0)<PRECISION_NORMALISATION);
+            assert(fabs(ProbaCarte-1.0)<2*PRECISION_NORMALISATION);
         }
     }
     for ( j = 0; j < 4; j++ )
@@ -337,6 +337,7 @@ int Position;
 void CheckDebugProba(TarotGame CurrentGame, struct _Jeu *pJeu, int IndexCarte)
 {
     if ( CurrentGame->CarteJouee[IndexCarte] >= 0 ) return;
+    if ( CurrentGame->ProbaDistrib > 0.0 ) return;      //  Pas de message d'erreur quand génère les distributions possibles
     if ( pJeu->ProbCarte[0][IndexCarte] < 0.08 && CurrentGame->Carte2Joueur[IndexCarte] == 0 )
     {
         OutDebug("PROBLEME Proba pour joueur %d:  pJeu->ProbCarte[SUD][%d] = %.3f et Carte appartient à joueur SUD\n", pJeu->PositionJoueur, IndexCarte, pJeu->ProbCarte[0][IndexCarte]);
@@ -528,6 +529,35 @@ int j;
 #endif // DEBUG_CHECK_PROBA
 }
 
+#define SEUIL_FAIBLE    0.01
+#define SEUIL_FORT      0.99
+
+//  Lors de la génération des jeux possibles, si une proba est trop faible, la met à 0, si elle est trop forte la met à 1
+
+void Attract_Proba(TarotGame CurrentGame, struct _Jeu *pJeu)
+{
+int i, j, k;
+
+    for ( j = 0; j < MAX_JOUEURS; j++ )
+    {
+        if ( j == pJeu->PositionJoueur ) continue;
+        for ( i = 0; i < 78; i++ )
+        {
+            if ( pJeu->ProbCarte[j][i] < SEUIL_FAIBLE )
+            {
+                BaisseProba(CurrentGame, pJeu->PositionJoueur, j, i, 1.0);      //  Force à 0
+            }
+            if ( pJeu->ProbCarte[j][i] > SEUIL_FORT )
+            {
+                for ( k = 0; k <= CHIEN; k++ )
+                    pJeu->ProbCarte[k][i] = 0.0;        //  Force à 0 toutes les cases
+                pJeu->ProbCarte[j][i] = 1.0;            //  Et met à 1 celle du joueur.
+            }
+        }
+    }
+    NormaliseProba(CurrentGame, pJeu);
+}
+
 //	Normalise les probas dans le cas général
 //  Pour une question d'éfficacité, plutôt utiliser RenormaliseMontant ou RenormaliseDescendant
 //	Assure que Somme(Proba(Joueur)) = Nombre de cartes attendu
@@ -626,7 +656,7 @@ int i;
 		if ( SConfiance < MaxErr )	//	Pas assez pour corriger, erreur dans Confiance
 		{
 			NoConfiance = 1;
-			printf("Erreur dans Confiance (Trop confiant) pour nomalisation, Calculé=%.2f, Erreur à rattaper=%.2f\n", SConfiance, MaxErr);
+			//printf("Erreur dans Confiance (Trop confiant) pour nomalisation, Calculé=%.2f, Erreur à rattaper=%.2f\n", SConfiance, MaxErr);
 			Diviseur = MaxValErr;
 		}
 		for ( i = 0; i < 78; i++ )
@@ -652,8 +682,9 @@ int i;
 					{
 						if ( j == ColonneErr ) continue;
 						pJeu->ProbCarte[j][i] *= 1.0 / (1.0 - pJeu->ProbCarte[ColonneErr][i]);
+						if (pJeu->ProbCarte[j][i] > 1.0 ) pJeu->ProbCarte[j][i] = 1.0;
 						assert(!isnan(pJeu->ProbCarte[j][i]));
-						assert(pJeu->ProbCarte[j][i] < 1.0000001 );
+						if (pJeu->ProbCarte[j][i] > 1.0 ) pJeu->ProbCarte[j][i] = 1.0;
 					}
 					pJeu->ProbCarte[ColonneErr][i] = 0.0;
 				}
@@ -675,12 +706,12 @@ int i;
 						{
 							if ( j == ColonneErr ) continue;
 							pJeu->ProbCarte[j][i] *= (1.0 - pJeu->ProbCarte[ColonneErr][i] - Delta) / (1.0 - pJeu->ProbCarte[ColonneErr][i]);
+							if ( pJeu->ProbCarte[j][i] > 1.0 ) pJeu->ProbCarte[j][i] = 1.0;     //  Limite valeur
 							assert(!isnan(pJeu->ProbCarte[j][i]));
-                            assert(pJeu->ProbCarte[j][i] < 1.0000001 );
 						}
 						pJeu->ProbCarte[ColonneErr][i] += Delta;
+                        if ( pJeu->ProbCarte[ColonneErr][i] > 1.0 ) pJeu->ProbCarte[ColonneErr][i] = 1.0;     //  Limite valeur
 						assert(!isnan(pJeu->ProbCarte[ColonneErr][i]));
-						assert(pJeu->ProbCarte[ColonneErr][i] < 1.0000001 );
 					}
 				}
 			}
@@ -734,7 +765,7 @@ int jr;
 	{
 		NoConfiance = 1;
 		Diviseur = MaxValErr;
-		printf("RenormaliseMontant, Confiance surestimée, SConfiance=%.2f, Erreur à rattraper %.2f\n", SConfiance, Erreur);
+		//printf("RenormaliseMontant, Confiance surestimée, SConfiance=%.2f, Erreur à rattraper %.2f\n", SConfiance, Erreur);
 	}
 	if (Erreur < 1.0e-7) return;
 	if ( Erreur < 0 )
@@ -828,7 +859,7 @@ int i, j, jr;
 	{
 		NoConfiance = 1;
 		Diviseur = MaxValErr;
-		printf("RenormaliseDescendant, Confiance surestimée, SConfiance=%.2f, Erreur à rattraper %.2f\n", SConfiance, Erreur);
+		//printf("RenormaliseDescendant, Confiance surestimée, SConfiance=%.2f, Erreur à rattraper %.2f\n", SConfiance, Erreur);
 	}
 	if (fabs(Erreur) < 1.0e-7) return;
 	if ( Erreur > 0 )
@@ -1042,7 +1073,7 @@ int posPreneur = (CurrentGame->JoueurPreneur - CurrentGame->JoueurEntame) & 3;
 }
 
 #if DEBUG > 0
-#define DEBUG_REGLE_TMP 1
+#define DEBUG_REGLE_TMP 0
 #else
 #define DEBUG_REGLE_TMP 0
 #endif  // DEBUG

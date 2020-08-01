@@ -610,7 +610,7 @@ int i1;
 //  Le Preneur est le premier à jouer
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_PREMIER 1
+#define DEBUG_ATTAQUE_PREMIER 0
 #else
 #define DEBUG_ATTAQUE_PREMIER 0
 #endif  // DEBUG
@@ -631,6 +631,7 @@ double BestScore = -1e6;
 int BestCouleur = -1;
 double ValCouleur[6];
 int CarteCouleur[6];
+double nDis = nbDistrib(CurrentGame, pJeu);
 
     StrategieChasseAttaque(CurrentGame, pJeu, Position);
 	pJeu->ResteAtout = NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT);
@@ -640,7 +641,17 @@ int CarteCouleur[6];
     OutDebug("JoueEnPremierAttaque : NbCarte = %d\n", pJeu->NbCarte);
     OutDebug("JoueEnPremierAttaque: StrategieChasse --> pJeu->StatusChasse ==%d\n", pJeu->StatusChasse);
     OutDebug("JoueEnPremierAttaque : ResteAtout = %d\n", pJeu->ResteAtout);
+    OutDebug("Nombre de distributions %.0f\n", nDis);
 #endif // DEBUG_ATTAQUE_PREMIER
+    if ( pJeu->NbCarte > 1 && pJeu->NbCarte <= MAX_CARTE_FIN_PARTIE_ATTAQUE && nDis <= NOMBRE_DISTRIB_FIN_PARTIE_ATTAQUE )
+    {
+        i0 = FinPartie(CurrentGame);
+        if ( i0 >= 0 )
+        {
+            PoseCarte(CurrentGame, i0);
+            return;
+        }
+    }
     if ( pJeu->StatusChasse == CHASSE_PRENEUR_GROS )
     {
 		if ( IsMaitreCouleur(CurrentGame, pJeu, ATOUT) )	//	Vérifie si maître...
@@ -838,7 +849,7 @@ int CarteCouleur[6];
 }
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_SECOND 1
+#define DEBUG_ATTAQUE_SECOND 0
 #else
 #define DEBUG_DEFENSE_SECOND 0
 #endif  // DEBUG
@@ -910,7 +921,7 @@ double Score;
 }
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_TROISIEME 1
+#define DEBUG_ATTAQUE_TROISIEME 0
 #else
 #define DEBUG_ATTAQUE_TROISIEME 0
 #endif  // DEBUG
@@ -980,7 +991,7 @@ double Score;
 }
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_DERNIER 1
+#define DEBUG_ATTAQUE_DERNIER 0
 #else
 #define DEBUG_ATTAQUE_DERNIER 0
 #endif  // DEBUG

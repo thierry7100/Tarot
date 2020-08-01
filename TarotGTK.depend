@@ -2855,12 +2855,13 @@
 
 1586965107 /home/thierry/Programmes/TarotGTK/ScreenSize.h
 
-1595273358 source:/home/thierry/Programmes/TarotGTK/Tarot_Main_ui.c
+1595952591 source:/home/thierry/Programmes/TarotGTK/Tarot_Main_ui.c
 	"ScreenSize.h"
 	<gtk/gtk.h>
 	"SplashScreen.h"
 	"Tarot_Ui_Objects.h"
 	<glib.h>
+	<stdlib.h>
 
 1595239352 source:/home/thierry/Programmes/TarotGTK/resources.c
 	<gio/gio.h>
@@ -2879,7 +2880,7 @@
 1595252740 /home/thierry/Programmes/TarotGTK/Tarot_Ui_Objects.h
 	"Tarot_Game.h"
 
-1595241095 /home/thierry/Programmes/TarotGTK/Tarot_Game.h
+1596280342 /home/thierry/Programmes/TarotGTK/Tarot_Game.h
 
 1595252423 source:/home/thierry/Programmes/TarotGTK/DrawGameZone.c
 	<gtk/gtk.h>
@@ -2921,7 +2922,7 @@
 	"Tarot_Ui_Objects.h"
 	"cairo_util.h"
 
-1595243694 source:/home/thierry/Programmes/TarotGTK/MouseGameZone.c
+1595952583 source:/home/thierry/Programmes/TarotGTK/MouseGameZone.c
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
 	"Tarot_Game.h"
@@ -2934,7 +2935,7 @@
 	<assert.h>
 	"Tarot_Ui_Objects.h"
 
-1595261347 source:/home/thierry/Programmes/TarotGTK/UtilJeu.c
+1595952539 source:/home/thierry/Programmes/TarotGTK/UtilJeu.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	<time.h>
@@ -2962,14 +2963,14 @@
 	"Tarot_Ui_Objects.h"
 	<assert.h>
 
-1593340880 source:/home/thierry/Programmes/TarotGTK/Proba.c
+1596202934 source:/home/thierry/Programmes/TarotGTK/Proba.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
 	<assert.h>
 	<math.h>
 
-1592554696 source:/home/thierry/Programmes/TarotGTK/TarotFile.c
+1595757536 source:/home/thierry/Programmes/TarotGTK/TarotFile.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	<time.h>
@@ -2983,21 +2984,21 @@
 	<assert.h>
 	<math.h>
 
-1593602097 source:/home/thierry/Programmes/TarotGTK/JeuAttaque.c
+1596268961 source:/home/thierry/Programmes/TarotGTK/JeuAttaque.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
 	<assert.h>
 	<math.h>
 
-1595342239 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
+1596268950 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
 	<assert.h>
 	<math.h>
 
-1595342957 source:/home/thierry/Programmes/TarotGTK/Table.c
+1596279574 source:/home/thierry/Programmes/TarotGTK/Table.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	<time.h>
@@ -3012,7 +3013,7 @@
 	<assert.h>
 	<math.h>
 
-1593516918 source:/home/thierry/Programmes/TarotGTK/Regle.c
+1595677859 source:/home/thierry/Programmes/TarotGTK/Regle.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	<time.h>
@@ -3060,7 +3061,7 @@
 	<math.h>
 	<assert.h>
 
-1595328813 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
+1595695984 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
@@ -3292,4 +3293,11 @@
 	"SplashScreen.h"
 	"Tarot_Ui_Objects.h"
 	<glib.h>
+
+1596280237 source:/home/thierry/Programmes/TarotGTK/FinPartie.c
+	<stdlib.h>
+	<gtk/gtk.h>
+	"Tarot_Ui_Objects.h"
+	<assert.h>
+	<math.h>
 

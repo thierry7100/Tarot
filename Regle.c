@@ -6,7 +6,7 @@
 #include "Tarot_Ui_Objects.h"
 
 #if DEBUG > 0
-#define DEBUG_REGLE 1
+#define DEBUG_REGLE 0
 #else
 #define DEBUG_REGLE 0
 #endif  // DEBUG

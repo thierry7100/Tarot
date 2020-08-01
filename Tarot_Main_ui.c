@@ -3,6 +3,7 @@
 #include "SplashScreen.h"
 #include "Tarot_Ui_Objects.h"
 #include <glib.h>
+#include <stdlib.h>
 
 //  Global variables for UI, will be accessed in the game
 GtkWindow *MainWindow;                  //  The top level window
@@ -44,7 +45,7 @@ struct _Tarot_Partie UiGame;
 const int DurationStepContrat = 500;
 const int DurationStepJeu = 500;
 
-const char *strVersion = "v 0.01.05";
+const char *strVersion = "v 0.02.01";
 
 int InitUi(int argc, char **argv)
 {
@@ -99,11 +100,11 @@ static int NbTickTimer;
         }
         UiGame.DecompteFinPli = 0;
         UiGame.StateJeu = JEU_EN_COURS;         //  Passe au second pli (ou plus)
-        RamassePli(&UiGame);                    //  Ramasse le pli en cours, prépare pli suivant
+        RamassePli(&UiGame, 0);                    //  Ramasse le pli en cours, prépare pli suivant
         AffichagePoints(&UiGame);
         if ( UiGame.NumPli == 18 )
         {
-            ComptePointsFinPartie(&UiGame);
+            ComptePointsFinPartie(&UiGame, 0);
             UiGame.StateJeu = JEU_TERMINE;
             UiGame.StateAfterMessage = JEU_TERMINE;
             gtk_widget_queue_draw(GameZoneArea);    //  Force réaffichage pour affichage pli ramassé

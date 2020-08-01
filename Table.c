@@ -90,11 +90,12 @@ int iCarte;
         }
     }
 #if DEBUG > 0
-    OutDebug("Joueur %d, Position %d, pose Carte ", CurrentGame->JoueurCourant, idxTable);
-    ImprimeCarte(&Table[idxTable]);
-    OutDebug("Reste NbCarte=%d NbCarteJoueur[%d]=%d\n", pJeu->NbCarte, Position, CurrentGame->NbCarteJoueur[Position]);
-    if ( Table[idxTable].Index == 29 )
-        i = 0;
+    if ( CurrentGame->ProbaDistrib == 0 )
+    {
+        OutDebug("Joueur %d, Position %d, pose Carte ", CurrentGame->JoueurCourant, idxTable);
+        ImprimeCarte(&Table[idxTable]);
+        OutDebug("Reste NbCarte=%d NbCarteJoueur[%d]=%d\n", pJeu->NbCarte, Position, CurrentGame->NbCarteJoueur[Position]);
+    }
 #endif // DEBUG
 }
 
@@ -141,7 +142,7 @@ int i;
 		return(1);
 	}
 	//  Le joueur ne joue pas de la couleur demandée, regarde déjà s'il en a
-	if ( pJeu->NbCouleur[CouleurDemandee] != 0 ) return(0);     //  S'il en a, doit en jouer
+	if ( CouleurDemandee > ATOUT && pJeu->NbCouleur[CouleurDemandee] != 0 ) return(0);     //  S'il en a, doit en jouer
 	if ( pJeu->NbAtout == 0 ) return(1);                        //  Si le joueur n'a pas de la couleur demandée et pas d'atout, tout est valide
 	//  Cas avec un seul ATOUT, l'excuse, les autres couleurs sont OK
 	if ( pJeu->NbAtout == 1 && pJeu->MyCarte[0].Couleur == EXCUSE ) return 1;
@@ -237,7 +238,7 @@ double GuessAtoutPreneur;
 			if ( Couleur <= ATOUT )
                 pJeu->NbAtout--;
             else
-				pJeu->NbCouleur[Couleur]--;
+                pJeu->NbCouleur[Couleur]--;
 		}
 	}
     NormaliseProba(CurrentGame, pJeu);                  //  Re normalise les probabilités si besoin est.
@@ -485,7 +486,7 @@ int i, pos;
 //  "Ramasse" le pli à fin.
 //  Met à jour les différents états
 
-void RamassePli(TarotGame CurrentGame)
+void RamassePli(TarotGame CurrentGame, int ModeFinPartie)
 {
 int pts[2];
 int j;
@@ -586,13 +587,17 @@ int PliAttaque;
             MiseAJourJeuJoueur(CurrentGame, j);
         }
     }
-    MemorisePli(CurrentGame);
+    if ( ModeFinPartie == 0 )
+        MemorisePli(CurrentGame);               //  Seulement en mode "normal", pas simulation fin de partie
     CurrentGame->JoueurEntame = gagnant;        //  Prochain à jouer
     CurrentGame->JoueurCourant = CurrentGame->JoueurEntame;
 #if DEBUG > 0
-    OutDebug("Fin du pli %d\n", CurrentGame->NumPli);
-    OutDebug("Points Preneur %d, Défense %d\n", CurrentGame->NumPointsPreneur, CurrentGame->NumPointsDefense);
-    OutDebug("--------------------------------------------------------------------------------------------\n");
+    if ( ModeFinPartie == 0 )
+    {
+        OutDebug("Fin du pli %d\n", CurrentGame->NumPli);
+        OutDebug("Points Preneur %d, Défense %d\n", CurrentGame->NumPointsPreneur, CurrentGame->NumPointsDefense);
+        OutDebug("--------------------------------------------------------------------------------------------\n");
+    }
 #endif // DEBUG
 }
 

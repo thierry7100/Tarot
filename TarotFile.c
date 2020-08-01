@@ -84,6 +84,9 @@ char strMessage[64];
     if ( InFile == NULL ) return -1;
     memset(CurrentGame, 0, sizeof(*CurrentGame));       //  Efface la structure
     CurrentGame->FlagAfficheJoueur[0] = 1;              //  Par défaut SUD visible
+#if DEBUG > 0
+    OutDebug("Charge fichier %s\n", Name);
+#endif // DEBUG
     while ( 1 )                         //  Quit loop on file end
     {
          //  Look for section
@@ -146,6 +149,9 @@ char strMessage[64];
     {
         snprintf(strMessage, 60, "Partie n°%d", CurrentGame->NumPartieEnregistree+1);
         AfficheMsgStatusBarGen(strMessage);
+#if DEBUG > 0
+        OutDebug("Chargement OK, Partie %d, Preneur = %d\n", CurrentGame->NumPartieEnregistree, CurrentGame->PreneurPartieEnregistree);
+#endif // DEBUG
     }
     return 1;
 }

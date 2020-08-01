@@ -1034,7 +1034,7 @@ int c;
 //
 
 #if DEBUG > 0
-#define DEBUG_DEFENSE_PREMIER    1
+#define DEBUG_DEFENSE_PREMIER    0
 #else
 #define DEBUG_DEFENSE_PREMIER    0
 #endif // DEBUG
@@ -1058,6 +1058,7 @@ int GoChasse = 0;
 double x;
 double ProbCoupeAvant, ProbCoupeApres;
 double ValAtoutFort = - 100000.0;
+double nDis = nbDistrib(CurrentGame, pJeu);
 
 	pJeu->AtoutPreneur = AvgLongueur(pJeu, CurrentGame->JoueurPreneur, ATOUT);
 	pJeu->ResteAtout = NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT);
@@ -1093,7 +1094,7 @@ double ValAtoutFort = - 100000.0;
     OutDebug("---------------------------------------- Pli %d ---------------------------------\n", CurrentGame->NumPli+1);
     OutDebug("Entrée JoueEnPremierDefense, Position %d, Flanc = %d, StatusChasse=%d, AvgLgPreneur=%.2f, SansAtoutPreneur=%.3f\n",
                 pJeu->PositionJoueur, pJeu->Flanc, pJeu->StatusChasse,  AvgLongueur(pJeu, pJeu->PositionPreneur, ATOUT), SansAtoutPreneur);
-    OutDebug("Nombre de distributions %.0f\n", nbDistrib(CurrentGame, pJeu));
+    OutDebug("Nombre de distributions %.0f\n", nDis);
     OutDebug("ProbCoupe[T]=%.3f, ProbCoupe[K]=%.3f, ProbCoupe[P]=%.3f, ProbCoupe[C]=%.3f\n",
           pJeu->ProbCoupe[TREFLE], pJeu->ProbCoupe[CARREAU], pJeu->ProbCoupe[PIQUE], pJeu->ProbCoupe[COEUR]);
     OutDebug("GuessProbCoupe[T]=%.3f, GuessProbCoupe[K]=%.3f, GuessProbCoupe[P]=%.3f, GuessProbCoupe[C]=%.3f\n",
@@ -1110,8 +1111,17 @@ double ValAtoutFort = - 100000.0;
              pJeu->PositionJoueur^2, pJeu->TmpProbCarte[pJeu->PositionJoueur^2][21],
              pJeu->PositionJoueur^3, pJeu->TmpProbCarte[pJeu->PositionJoueur^3][21],
              pJeu->TmpProbCarte[4][1]);
-    OutDebug("Flanc = %d, ValFlanc = %.3f, CouleurTenur = %d\n", pJeu->Flanc, pJeu->Flanc > 0 ? pJeu->ValFlanc[pJeu->Flanc]:0.0, pJeu->CouleurTenue);
+    OutDebug("Flanc = %d, ValFlanc = %.3f, CouleurTenue = %d\n", pJeu->Flanc, pJeu->Flanc > 0 ? pJeu->ValFlanc[pJeu->Flanc]:0.0, pJeu->CouleurTenue);
 #endif // DEBUG
+    if ( pJeu->NbCarte > 1 && pJeu->NbCarte <= MAX_CARTE_FIN_PARTIE_DEFENSE && nDis <= NOMBRE_DISTRIB_FIN_PARTIE_DEFENSE )
+    {
+        i0 = FinPartie(CurrentGame);
+        if ( i0 >= 0 )
+        {
+            PoseCarte(CurrentGame, i0);
+            return;
+        }
+    }
     //	Coups spécifiques d'entame défense en contradiction avec les règles générales
     //	Si retour positif ou nul, joue la carte correspondante.
 	if ( (i0 = CoupsEntameDefense(CurrentGame, pJeu, ValCouleur)) >= 0 )
@@ -1788,7 +1798,7 @@ int i;
 
 
 #if DEBUG > 0
-#define DEBUG_DEFENSE_SECOND 1
+#define DEBUG_DEFENSE_SECOND 0
 #else
 #define DEBUG_DEFENSE_SECOND 0
 #endif  // DEBUG
@@ -2090,7 +2100,7 @@ int NbPoint = Table[0].Valeur;
 }
 
 #if DEBUG > 0
-#define DEBUG_DEFENSE_3EME 1
+#define DEBUG_DEFENSE_3EME 0
 #else
 #define DEBUG_DEFENSE_3EME 0
 #endif  // DEBUG
@@ -2377,7 +2387,7 @@ int BestC;
                 }
 
 			}
-#if DEBUG_DEFENSE_3EME
+#if DEBUG_DEFENSE_3EME > 0
             OutDebug("Essai Carte ");
             ImprimeCarte(&Table[2]);
             OutDebug(" Score = %.2f\n", Score);
@@ -2398,7 +2408,7 @@ int BestC;
 }
 
 #if DEBUG > 0
-#define DEBUG_DEFENSE_DERNIER 1
+#define DEBUG_DEFENSE_DERNIER 0
 #else
 #define DEBUG_DEFENSE_DERNIER 0
 #endif  // DEBUG
@@ -2918,7 +2928,7 @@ double PtRestant = 0;
 
 
 #if DEBUG > 0
-#define DEBUG_DEFENSE_GAGNANT 1
+#define DEBUG_DEFENSE_GAGNANT 0
 #else
 #define DEBUG_DEFENSE_GAGNANT 0
 #endif  // DEBUG
@@ -3181,7 +3191,7 @@ int Maitre;
 
 
 #if DEBUG > 0
-#define DEBUG_DEFAUSSE_DEFENSE 1
+#define DEBUG_DEFAUSSE_DEFENSE 0
 #else
 #define DEBUG_DEFAUSSE_DEFENSE 0
 #endif  // DEBUG
@@ -3303,6 +3313,10 @@ int Best = -1;
 double Maitre = 0;
 double NbA;
 int idxPos = (pJeu->PositionJoueur - CurrentGame->JoueurEntame)&3;
+int nbnh;
+double v;
+int d;
+int MaxPlisDefense = pJeu->NbCarte - MinPlisPreneur(CurrentGame, pJeu);
 
 	Bval = -1000000.0;
 	for ( i = 0; i < pJeu->NbCarte; i++)
@@ -3349,9 +3363,21 @@ int idxPos = (pJeu->PositionJoueur - CurrentGame->JoueurEntame)&3;
                 TousUtiles = 0;         //  Plus de cartes que de plis possibles ?
 			if ( AvgLongueur(pJeu, pJeu->PositionPreneur, ATOUT) < 0.001 && Maitre > 0 )
 				Maitre = (1.0 + 3.0*pJeu->ProbCarte[pJeu->PositionPreneur][pJeu->MyCarte[i].Index-1]) ;
+            //  Calcul pc : proba coupe
 			pc = pJeu->ProbCoupe[c];
 			if ( pJeu->JoueurCouleur[c] < 0 && pc > 0.15)		//	Pas encore ouvert
 				pc += (1.0 - pc)/pJeu->NbCarte;
+            //  Modifie pc avec proba faire des plis. Pas la peine de garder un honneur si ne peut faire de plis
+            if ( pc < 1 )
+            {
+                v = AvgLongueur(pJeu, pJeu->PositionPreneur, c);
+                d = ROI - GetCartePlusForte(pJeu, c)->Hauteur;      //  Nombre de cartes avant de faire un pli
+                if ( v < d + 1 )
+                {
+                    pc += d + 1 - v;
+                    if ( pc > 1 ) pc = 1;
+                }
+            }
 			NbA = AvgLongueur(pJeu, pJeu->PositionPreneur, ATOUT);			//	Nombre d'atouts du preneur
 			if ( ((pJeu->PositionPreneur-CurrentGame->JoueurEntame) & 3) > idxPos )	//	Avant le preneur
 			{
@@ -3368,23 +3394,27 @@ int idxPos = (pJeu->PositionJoueur - CurrentGame->JoueurEntame)&3;
 				else
 					pp -= NbA;
 			}
-			val = 1.0 * pJeu->MyCarte[i].Valeur + 0.75/pJeu->NbCouleur[c] -  0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) - 0.1*pJeu->NbCouleurChien[c]
+			nbnh = NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c);
+			if ( nbnh > 3 ) nbnh = 3;       //  Limite importance du facteur
+			if ( nbnh > MaxPlisDefense ) nbnh = MaxPlisDefense;
+			val = 1.0 * pJeu->MyCarte[i].Valeur + 0.75/pJeu->NbCouleur[c] -  0.5*nbnh - 0.1*pJeu->NbCouleurChien[c]
 				+ 2.0*pc - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) - Maitre*PointsRestants(pJeu, pJeu->PositionPreneur, c)*(1.0 - StyleJoueur[pJeu->PositionJoueur][dStyleDefDefausse])
 				- Maitre* pJeu->MyCarte[i].Valeur *(1-pc)/(1.0 + NbA)*AvgLongueur(pJeu, pJeu->PositionPreneur, c);
-			//	Signalisation des defausses. Jette les couleurs dont ne veut pas...
+			//	Signalisation des défausses. Jette les couleurs dont ne veut pas...
 			if ( FlagSignalisation )
 			{
 				if ( pJeu->MyCarte[i].Valeur == 1 && pp == 0 && (pJeu->DefausseCouleurParJoueur[pJeu->PositionJoueur] & (1 << c)) == 0 )
 					//	Pas encore de défausse dans cette couleur où ne fera rien...
 				{
-					val += 2.0;		//	Aide à la défausse...
+                    if ( MaxPlisDefense > 3 )
+                        val += 1.5;		//	Aide à la défausse... La valeur doit être inférieure à la différence avec un valet cependant
 				}
 			}
 #if DEBUG_DEFAUSSE_DEFENSE > 0
             OutDebug(", val =  %.2f\n", val);
             OutDebug("    = pJeu->MyCarte[i].Valeur : %d\n", pJeu->MyCarte[i].Valeur);
             OutDebug("    + 0.75/pJeu->NbCouleur[c] : %.2f\n", 0.75/pJeu->NbCouleur[c]);
-            OutDebug("    - 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c) : %.2f\n", 0.5*NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c));
+            OutDebug("    - 0.5*min(NbNonHonneur(CurrentGame, pJeu->PositionJoueur, c),3) : %.2f\n", 0.5*nbnh);
             OutDebug("    - 0.1*pJeu->NbCouleurChien[c] : %.2f\n", 0.1*pJeu->NbCouleurChien[c]);
             OutDebug("    + 2.0*pc : %.2f\n", 2.0*pc);
             OutDebug("    - (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp) : (1.0 + 6.0*%.2f)*(1-0-%.2f)*sqrt(%.2f) -> %.3f\n", TousUtiles, pc, pp, (1.0 + 6.0*TousUtiles)*(1.0-pc)*sqrt(pp));
