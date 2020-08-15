@@ -610,7 +610,7 @@ int i1;
 //  Le Preneur est le premier à jouer
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_PREMIER 0
+#define DEBUG_ATTAQUE_PREMIER 1
 #else
 #define DEBUG_ATTAQUE_PREMIER 0
 #endif  // DEBUG
@@ -991,7 +991,7 @@ double Score;
 }
 
 #if DEBUG > 0
-#define DEBUG_ATTAQUE_DERNIER 0
+#define DEBUG_ATTAQUE_DERNIER 1
 #else
 #define DEBUG_ATTAQUE_DERNIER 0
 #endif  // DEBUG

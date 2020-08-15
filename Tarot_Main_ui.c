@@ -1,4 +1,5 @@
 #include "ScreenSize.h"
+#include "version.h"
 #include <gtk/gtk.h>
 #include "SplashScreen.h"
 #include "Tarot_Ui_Objects.h"
@@ -45,7 +46,7 @@ struct _Tarot_Partie UiGame;
 const int DurationStepContrat = 500;
 const int DurationStepJeu = 500;
 
-const char *strVersion = "v 0.02.01";
+
 
 int InitUi(int argc, char **argv)
 {
@@ -101,6 +102,7 @@ static int NbTickTimer;
         UiGame.DecompteFinPli = 0;
         UiGame.StateJeu = JEU_EN_COURS;         //  Passe au second pli (ou plus)
         RamassePli(&UiGame, 0);                    //  Ramasse le pli en cours, prépare pli suivant
+        UiGame.NumPli++;
         AffichagePoints(&UiGame);
         if ( UiGame.NumPli == 18 )
         {
@@ -958,7 +960,7 @@ const gchar *authors[] = {"Thierry Houdoin", NULL};
     gtk_about_dialog_set_copyright (GTK_ABOUT_DIALOG (about_dialog), "Copyright \xc2\xa9 2020 Thierry Houdoin");
     gtk_about_dialog_set_authors (GTK_ABOUT_DIALOG (about_dialog), authors);
     gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG (about_dialog), IconTarot);
-    gtk_about_dialog_set_version(GTK_ABOUT_DIALOG (about_dialog), strVersion);
+    gtk_about_dialog_set_version(GTK_ABOUT_DIALOG (about_dialog), FULLVERSION_STRING);
   /* We do not wish to show the title, which in this case would be
    * "AboutDialog Example". We have to reset the title of the messagedialog
    * window after setting the program name.
@@ -972,6 +974,7 @@ const gchar *authors[] = {"Thierry Houdoin", NULL};
 
   /* Show the about dialog */
     gtk_widget_show (about_dialog);
+
 }
 
 
@@ -1161,7 +1164,7 @@ gchar *DebugFileName;
     DebugFileName = g_build_filename(AppConfDir, "TarotDebug.txt", NULL);
     OpenDebugFile(DebugFileName);
     OutDebug("GTK Version %d.%d.%d\n", gtk_get_major_version(), gtk_get_minor_version(), gtk_get_micro_version());
-    OutDebug("Tarot version %s\n\n", strVersion);
+    OutDebug("Tarot version %s\n\n", FULLVERSION_STRING);
 #endif // DEBUG
     AfficheMsgStatusBarGen("F2 pour distribuer...");
     UserInterfaceReady = TRUE;

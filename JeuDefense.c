@@ -1797,6 +1797,53 @@ int i;
 }
 
 
+//  Cas spécial coupe défense
+//  Si défenseur court en atout et coupe dans la longue du preneur, joue les forts d'abord pour éviter de faire monter les partenaires
+//  Retourne la carte à jouer si cas spécial, sinon retourne -1, le cas général s'applique alors
+
+int JoueCoupeFortEnTete(TarotGame CurrentGame, struct _Jeu *pJeu)
+{
+int j;
+double pnc, pf;
+double val = 1.0;
+int idx;
+
+    if ( HasPetit(pJeu) ) return -1;        //  Pas avec le petit !
+    if ( CurrentGame->JoueurEntame != CurrentGame->JoueurPreneur ) return -1;       //  Seulement si entame preneur
+    if ( pJeu->NbAtout > 4 ) return -1;         //  Ne doit pas avoir beaucoup d'atouts
+    if ( JoueurAvecPetit(CurrentGame, pJeu) != pJeu->PositionPreneur )  //  Si petit pas chez preneur, ne le fait pas
+    if ( AvgLongueur(pJeu, pJeu->PositionPreneur, Table[0].Couleur) < 2 )
+        return -1;                  //  Seulement si longue preneur
+    idx = GetPlusForte(pJeu, ATOUT);
+    //  L'idée est de jouer les gros si pas de coupe derrière ET proba d'avoir plus gros importante
+    pnc = 1.0;                   //  Proba NON coupe
+    pf = 1.0;                   //  Proba d'avoir plus fort
+    j = (pJeu->PositionJoueur + 1) & 3;
+    if ( j == CurrentGame->JoueurPreneur ) return -1;       //  Pas si juste avant le preneur (fond)
+    //  Calcule proba de coupe des partenaires derrière
+    while ( j != CurrentGame->JoueurPreneur )
+    {
+        pnc *= (1.0 - ProbCoupeJoueur(pJeu, j, Table[0].Couleur));
+        pf *= ProbaCarteSup(pJeu, j, ATOUT, pJeu->MyCarte[idx].Index);
+        val *= pf * pnc;        //  Si val devient trop faible cela ne vaut pas la peine
+        j = (j + 1) & 3;
+    }
+    if ( val < 0.5 ) return -1;      //  Si val trop faible ne la fait pas
+    return idx;
+}
+
+//  Traite les cas spéciaux quand un défenseur doit couper
+//  Retourne la carte à jouer si cas spécial, sinon retourne -1, le cas général s'applique alors
+
+int JoueCoupeDefense(TarotGame CurrentGame, struct _Jeu *pJeu)
+{
+int CBest;
+
+     if ( (CBest = JoueCoupeFortEnTete(CurrentGame, pJeu)) > 0 )
+        return CBest;
+    return -1;
+}
+
 #if DEBUG > 0
 #define DEBUG_DEFENSE_SECOND 0
 #else
@@ -1890,6 +1937,15 @@ int CBest;
 					return;
 				}
 			}
+			//  Cas spéciaux de coupe de la défense
+			if ( Table[0].Couleur > ATOUT && Table[1].Couleur == ATOUT )
+            {
+				if ( (CBest = JoueCoupeDefense(CurrentGame, pJeu)) >= 0)
+				{
+                    PoseCarte(CurrentGame, CBest);
+					return;
+				}
+            }
 			Table[1] = pJeu->MyCarte[i0];       //  Essaie la carte ( a été modifiée par JoueDefenseGagnant)
 			//  Cas général, évalue la valeur du coup.
 			Score = EvalCoupSecond(CurrentGame, pJeu);
@@ -2336,6 +2392,15 @@ int BestC;
 					return;
 				}
 			}
+			//  Cas spéciaux de coupe de la défense
+			if ( Table[0].Couleur > ATOUT && Table[2].Couleur == ATOUT )
+            {
+				if ( (BestC = JoueCoupeDefense(CurrentGame, pJeu)) >= 0)
+				{
+                    PoseCarte(CurrentGame, BestC);
+					return;
+				}
+            }
 #if DEBUG > 0
             if (CouleurDemandee == PIQUE && Table[0].Hauteur == VALET )
                 Score = 0;
@@ -3213,7 +3278,9 @@ double TousUtiles;
 double pp = 0;
 double val;
 int nbnh;
+#if DEBUG_DEFAUSSE_DEFENSE > 0
 int idxPos = (pJeu->PositionJoueur - CurrentGame->JoueurEntame)&3;
+#endif
 int Best = -1;
 
 	Bval = -1000000.0;

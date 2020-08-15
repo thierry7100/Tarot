@@ -28,4 +28,10 @@ Améliorer jeu excuse
 Regarder bug partie 23 --> A coeur Ouest annonce doubleton en descendant    OK favorise plus petite si plus de 2 cartes dans ouverture défense
 Partie 104 : bug, joueur nord joue coeur sur pique alors qu'il a de l'atout : bug pose carte OK
 ----------------------   Version 0.01.05
-Fin de partie : essai toutes les possibilités en 1er
+Fin de partie : essai toutes les possibilités en 1er    OK
+----------------------  Version 0.02.01
+Joue gros atout 'abord sur longue preneur quand peu d'atouts.   OK
+----------------------  Version 0.02.02
+Correction Pb PoseCarte Attaque
+----------------------  Version 0.02.03
+

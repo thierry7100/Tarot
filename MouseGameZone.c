@@ -73,6 +73,7 @@ extern double RecouvrementJeu;
         CurrentGame->StateJeu = JEU_EN_COURS;         //  Passe au second pli (ou plus)
         CurrentGame->StateAfterMessage = JEU_EN_COURS;//  Ne met pas de suite l'état attente jeu SUD, il faudra attendre un tick avant de pouvoir jouer
         RamassePli(CurrentGame, 0);                      //  Ramasse le pli en cours, prépare pli suivant
+        CurrentGame->NumPli++;
         AffichagePoints(CurrentGame);
         if ( CurrentGame->NumPli == 18 )
         {

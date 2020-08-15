@@ -69,6 +69,8 @@ int h;
 		for ( j = 1; j < 22; j++)
 		{
 		    if ( CurrentGame->CarteJouee[j] >= 0 ) continue;                    //  Rien à faire, carte déjà jouée
+		    if ( pJeu->ProbCarte[pos][j] >= 0.99999) continue;                  //  Rien à faire, proba à 1
+		    if ( pJeu->ProbCarte[pos][j] <= 0.000001) continue;                  //  Rien à faire, proba à 0
 			BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, j, 1.0);        //  Sûr de ne plus en avoir
 		}
 	}

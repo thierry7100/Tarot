@@ -1271,3 +1271,16 @@ int iPos;
 	}
 }
 
+//  Calcule la probabilité de coupe de la couleur Couleur par le Joueur Joueur
+//  Proba coupe = Produit(Proba pas la carte I)
+double CalcProbCoupeCouleur(struct _Jeu *pJeu, int Joueur, int Couleur)
+{
+double pc = 1.0;
+int i;
+
+    for ( i = Startof[Couleur]; i < Endof[Couleur]; i++)
+    {
+        pc *= (1.0 - pJeu->TmpProbCarte[Joueur][i] );
+    }
+    return(pc);
+}

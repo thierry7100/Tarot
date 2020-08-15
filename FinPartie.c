@@ -8,7 +8,7 @@
 #define PROB_MIN_DISTRIB    1e-4
 
 #if DEBUG > 0
-#define DEBUG_FIN_PARTIE 1
+#define DEBUG_FIN_PARTIE 2
 #else
 #define DEBUG_FIN_PARTIE 0
 #endif  // DEBUG
@@ -105,7 +105,7 @@ int i;
         JoueDefenseDernier(CurrentGame);
     //  Ramasse le pli
     RamassePli(CurrentGame, 1);
-    CurrentGame->NumPli++;                  //  Incrémente n° de pli car pas fait dans RamassePli (MemorisePli non appelé)
+    CurrentGame->NumPli++;                  //  Incrémente n° de pli car pas fait dans RamassePli
     if ( CurrentGame->NumPli != 18 )        //  Fin de partie ?
     {
         //  Joue le pli suivant en testant toutes les cartes du joueur entame

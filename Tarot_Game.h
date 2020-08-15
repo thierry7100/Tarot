@@ -349,7 +349,6 @@ void RenormaliseMontant(struct _Jeu *pJeu, int Joueur, int NbCarteAttendues);
 void RenormaliseDescendant(struct _Jeu *pJeu, int Joueur, int NbCarteAttendues);
 double GetProbAtout(struct _Jeu *pJeu, int Joueur);
 double ProbaExactementN(struct _Jeu *pJeu, int Joueur, int N, int Index, int Borne);
-double GetProbAtout(struct _Jeu *pJeu, int joueur);
 double ProbUnDefenseurSansAtout(struct _Jeu *pJeu);
 void SetCarte2Position(struct _Jeu *pJeu, int Position, int Index);
 void CopieProba2Tmp(struct _Jeu *pJeu);
@@ -361,6 +360,7 @@ void BaisseTmpProb(struct _Jeu *pJeu, int posJoueur, int IndexCarte, double Prob
 void MonteTmpProb(struct _Jeu *pJeu, int posJoueur, int IndexCarte, double mul, double NumRegle);
 void NormaliseTmpProba(TarotGame CurrentGame, struct _Jeu *pJeu, int indexJoueur);
 void Attract_Proba(TarotGame CurrentGame, struct _Jeu *pJeu);
+double ProbaCarteSup(struct _Jeu *pJeu, int Joueur, int Couleur, int idxCarte);
 
 //  Heuristiques
 void Heuristique_Petit_Proba(TarotGame CurrentGame, struct _Jeu *pJeu, int IndexTable);

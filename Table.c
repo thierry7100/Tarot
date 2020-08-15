@@ -62,7 +62,7 @@ int iCarte;
         for ( i = IndexCarte+1; i < pJeu->NbCarte; i++)
         {
             j = CurrentGame->IdxCartesJoueur[Position][i];
-            if ( j == iCarte+1)
+            if ( j == iCarte+1 && pJeu->MyCarte[IndexCarte].Couleur == pJeu->MyCarte[i].Couleur)
             {
                 iCarte = j;
                 IndexCarte++;
@@ -480,7 +480,7 @@ int i, pos;
         CurrentGame->MemPlis[CurrentGame->NumPli][i] = Table[pos].Index;
     }
     CurrentGame->Entame[CurrentGame->NumPli] = CurrentGame->JoueurEntame;
-    CurrentGame->NumPli++;
+    //CurrentGame->NumPli++;
 }
 
 //  "Ramasse" le pli à fin.
@@ -587,8 +587,7 @@ int PliAttaque;
             MiseAJourJeuJoueur(CurrentGame, j);
         }
     }
-    if ( ModeFinPartie == 0 )
-        MemorisePli(CurrentGame);               //  Seulement en mode "normal", pas simulation fin de partie
+    MemorisePli(CurrentGame);
     CurrentGame->JoueurEntame = gagnant;        //  Prochain à jouer
     CurrentGame->JoueurCourant = CurrentGame->JoueurEntame;
 #if DEBUG > 0

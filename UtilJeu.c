@@ -928,6 +928,19 @@ double pc = 1.0;
 	return(p);
 }
 
+//  Retourne la probabilité que le joueur Joueur possède une carte de la couleur Couleur plus grosse que idxCarte
+
+double ProbaCarteSup(struct _Jeu *pJeu, int Joueur, int Couleur, int idxCarte)
+{
+double p = 1.0;
+int i;
+    for ( i = idxCarte; i < Endof[Couleur]; i++ )
+    {
+        p *= (1.0 - pJeu->ProbCarte[Joueur][i]);
+    }
+    return(1.0 - p);
+}
+
 //  Regarde si petit au bout en fin de partie
 //  Retourne 0 si pas petit au bout, 10 si petit au bout gagnant et -10 si petit perdu au bout
 
