@@ -780,6 +780,7 @@ int jr;
 			TmpConf = 1.0 - pJeu->ConfianceProb[Joueur][i];     //  Delta max pour cette carte
 			if ( NoConfiance || pJeu->ConfianceProb[Joueur][i] < pJeu->ProbCarte[Joueur][i] )
 				TmpConf = 1.0 - pJeu->ProbCarte[Joueur][i];     //  Pas sûr, limite à 1 - proba actuelle pour ne pas dépasser 1
+			if ( TmpConf <= 0 ) continue;                       //  Ne change pas proba cartes sûres !
 			Delta = Erreur / Diviseur * TmpConf;
 			assert(!isnan(Delta));
 			assert(Delta >= 0.0);                             //  Delta DOIT être positif !
@@ -804,6 +805,7 @@ int jr;
                         pJeu->ProbCarte[jr][i] *= (1.0 - pJeu->ProbCarte[Joueur][i] - Delta) / (1.0 - pJeu->ProbCarte[Joueur][i]);
                     }
 					pJeu->ProbCarte[Joueur][i] += Delta;
+                    if ( pJeu->ProbCarte[Joueur][i] > 1.0 ) pJeu->ProbCarte[Joueur][i] = 1.0;
 				}
 			}
 #if DEBUG > 0
@@ -883,6 +885,7 @@ int i, j, jr;
                 {
                     if ( jr == Joueur ) continue;
                     pJeu->ProbCarte[jr][i] *= 1.0 / (1.0 - pJeu->ProbCarte[Joueur][i]);
+                    if ( pJeu->ProbCarte[jr][i] > 1.0 ) pJeu->ProbCarte[jr][i] = 1.0;
                 }
 				pJeu->ProbCarte[Joueur][i] = 0.0;
 			}
@@ -895,6 +898,7 @@ int i, j, jr;
                     {
                         if ( jr == Joueur ) continue;
                         pJeu->ProbCarte[jr][i] *= (1.0 - pJeu->ProbCarte[Joueur][i] - Delta) / (1.0 - pJeu->ProbCarte[Joueur][i]);
+                        if ( pJeu->ProbCarte[jr][i] > 1.0 ) pJeu->ProbCarte[jr][i] = 1.0;
                     }
 					pJeu->ProbCarte[Joueur][i] += Delta;
 				}

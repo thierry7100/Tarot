@@ -36,4 +36,6 @@ Correction Pb PoseCarte Attaque
 ----------------------  Version 0.02.03
 Correction Pb GetPlusForte(ATOUT) avec Excuse seulement
 ----------------------  Version 0.02.04
+Correction Pb Probas
+----------------------  Version 0.02.05
 
