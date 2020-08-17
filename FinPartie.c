@@ -221,8 +221,8 @@ char str[16];
 #endif // DEBUG
         for ( i = StartIndex; i < 78; i++ )
         {
-            if ( pJeu->ProbCarte[j][i] < 0.000001 ) continue;   //  Saute les cartes avec proba trop faibles (sûr de ne pas avoir)
-            if ( pJeu->ProbCarte[j][i] > 0.999999 ) continue;   //  Idem, saute les cartes certaines
+            if ( pJeu->ProbCarte[j][i] < 0.01 ) continue;   //  Saute les cartes avec proba trop faibles (sûr de ne pas avoir)
+            if ( pJeu->ProbCarte[j][i] > 0.99 ) continue;   //  Idem, saute les cartes presque certaines
             //  Trouvé une carte qui peut être fixée à 0 ou 1
             if ( tmpGame == NULL )
                 tmpGame = (TarotGame) malloc(sizeof(struct _Tarot_Partie));     //  Alloue la mémoire pour la structure temporaire

@@ -3075,7 +3075,7 @@ int Maitre;
 		return(Maitre);
 	}
 	//	Cas où il reste un seul ATOUT sur 2 cartes. Joue la plus grosse de toute manière
-	if ( NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT) == 1 && pJeu->NbCarte == 2 )
+	if ( NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT) == 1 && pJeu->NbCarte == 2 && CouleurDemandee != EXCUSE )
 	{
 		Maitre = GetPlusForte(pJeu, CouleurDemandee);
 		return(Maitre);

@@ -24,6 +24,7 @@ GtkDialog *DialogNomJoueurs;
 GtkDialog *DialogStyleJeu;
 GtkDialog *DialogChoixPartie;
 GtkDialog *DialogUserPref;
+GtkDialog *DialogTestMaitre;
 GtkBuilder *builder;
 GdkPixbuf *IconTarot;
 GtkMenuItem * ReloadMenuItem;
@@ -41,10 +42,13 @@ int FlagSuggestionCarte;
 int FlagSuggestionPoignee;
 int PassageAutoPliSuivant;
 int DelaiPliAuto;
+int FlagModeTest;
+int ModeTestDebut, ModeTestFin;
 
 struct _Tarot_Partie UiGame;
 const int DurationStepContrat = 500;
 const int DurationStepJeu = 500;
+const int DurationStepJeuModeTest = 200;
 
 
 
@@ -71,6 +75,40 @@ int close_screen(gpointer data)
     return(FALSE);
 }
 
+//  Joue la partie maitre suivante en mode automatique
+
+static void NextPartieMaitre(int ModeStart)
+{
+gchar *LastFileName;
+
+    if ( UiGame.NumPartieEnregistree == ModeTestFin - 1)
+    {
+        FlagModeTest = 0;
+        return;
+    }
+    UiGame.NumPartieEnregistree++;
+    UiGame.PreneurPartieEnregistree = 0;        //  Toujours SUD preneur
+    DistribuePartieMaitre(&UiGame, 1);
+    LastFileName = g_build_filename(AppConfDir, "LastDistrib.tarot", NULL);
+    SaveFile(LastFileName, &UiGame);
+    //  Preneur SUD avec Garde
+    UiGame.TypePartie = GARDE;
+    UiGame.JoueurPreneur = SUD;
+    UiGame.StateJeu = JEU_MONTRE_CHIEN;
+    EffaceContratsJoueurs(&UiGame);
+    AjouteCarteChienPreneur(&UiGame);                  //  Ajoute les cartes du chien au preneur
+    MakeEcart(&UiGame);                            //  Fait une proposition de cartes à mettre au chien
+    UiGame.StateJeu = JEU_PREMIER_PLI;
+    MetCartesEcart(&UiGame);
+    DebutPartie(&UiGame);
+    DeltaCarteLevee = 0;
+    BaisseCartesSUD(&UiGame);                       //  Baisse les cartes à ce stade
+    if ( ModeStart )
+        g_timeout_add (DurationStepJeuModeTest, NextStepJeu, NULL); //  Lance Timer Jeu si état toujours premier pli
+    gtk_widget_queue_draw(GameZoneArea);            //  Force réaffichage pour affichage chien
+}
+
+
 //  Avance pendant les plis
 
 
@@ -94,7 +132,7 @@ static int NbTickTimer;
     if ( UiGame.StateJeu == JEU_FIN_PLI )
     {
         NbTickTimer = 0;
-        if ( UiGame.DecompteFinPli > 0 )
+        if ( FlagModeTest == 0 && UiGame.DecompteFinPli > 0 )
         {
             UiGame.DecompteFinPli--;
             return TRUE;                        //  Reste au même état et garde le timer
@@ -107,21 +145,26 @@ static int NbTickTimer;
         if ( UiGame.NumPli == 18 )
         {
             ComptePointsFinPartie(&UiGame, 0);
+            if ( FlagModeTest )
+            {
+                NextPartieMaitre(0);
+                return TRUE;
+            }
             UiGame.StateJeu = JEU_TERMINE;
             UiGame.StateAfterMessage = JEU_TERMINE;
             gtk_widget_queue_draw(GameZoneArea);    //  Force réaffichage pour affichage pli ramassé
             UiGame.TypeTimer = TIMER_NO;
             return FALSE;                           //  Cela désactive le timer.
         }
-        else if ( UiGame.JoueurCourant == SUD )
+        else if ( UiGame.JoueurCourant == SUD && FlagModeTest == 0 )
             UiGame.StateAfterMessage = JEU_ATTENTE_JEU_SUD;     //  Pour pouvoir jouer sans attendre le timer
-        gtk_widget_queue_draw(GameZoneArea);    //  Force réaffichage pour affichage pli ramassé
+        gtk_widget_queue_draw(GameZoneArea);                    //  Force réaffichage pour affichage pli ramassé
         return  TRUE;
     }
     //  Regarde où en est-on du pli en cours
     pos = (UiGame.JoueurCourant - UiGame.JoueurEntame)&3;     //  Joueur avec entame Delta par rapport à l'entame
     AffichageAtouts(&UiGame);
-    if ( UiGame.JoueurCourant == SUD )
+    if ( UiGame.JoueurCourant == SUD && FlagModeTest == 0 )
     {
         NbTickTimer++;
         if ( UiGame.NumPli == 0 )
@@ -151,6 +194,22 @@ static int NbTickTimer;
     {
         if ( UiGame.PoigneeMontree[UiGame.JoueurCourant] == 0 && OkToShowPoignee(&UiGame) )
         {
+            if ( FlagModeTest )
+            {
+                int TypePoignee;
+
+                if ( UiGame.NumAtoutPoignee[UiGame.JoueurCourant] == 10 )
+                    TypePoignee = POIGNEE_SIMPLE;
+                else if ( UiGame.NumAtoutPoignee[UiGame.JoueurCourant] == 13 )
+                    TypePoignee = POIGNEE_DOUBLE;
+                else
+                    TypePoignee = POIGNEE_TRIPLE;
+                UiGame.PoigneeMontree[UiGame.JoueurCourant] = TypePoignee;
+                RegardePoigneeJoueurs(&UiGame, UiGame.JoueurCourant);
+                UiGame.StateJeu = JEU_PREMIER_PLI;        //  Revient à la base...
+                gtk_widget_queue_draw(GameZoneArea);            //  Force réaffichage pour affichage message
+                return TRUE;
+            }
             UiGame.StateJeu = JEU_AFFICHE_POIGNEE;
             UiGame.StateAfterMessage = JEU_PREMIER_PLI;
             UiGame.JoueurAffichePoignee = UiGame.JoueurCourant;
@@ -230,7 +289,7 @@ static int NbTickTimer;
     }
     UiGame.JoueurCourant++;                         //  Passe au suivant
     UiGame.JoueurCourant &= 3;
-    if ( UiGame.JoueurCourant == SUD )
+    if ( UiGame.JoueurCourant == SUD && FlagModeTest == 0 )
     {
         if ( UiGame.NumPli == 0 )
         {
@@ -252,6 +311,7 @@ static int NbTickTimer;
     gtk_widget_queue_draw(GameZoneArea);            //  Force réaffichage pour affichage pli
     return TRUE;
 }
+
 //  Avance l'état des contrats par joueur
 int NextStepContrat(gpointer data)
 {
@@ -896,6 +956,46 @@ GtkEntry *EntrySUD, *EntryEST, *EntryOUEST, *EntryNORD;
     }
 }
 
+//  Appel DEBUG / Test parties enregistrées
+//  Joue toutes les parties enregistrées
+
+static void MenuTestMaitre(GtkWidget *widget, gpointer data)
+{
+GtkEntry *DebutMaitre, *FinMaitre;
+int Ret;
+int Num;
+char str[64];
+
+    snprintf(str, 10, "%d", NB_PARTIE_MAITRE);
+    DebutMaitre =  GTK_ENTRY(gtk_builder_get_object(builder, "ID_TEST_PARTIE_DEBUT"));
+    gtk_entry_set_text(DebutMaitre, "1");
+
+    FinMaitre =  GTK_ENTRY(gtk_builder_get_object(builder, "ID_TEST_PARTIE_FIN"));
+    gtk_entry_set_text(FinMaitre, str);
+
+    Ret = gtk_dialog_run(DialogTestMaitre);
+    gtk_widget_hide(GTK_WIDGET(DialogTestMaitre));
+    if ( Ret == GTK_RESPONSE_OK )
+    {
+        //  Lecture des champs de la boîte de dialogue;
+        sscanf(gtk_entry_get_text(DebutMaitre), "%d", &Num);
+        if ( Num < 1 || Num > NB_PARTIE_MAITRE )
+            Num = 1;
+        ModeTestDebut = Num - 2;
+        sscanf(gtk_entry_get_text(FinMaitre), "%d", &Num);
+        if ( Num < 1 || Num > NB_PARTIE_MAITRE )
+            Num = NB_PARTIE_MAITRE - 1;
+        ModeTestFin = Num;
+        FlagModeTest = 1;
+        UiGame.NumPartieEnregistree = ModeTestDebut;
+        UiGame.PreneurPartieEnregistree = 0;        //  Toujours SUD preneur
+        NextPartieMaitre(1);
+    }
+
+}
+
+//  Appel DEBUG / Choix parte enregistrée
+
 static void MenuChoixPartie(GtkWidget *widget, gpointer data)
 {
 int Ret;
@@ -1098,6 +1198,9 @@ gchar *DebugFileName;
     MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "MENU_CHOIX_PARTIE"));
     g_signal_connect (MenuItem, "activate", G_CALLBACK(MenuChoixPartie), NULL);
 
+    MenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "MENU_TEST_MAITRE"));
+    g_signal_connect (MenuItem, "activate", G_CALLBACK(MenuTestMaitre), NULL);
+
     ReloadMenuItem = GTK_MENU_ITEM(gtk_builder_get_object(builder, "RELOAD_LAST"));
     g_signal_connect (ReloadMenuItem, "activate", G_CALLBACK(ReloadLast), NULL);
 
@@ -1126,6 +1229,9 @@ gchar *DebugFileName;
     gtk_window_set_transient_for(GTK_WINDOW(DialogUserPref), MainWindow);
     gtk_window_set_modal(GTK_WINDOW(DialogUserPref), TRUE);
 
+    DialogTestMaitre = GTK_DIALOG(gtk_builder_get_object(builder, "DIALOGUE_TEST_MAITRE"));
+    gtk_window_set_transient_for(GTK_WINDOW(DialogTestMaitre), MainWindow);
+    gtk_window_set_modal(GTK_WINDOW(DialogTestMaitre), TRUE);
     //  Status bars
     StatusBarGen = GTK_STATUSBAR(gtk_builder_get_object(builder, "Status_Bar"));
     StatusBarAtout = GTK_STATUSBAR(gtk_builder_get_object(builder, "STATUS_ATOUTS"));

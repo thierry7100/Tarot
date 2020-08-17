@@ -714,11 +714,14 @@ int PossPetit;
 			j = CarteMaitreNonJoueeNoErr(CurrentGame, CouleurDemandee);
 			if ( Table[idxGagnant].Couleur == CouleurDemandee && j >= 0 && j > Table[idxGagnant].Index )
             {
-				BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, j, 0.95 - 1.5/h);
+                if ( pJeu->ProbCarte[pos][j] > 0.0000001 && pJeu->ProbCarte[pos][j] < 0.9999999999)
+                {
+                    BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, j, 0.95 - 1.5/h);
 #if DEBUG_HEURISTIQUES > 0
-                OutDebug("Heuristique Couleur 9, joueur ne prend pas un pli rapportant des points, n'a pas de plus grosse.. ProbCarte[%d][%d] = %.3f\n",
-                pos, j, pJeu->ProbCarte[pos][j]);
+                    OutDebug("Heuristique Couleur 9, joueur ne prend pas un pli rapportant des points, n'a pas de plus grosse.. ProbCarte[%d][%d] = %.3f\n",
+                    pos, j, pJeu->ProbCarte[pos][j]);
 #endif // DEBUG_HEURISTIQUES
+                }
             }
 		}
 		CopieProba2Tmp(pJeu);
@@ -808,12 +811,15 @@ int PossPetit;
     //	Heuristique  13 : Entame du CAVALIER => Possède certainement la DAME...
 	if ( IndexTable == 0  && pJeu->JoueurCouleur[CouleurDemandee] < 0 && CouleurDemandee > ATOUT && Table[0].Hauteur == CAVALIER )
 	{
-		MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Table[0].Index+1, 5, 0);
+		if ( pJeu->ProbCarte[pos][Table[0].Index+1] > 0.000001 && pJeu->ProbCarte[pos][Table[0].Index+1] < 0.99999999 )
+        {
+            MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Table[0].Index+1, 5, 0);
 #if DEBUG_HEURISTIQUES > 0
             OutDebug("Heuristique Couleur 13, Défenseur joue honneur sur preneur maître, n'a plus de petites.. ProbCarte[%d][%d] = %.3f\n",
             pos, Table[0].Index+1, pJeu->ProbCarte[pos][Table[0].Index+1]);
 #endif // DEBUG_HEURISTIQUES
-		CopieProba2Tmp(pJeu);
+            CopieProba2Tmp(pJeu);
+        }
 	}
     //	Heuristique 14 : Si entame d'un joueur avec un ROI ou Cavalier, main forte
 	if ( FlagSignalisation && IndexTable == 0 && posPreneur != 0 && pJeu->NbEntame[CurrentGame->JoueurEntame] == 1
@@ -1060,8 +1066,8 @@ int PossPetit;
 			{	//	reste les cas 2 et 3
 				v = ProbCoupeJoueur(pJeu, pos, pJeu->Flanc);
 				if ( v < 0.001) v = 0.001;
-				//	Monte proba petit si v est assez faible
-				if ( CurrentGame->CarteJouee[1] < 0 )
+				//	Monte proba petit si v est assez faible. v doit être strictement inférieur à 1 pour monter la probabilité
+				if ( CurrentGame->CarteJouee[1] < 0 && v < 1.0 )
                     MonteProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 1.0 - 0.5*log(v), 0);
 #if DEBUG_HEURISTIQUES > 0
                 OutDebug("Heuristique Couleur 22.1, Monte proba petit suite à changement couleur. ProbCarte[%d][%d] = %.3f\n",

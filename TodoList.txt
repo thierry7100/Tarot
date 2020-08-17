@@ -38,4 +38,8 @@ Correction Pb GetPlusForte(ATOUT) avec Excuse seulement
 ----------------------  Version 0.02.04
 Correction Pb Probas
 ----------------------  Version 0.02.05
-
+Correction Pb version windows
+----------------------  Version 0.02.06
+Ajout mode test parties
+----------------------  Version 0.03.01
+Correction Pb joue excuse en premier.

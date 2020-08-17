@@ -22,6 +22,8 @@ extern GtkCssProvider *Tarot_css;
 extern int GameZoneArea_width;                  //  Size of game zone
 extern int GameZoneArea_height;
 
+extern int FlagModeTest;                        //  Si vrai, joue en mode test (tous les joueurs), pas de pause.
+
 //  Noms des joueurs
 void InitNomJoueurs();
 

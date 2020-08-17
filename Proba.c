@@ -661,7 +661,7 @@ int i;
 		}
 		for ( i = 0; i < 78; i++ )
 		{
-			if ( pJeu->ProbCarte[ColonneErr][i] > 0 )
+			if ( pJeu->ProbCarte[ColonneErr][i] > 0.000001 && pJeu->ProbCarte[ColonneErr][i] < 0.999999)
 			{
 				TmpConf = 1.0 - pJeu->ConfianceProb[ColonneErr][i];
 				if ( Erreur[ColonneErr] < 0 )	//	Doit remonter les probas
