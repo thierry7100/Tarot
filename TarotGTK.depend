@@ -2936,7 +2936,7 @@
 	<assert.h>
 	"Tarot_Ui_Objects.h"
 
-1596366385 source:/home/thierry/Programmes/TarotGTK/UtilJeu.c
+1597654923 source:/home/thierry/Programmes/TarotGTK/UtilJeu.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	<time.h>
@@ -2978,7 +2978,7 @@
 	<assert.h>
 	"Tarot_Ui_Objects.h"
 
-1595331252 source:/home/thierry/Programmes/TarotGTK/JeuCommun.c
+1597655523 source:/home/thierry/Programmes/TarotGTK/JeuCommun.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
@@ -2992,7 +2992,7 @@
 	<assert.h>
 	<math.h>
 
-1596368358 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
+1597657095 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
@@ -3062,7 +3062,7 @@
 	<math.h>
 	<assert.h>
 
-1595695984 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
+1597656172 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
@@ -3302,5 +3302,5 @@
 	<assert.h>
 	<math.h>
 
-1597489598 /home/thierry/Programmes/TarotGTK/version.h
+1597657219 /home/thierry/Programmes/TarotGTK/version.h
 

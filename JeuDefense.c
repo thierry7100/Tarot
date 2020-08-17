@@ -509,7 +509,7 @@ int i0;
 #endif
     //	Coup 5 : Si peut prendre petit au preneur, joue ATOUT
     //  Preneur avec peu d'atout et pas excuse chez le preneur
-	if ( PositionPetit == pJeu->PositionPreneur  && pJeu->AtoutPreneur < 1.1 && pJeu->NbAtout >= 1 && !HasCarte(pJeu, pJeu->PositionPreneur, 0))
+	if ( PositionPetit == pJeu->PositionPreneur  && pJeu->AtoutPreneur < 1.1 && pJeu->NbAtout > HasExcuse(pJeu) && !HasCarte(pJeu, pJeu->PositionPreneur, 0))
 	{
 #if DEBUG_ENTAME_DEFENSE > 0
         OutDebug("CoupsEntameDefense n° 5.1 : Joue ATOUT pour prendre petit au preneur\n");
@@ -519,7 +519,8 @@ int i0;
 #endif // DEBUG_ENTAME_DEFENCE
 		return(GetPlusForte(pJeu, ATOUT));
 	}
-	if ( PositionPetit == pJeu->PositionPreneur && pJeu->AtoutPreneur < pJeu->NbAtout + 0.01 && NbAtoutMaitre(CurrentGame, pJeu->PositionJoueur) >= pJeu->AtoutPreneur - 1.05 )
+	if ( PositionPetit == pJeu->PositionPreneur && pJeu->AtoutPreneur < pJeu->NbAtout + 0.01
+        && NbAtoutMaitre(CurrentGame, pJeu->PositionJoueur) >= pJeu->AtoutPreneur - 1.05 && pJeu->NbAtout < HasExcuse(pJeu) )
 	{
 #if DEBUG_ENTAME_DEFENSE > 0
         OutDebug("CoupsEntameDefense n° 5.2 : Joue ATOUT pour prendre petit au preneur\n");
@@ -708,6 +709,7 @@ int i0;
 double Val;
 
 	for ( c = 0; c < NB_COULEUR; c++) ValCouleur[c] = 0;
+		OutDebug("ERROR : Recherche plus faible couleur %d pour Joueur %d, ne trouve pas de carte de cette couleur\n", c, pJeu->PositionJoueur);
     //	Coups spécifiques d'entame défense en contradiction avec les règles générales
     //	Si retour positif ou nul, joue la carte correspondante.
 	if ( (i0 = CoupsEntameDefense(CurrentGame, pJeu, ValCouleur)) >= 0 )
@@ -741,7 +743,7 @@ double Val;
 #endif // DEBUG_ENTAME_DEFENSE
 	}
 	//	Pour l'atout...
-	if ( pJeu->NbAtout > 0 )
+	if ( pJeu->NbAtout > HasExcuse(pJeu) )
 	{
 		Val = 0.0;
 		//  Plus de 7 atouts ou 6 avec deux au dessus du 16 et pas d'atout au chien
@@ -978,6 +980,7 @@ double va, vc;
 int posJP = (pJeu->PositionPreneur - pJeu->PositionJoueur) & 3;     //  Position joueur par rapport au preneur
 int c;
 
+    if ( pJeu->NbAtout <= HasExcuse(pJeu) ) return -1000;       //  Pas d'atout !
     //  Si le preneur possède ATOUT maître, pas bon il peut le jouer et bloquer le coup
     if ( pJeu->TmpProbCarte[pJeu->PositionPreneur][CarteMaitreNonJouee(CurrentGame, ATOUT)] >= 0.8 || (pJeu->ResteAtout - pJeu->AtoutPreneur) < 0.5 )
             return -1000;
@@ -1627,7 +1630,7 @@ double nDis = nbDistrib(CurrentGame, pJeu);
 	//	Autre couleur
 	//	Si maitre dans la couleur : si Proba coupe assez faible, joue la carte maîtresse
 	//  Cas particulier : plus d'atout preneur, et un seul dans la couleur joue son dernier atout pour ne pas bloquer
-	if ( pJeu->NbAtout == 1 && SansAtoutPreneur > 0.8 && pJeu->NbCouleur[i0] == 1 )	//	Joue d'abord ATOUT...
+	if ( pJeu->NbAtout == 1 && !HasExcuse(pJeu) && SansAtoutPreneur > 0.8 && pJeu->NbCouleur[i0] == 1 )	//	Joue d'abord ATOUT...
 	{
 		i0 = GetPlusForte(pJeu, ATOUT);
 		PoseCarte(CurrentGame, i0);
@@ -1702,6 +1705,7 @@ int h;
 int petit;
 int i;
 
+    if ( pJeu->NbAtout <= HasExcuse(pJeu) ) return(-1);     //  Pas d'atout !
 	if ( CurrentGame->JoueurEntame == pJeu->PositionPreneur && HasPetit(pJeu) )
 	{	//	Possède le petit et le preneur joue atout
 		j = 0;      //  Compte les atouts non joués
@@ -1759,7 +1763,8 @@ int i;
 	}
 	//	Si possède très peu d'atout, joue les gros en premier
 	if ( CurrentGame->JoueurEntame != pJeu->PositionPreneur && pJeu->NbAtout <= 3
-        && (NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT) >= 15 - IndexTable) && CurrentGame->CarteJouee[1] < 0 && !HasPetit(pJeu) )
+        && (NbReste(CurrentGame, pJeu->PositionJoueur, ATOUT) >= 15 - IndexTable)
+        && CurrentGame->CarteJouee[1] < 0 && !HasPetit(pJeu) )
 	{
 		return(GetPlusForte(pJeu, ATOUT));
 	}
@@ -1809,6 +1814,7 @@ double val = 1.0;
 int idx;
 
     if ( HasPetit(pJeu) ) return -1;        //  Pas avec le petit !
+    if ( pJeu->NbAtout <= HasExcuse(pJeu) ) return -1;      //  Pas d'atout !
     if ( CurrentGame->JoueurEntame != CurrentGame->JoueurPreneur ) return -1;       //  Seulement si entame preneur
     if ( pJeu->NbAtout > 4 ) return -1;         //  Ne doit pas avoir beaucoup d'atouts
     if ( JoueurAvecPetit(CurrentGame, pJeu) != pJeu->PositionPreneur )  //  Si petit pas chez preneur, ne le fait pas

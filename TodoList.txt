@@ -34,4 +34,6 @@ Joue gros atout 'abord sur longue preneur quand peu d'atouts.   OK
 ----------------------  Version 0.02.02
 Correction Pb PoseCarte Attaque
 ----------------------  Version 0.02.03
+Correction Pb GetPlusForte(ATOUT) avec Excuse seulement
+----------------------  Version 0.02.04
 

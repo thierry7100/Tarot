@@ -1024,7 +1024,7 @@ int OldHauteurAtout = 0;
 				//	Evite de mettre l'excuse pour laisser le pli au preneur si chasse lancée
 				if ( pJeu->StatusChasse == CHASSE_DEFENSE_IMPAIR || (Table[0].Index & 1) )
 				{
-					if ( GainAttaque == 1 && PosC > IndexPreneur && pJeu->NbAtout > 0
+					if ( GainAttaque == 1 && PosC > IndexPreneur && pJeu->NbAtout > HasExcuse(pJeu)
                         && GetCartePlusForte(pJeu, ATOUT)->Index > Table[IndexPreneur].Index )
 						pts[0] -= 5.0;
 				}

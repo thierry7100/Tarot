@@ -111,6 +111,7 @@ int i;
 	{
 		if ( pJeu->MyCarte[i].Couleur == c ) return(i);
 	}
+	OutDebug("ERROR : Recherche plus faible couleur %d pour Joueur %d, ne trouve pas de carte de cette couleur\n", c, pJeu->PositionJoueur);
 	assert(0);
 	return(-1);
 }
@@ -126,6 +127,7 @@ int i;
 	{
 		if ( pJeu->MyCarte[i].Couleur == c ) return(i);
 	}
+	OutDebug("ERROR : Recherche plus forte couleur %d pour Joueur %d, ne trouve pas de carte de cette couleur\n", c, pJeu->PositionJoueur);
 	assert(0);
 	return(-1);
 }

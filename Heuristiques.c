@@ -133,7 +133,8 @@ double v;
 		//	A priori, a joué son plus fort, d'autant plus vrai que le joueur est à la fin
 		for ( h = Table[IndexTable].Hauteur + 1; h < 22; h++)
 		{
-			BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, h, 0.5);
+		    if ( pJeu->ProbCarte[pos][h] < 1 && pJeu->ProbCarte[pos][h] > 0 )
+                BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, h, 0.5);
 		}
 		CopieProba2Tmp(pJeu);
 	}
