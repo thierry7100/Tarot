@@ -1,5 +1,5 @@
 #include "ScreenSize.h"
-#include "version.h"
+#include "Tarotversion.h"
 #include <gtk/gtk.h>
 #include "SplashScreen.h"
 #include "Tarot_Ui_Objects.h"

@@ -2855,9 +2855,9 @@
 
 1586965107 /home/thierry/Programmes/TarotGTK/ScreenSize.h
 
-1596538347 source:/home/thierry/Programmes/TarotGTK/Tarot_Main_ui.c
+1597665780 source:/home/thierry/Programmes/TarotGTK/Tarot_Main_ui.c
 	"ScreenSize.h"
-	"version.h"
+	"Tarotversion.h"
 	<gtk/gtk.h>
 	"SplashScreen.h"
 	"Tarot_Ui_Objects.h"
@@ -3303,4 +3303,6 @@
 	<math.h>
 
 1597664913 /home/thierry/Programmes/TarotGTK/version.h
+
+1597666108 /home/thierry/Programmes/TarotGTK/Tarotversion.h
 
