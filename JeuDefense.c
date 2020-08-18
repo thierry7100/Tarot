@@ -3026,8 +3026,13 @@ int nb;
 int Maitre;
 
 	CouleurDemandee = Table[0].Couleur;
-	if ( CouleurDemandee == EXCUSE && idxPos > 1)
-		CouleurDemandee = Table[1].Couleur;
+	if ( CouleurDemandee == EXCUSE )
+	{
+        if ( idxPos > 1 )
+            CouleurDemandee = Table[1].Couleur;         //  Si excuse en premier, le second fixe la couleur
+	    else
+            return -1;                                  //  Ne sait pas dans ce cas, le traitement général fera l'affaire
+	}
 	ProbGain = ProbGainCoup(CurrentGame, pJeu, idxPos, 0);
 	MinPliP = MinPlisPreneur(CurrentGame, pJeu);
 	if ( ProbGain > 0.001 && MinPliP >= pJeu->NbCarte - 1 )	//	Doit faire tous les autres ...

@@ -164,7 +164,7 @@ double v;
 	if ( IndexTable > posPreneur && CouleurDemandee > ATOUT && h <= 0 && Table[IndexTable].Couleur == ATOUT
 		&&  Table[IndexTable].Hauteur > 1 && CurrentGame->CarteJouee[1] < 0)
 	{
-	    if ( pJeu->ProbCarte[pos][1] < 0.99999)
+	    if ( pJeu->ProbCarte[pos][1] < 0.99999 && pJeu->ProbCarte[pos][1] > 0.00001 )
         {
             BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 0.9 );
 #if DEBUG_HEURISTIQUES > 0
@@ -178,14 +178,17 @@ double v;
 	if ( CouleurDemandee == ATOUT && pos == posPreneur && Table[IndexTable].Couleur == ATOUT &&
 		Table[IndexTable].Hauteur == 1 && posPreneur > 0 )
 	{
-        BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, 0, 0.95 );
+	     if ( pJeu->ProbCarte[pos][0] > 0.00001 &&  pJeu->ProbCarte[pos][0] > 0.999999 )
+         {
+            BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, 0, 0.95 );
 #if DEBUG_HEURISTIQUES > 0
-        OutDebug("Heuristique 8, Preneur joue le petit sur ATOUT demandé, n'en possède plus : Nouvelle proba ProbCarte[%d][0] = %.3f\n",
+            OutDebug("Heuristique 8, Preneur joue le petit sur ATOUT demandé, n'en possède plus : Nouvelle proba ProbCarte[%d][0] = %.3f\n",
                     pos, pJeu->ProbCarte[pos][0]);
 #endif // DEBUG_HEURISTIQUES
+         }
 		for ( h = 2; h < 22; h++)
 		{
-		    if ( pJeu->ProbCarte[pos][h] <= 0.00001 ) continue;
+		    if ( pJeu->ProbCarte[pos][h] <= 0.00001 || pJeu->ProbCarte[pos][h] > 0.999999 ) continue;
             BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, h, 0.95 );
 #if DEBUG_HEURISTIQUES > 0
             OutDebug("Heuristique 8, Preneur joue le petit sur ATOUT demandé, n'en possède plus : Nouvelle proba ProbCarte[%d][%d] = %.3f\n",
@@ -199,11 +202,14 @@ double v;
 	if ( (h = PlusFortAtoutJoue(IndexTable))> 0 && Table[IndexTable].Couleur == ATOUT && h > Table[IndexTable].Hauteur
             && IndexTable > posPreneur && (v = ProbRestantAuDessus(pJeu, h, pos, IndexTable)) > 1 && CurrentGame->CarteJouee[1] < 0)
 	{
-        BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 0.9 - 0.25/v );
+	     if ( pJeu->ProbCarte[pos][1] > 0.00001 &&  pJeu->ProbCarte[pos][1] > 0.999999 )
+         {
+            BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 0.9 - 0.25/v );
 #if DEBUG_HEURISTIQUES > 0
-        OutDebug("Heuristique 9, Défenseur joue en dessous sans mettre le petit, ne l'a pas : Nouvelle proba ProbCarte[%d][%d] = %.3f\n",
+            OutDebug("Heuristique 9, Défenseur joue en dessous sans mettre le petit, ne l'a pas : Nouvelle proba ProbCarte[%d][%d] = %.3f\n",
                         pos, 1, pJeu->ProbCarte[pos][1]);
 #endif // DEBUG_HEURISTIQUES
+         }
 		CopieProba2Tmp(pJeu);
 	}
     //	Heuristique 10: Si un défenseur met le petit après le preneur sur l'atout maître, n'en possède plus
@@ -233,11 +239,14 @@ double v;
     //	Heuristique 11 : Si partenaire descend à l'atout, possède le petit
 	if ( IndexTable > 0 && IndexTable != posPreneur  && LookForPetit(CurrentGame, pos) && CurrentGame->CarteJouee[1] < 0)
 	{
-		MonteProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 8.0, 0);
+	     if ( pJeu->ProbCarte[pos][1] > 0.00001 &&  pJeu->ProbCarte[pos][1] > 0.999999 )
+         {
+            MonteProba(CurrentGame, pJeu->PositionJoueur, pos, 1, 8.0, 0);
 #if DEBUG_HEURISTIQUES > 0
-        OutDebug("Heuristique 11, Défenseur Descend à l'atout monte proba petit : Nouvelle proba ProbCarte[%d][%d] = %.3f\n",
-                        pos, 1, pJeu->ProbCarte[pos][1]);
+            OutDebug("Heuristique 11, Défenseur Descend à l'atout monte proba petit : Nouvelle proba ProbCarte[%d][%d] = %.3f\n",
+                            pos, 1, pJeu->ProbCarte[pos][1]);
 #endif // DEBUG_HEURISTIQUES
+         }
 		CopieProba2Tmp(pJeu);
 	}
     //	Heuristique 12 : Si Joue première carte et pas ATOUT alors monte proba petit, surtout si pas d'atout au chien
@@ -553,9 +562,9 @@ int PossPetit;
 	{
 		if ( Table[0].Hauteur >= 6 && Table[0].Hauteur <= 10 )
 		{
-            if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 )
+            if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] < 0.99999)
                 BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + DAME - 1, 0.8);
-            if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 )
+            if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] < 0.99999 )
                 BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + ROI - 1, 0.8);
 #if DEBUG_HEURISTIQUES > 0
         OutDebug("Heuristique Couleur 5, Ouverture couleur avec 6 au 10 : ni Roi ni Dame.. ProbCarte[%d][DAME] = %.3f  ProbCarte[%d][ROI] = %.3f\n",
@@ -566,7 +575,7 @@ int PossPetit;
 		{
 			if ( HasCarte(pJeu, pJeu->PositionJoueur, Startof[CouleurDemandee] + DAME - 1) )
 			{
-                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 )
+                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] < 0.9999 )
                 {
                     MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + ROI - 1, 2.0, 0);
 #if DEBUG_HEURISTIQUES > 0
@@ -577,7 +586,7 @@ int PossPetit;
 			}
 			else if ( HasCarte(pJeu, pJeu->PositionJoueur, Startof[CouleurDemandee] + ROI - 1) )
 			{
-                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 )
+                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] < 0.9999 )
                 {
                     MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + DAME - 1, 2.0, 0);
 #if DEBUG_HEURISTIQUES > 0
@@ -588,9 +597,9 @@ int PossPetit;
 			}
 			else
 			{
-                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 )
+                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + DAME - 1] < 0.9999)
                     MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + DAME - 1, 1.4, 0);
-                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 )
+                if ( pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] > 0.0001 && pJeu->ProbCarte[pos][Startof[CouleurDemandee] + ROI - 1] < 0.9999 )
                     MonteProba(CurrentGame, pJeu->PositionJoueur, pos, Startof[CouleurDemandee] + ROI - 1, 1.4, 0);
 #if DEBUG_HEURISTIQUES > 0
                 OutDebug("Heuristique Couleur 5, Ouverture couleur avec 1 au 5 : Roi ou Dame.. ProbCarte[%d][DAME] = %.3f  ProbCarte[%d][ROI] = %.3f\n",
@@ -1119,7 +1128,7 @@ int PossPetit;
 	{
         for ( j = Startof[CouleurDemandee]; j < Startof[CouleurDemandee]+10; j++)
         {
-            if ( pJeu->ProbCarte[pos][j] < 0.0001 ) continue;
+            if ( pJeu->ProbCarte[pos][j] < 0.00001 || pJeu->ProbCarte[pos][j] > 0.999999) continue;
             BaisseProba(CurrentGame, pJeu->PositionJoueur, pos, j, 0.6);
 #if DEBUG_HEURISTIQUES > 0
             OutDebug("Heuristique Couleur 23.1, Défense joue excuse sur . ProbCarte[%d][%d] = %.3f\n",

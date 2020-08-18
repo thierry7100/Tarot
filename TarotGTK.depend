@@ -2992,7 +2992,7 @@
 	<assert.h>
 	<math.h>
 
-1597682701 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
+1597742528 source:/home/thierry/Programmes/TarotGTK/JeuDefense.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
@@ -3062,7 +3062,7 @@
 	<math.h>
 	<assert.h>
 
-1597676542 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
+1597747370 source:/home/thierry/Programmes/TarotGTK/Heuristiques.c
 	<stdlib.h>
 	<gtk/gtk.h>
 	"Tarot_Ui_Objects.h"
